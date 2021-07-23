@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import {TitleWrpper, Remark, Title, ExTitle, PageBlockWrapper, BlueButton, ExSubTitle } from '../../components/PageStyle';
+import {TitleWrpper, Remark, Title, ExTitle, PageBlockWrapper, BlueButton, ExSubTitle, CardWrapper, ExplaneWrapper, Explane } from '../../components/PageStyle';
 import PhtoImg from '../../assets/helmet.png';
 
 const ThirdSection = () => {
@@ -39,20 +39,6 @@ const Background = styled.div`
     flex-direction: column;
 `;
 
-const CardWrapper = styled.div`
-    display: flex;
-    width: 90vw;
-    max-width: 1088px;
-    justify-content: space-around; 
-    align-items: center;
-    flex-wrap: wrap;
-    @media screen and (max-width: 840px) {
-        width: 90vw;
-        justify-content: space-around; 
-  }
-`;
- 
-
 const Photo = styled.div`
     width: 30vw;
     min-width: 500px;
@@ -78,23 +64,6 @@ const Photo = styled.div`
         height: 90vw;
         min-width: 0;
         min-height: 0;
-  }
-`;
-
-const ExplaneWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    @media screen and (max-width: 780px) {
-        align-items: center;
-        width: 90vw;
-        min-width: 0;
-        min-height: 0;
-  }
-`;
-
-const Explane = styled.div`
-    @media screen and (max-width: 780px) {
-        text-align: center;
   }
 `;
 

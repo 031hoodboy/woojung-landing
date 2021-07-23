@@ -7,6 +7,7 @@ import FirstSection from './FirstSection';
 import SecondSection from './SecondSection';
 import ThirdSection from './ThirdSection';
 import FourthSection from './FourthSection';
+import FifthSection from './FifthSection';
 import Banner from './Banner';
 
 const Main = () => {
@@ -17,6 +18,7 @@ const Main = () => {
                 <SecondSection/>
                 <ThirdSection/>
                 <FourthSection/>
+                <FifthSection/>
                 <Banner/>
             <Footer/>
         </PageWrapper>

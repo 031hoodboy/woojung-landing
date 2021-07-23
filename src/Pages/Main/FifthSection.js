@@ -1,22 +1,22 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { ExTitle, PageBlockWrapper, GreenButton, ExSubTitle, CardWrapper, ExplaneWrapper, Explane } from '../../components/PageStyle';
-import PhtoImg from '../../assets/alarm.png';
+import {ExTitle, PageBlockWrapper, BlueButton, ExSubTitle, CardWrapper, ExplaneWrapper, Explane } from '../../components/PageStyle';
+import PhtoImg from '../../assets/drill.png';
 
-const FourthSection = () => {
+const FifthSection = () => {
     return (
         <Background>
             <PageBlockWrapper>
-                <ReverseCardWrapper>
+                <CardWrapper>
                     <Photo />
                     <ExplaneWrapper>
                         <Explane>
-                        <ExTitle>위험물 안전관리대행</ExTitle>
+                        <ExTitle>소방 시설관리</ExTitle>
                         <ExSubTitle>최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고있습니다. 최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고.</ExSubTitle>
                         </Explane>
-                        <GreenButton>더 보기</GreenButton>
+                        <BlueButton>더 보기</BlueButton>
                     </ExplaneWrapper>
-                </ReverseCardWrapper>
+                </CardWrapper>
             </PageBlockWrapper>
         </Background>
     );
@@ -25,7 +25,7 @@ const FourthSection = () => {
 const Background = styled.div`
     width: 100vw;
     padding: 10vh 0;
-    background: #fff;
+    background: #f7fbfd;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
@@ -63,7 +63,4 @@ const Photo = styled.div`
   }
 `;
 
-const ReverseCardWrapper = styled(CardWrapper)`
-    flex-direction: row-reverse;
-`;
-export default FourthSection;
+export default FifthSection;

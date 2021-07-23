@@ -280,3 +280,34 @@ export const GreenButton = styled(Button)`
     color: #63EA00;
 `;
 
+
+export const CardWrapper = styled.div`
+    display: flex;
+    width: 90vw;
+    max-width: 1088px;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap;
+    @media screen and (max-width: 840px) {
+        width: 90vw;
+        justify-content: space-around; 
+  }
+`;
+ 
+
+export const ExplaneWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 780px) {
+        align-items: center;
+        width: 90vw;
+        min-width: 0;
+        min-height: 0;
+  }
+`;
+
+export const Explane = styled.div`
+    @media screen and (max-width: 780px) {
+        text-align: center;
+  }
+`;
