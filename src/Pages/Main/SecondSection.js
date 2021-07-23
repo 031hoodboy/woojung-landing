@@ -55,19 +55,26 @@ const Background = styled.div`
 `;
 
 const CardWrapper =  styled.div`
-    width: 1080px;
+    width: 1088px;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media screen and (max-width: 1088px) {
+        width: 90vw;
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const CardBlock =  styled.div`
-    width: 220px;
+    width: 210px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     max-width: 1088px;
     justify-content: space-between;
-    margin: 5vh auto;
+    margin: 5vh 0;
     overflow: hidden;
 `;
 

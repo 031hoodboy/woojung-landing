@@ -1,19 +1,25 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import {TitleWrpper, Remark, Title, PageBlockWrapper } from '../../components/PageStyle';
-import Tech1Img from '../../assets/tech1.png';
-import Tech2Img from '../../assets/tech2.png';
+import {TitleWrpper, Remark, Title, ExTitle, PageBlockWrapper, BlueButton, ExSubTitle } from '../../components/PageStyle';
+import PhtoImg from '../../assets/helmet.png';
 
 const ThirdSection = () => {
     return (
         <Background>
             <PageBlockWrapper>
                 <TitleWrpper>
-                    <Remark>TECHNOLOGY</Remark>
-                    <Title>설비 및 기술 현황</Title>
+                    <Remark>BUSINESS</Remark>
+                    <Title>사업분야</Title>
                 </TitleWrpper>
                 <CardWrapper>
-
+                    <Photo />
+                    <ExplaneWrapper>
+                        <Explane>
+                        <ExTitle>위험물 인허가/설계</ExTitle>
+                        <ExSubTitle>최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고있습니다. 최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고.</ExSubTitle>
+                        </Explane>
+                        <BlueButton>더 보기</BlueButton>
+                    </ExplaneWrapper>
                 </CardWrapper>
             </PageBlockWrapper>
         </Background>
@@ -23,7 +29,7 @@ const ThirdSection = () => {
 const Background = styled.div`
     width: 100vw;
     padding: 10vh 0;
-    background: #FCF8F8;
+    background: #f7fbfd;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
@@ -37,22 +43,25 @@ const CardWrapper = styled.div`
     display: flex;
     width: 90vw;
     max-width: 1088px;
-    justify-content: space-between; 
+    justify-content: space-around; 
+    align-items: center;
     flex-wrap: wrap;
     @media screen and (max-width: 840px) {
+        width: 90vw;
         justify-content: space-around; 
   }
 `;
  
 
-const Card1 = styled.div`
-    max-width: 536px;
-    max-height: 198px;
-    min-height: 198px;
-    min-width: 450px;
-    width: 38vw;
+const Photo = styled.div`
+    width: 30vw;
+    min-width: 500px;
+    max-width: 500px;
+    height: 30vw;
+    min-height: 500px;
+    max-height: 500px;
     background: #fff;
-    background-image: url(${Tech1Img});
+    background-image: url(${PhtoImg});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
@@ -64,13 +73,29 @@ const Card1 = styled.div`
     font-size: 30px;
     font-weight: 600;
     margin-top: 5vh;
-    @media screen and (max-width: 840px) {
+    @media screen and (max-width: 780px) {
         width: 90vw;
+        height: 90vw;
+        min-width: 0;
+        min-height: 0;
   }
 `;
 
-const Card2 = styled(Card1)`
-    background-image: url(${Tech2Img});
+const ExplaneWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 780px) {
+        align-items: center;
+        width: 90vw;
+        min-width: 0;
+        min-height: 0;
+  }
+`;
+
+const Explane = styled.div`
+    @media screen and (max-width: 780px) {
+        text-align: center;
+  }
 `;
 
 export default ThirdSection;

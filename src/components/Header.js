@@ -23,8 +23,8 @@ const Header = () => {
 };
 
 const HeaderBlock = styled.div`
-    width: 85vw;
-    padding: 0 7.5vw;
+    width: 70vw;
+    padding: 0 15vw;
     position: sticky;
     margin: 0 auto;
     top: 0;

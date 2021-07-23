@@ -97,8 +97,9 @@ export const PageTitleWrpper = styled.div`
 `;
 
 export const Remark = styled.div`
-    color: #98272B;
+    color: #05CFFF;
     font-size: 20px;
+    font-weight: 500;
     @media screen and (max-width: ${({ threshold }) =>
       threshold || SMALL_SCREEN_THRESHOLD}px) {
     font-size: 16px;
@@ -108,10 +109,18 @@ export const Remark = styled.div`
 export const Title = styled.div`
     font-size: 38px;
     font-weight: 600;
-    margin: 15px 0 22px 0; 
+    margin: 20px 0 20px 0; 
     @media screen and (max-width: ${({ threshold }) =>
       threshold || SMALL_SCREEN_THRESHOLD}px) {
     font-size: 30px;
+  }
+`;
+
+export const ExTitle = styled(Title)`
+    font-size: 40px;
+    @media screen and (max-width: ${({ threshold }) =>
+      threshold || SMALL_SCREEN_THRESHOLD}px) {
+    font-size: 20px;
   }
 `;
 
@@ -122,6 +131,20 @@ export const SubTitle = styled.div`
     width: 90vw;
     font-size: 18px;
     text-align: center;
+  }
+`;
+
+export const ExSubTitle = styled(SubTitle)`
+    width: 30vw;
+    min-width: 500px;
+    max-width: 500px;
+    font-size: 22px;
+    line-height: 32px;
+    @media screen and (max-width: ${({ threshold }) =>
+      threshold || SMALL_SCREEN_THRESHOLD}px) {
+    width: 90vw;
+    font-size: 16px;
+    min-width: 0;
   }
 `;
 
@@ -218,10 +241,11 @@ export const SubTitle3 = styled(Title)`
 
 export const ButtonWrpper = styled.div`
     margin-top: 5vh;
-    width: 400px;
+    width: 380px;
     display: flex;
     justify-content: space-between;
     @media screen and (max-width: 780px) {
+        max-width: 380px;
         width: 80vw;
     }
 `;
@@ -236,9 +260,23 @@ export const Button = styled.div`
     align-items: center;
     cursor: pointer;
     @media screen and (max-width: 780px) {
-    width: 38vw;
+    max-width: 180px;
+    width: 39vw;
     height: 40px;
     font-size: 14px;
   }
+`;
+
+
+export const BlueButton = styled(Button)`
+    border: 1px solid #05CFFF;
+    color: #05CFFF;
+    margin: 5vh 0;
+`;
+
+
+export const GreenButton = styled(Button)`
+    border: 1px solid #63EA00;
+    color: #63EA00;
 `;
 

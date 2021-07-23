@@ -69,8 +69,8 @@ const HeaderNav = () => {
 };
 
 const HeaderBlock = styled.div`
-    width: 85vw;
-    padding: 0 7.5vw;
+    width: 70vw;
+    padding: 0 15vw;
     position: fixed;
     margin: 0 auto;
     display: flex;

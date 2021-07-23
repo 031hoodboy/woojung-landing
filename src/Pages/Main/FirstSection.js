@@ -50,7 +50,7 @@ const FirstTitle = styled(Title)`
     color: #fff;
     font-size: 50px;
     @media screen and (max-width: 840px) {
-    font-size: 24px;
+    font-size: 7vw;
   }
 `;
 
@@ -58,7 +58,7 @@ const FirstSubTitle = styled(SubTitle)`
     color: #fff;
     @media screen and (max-width: 840px) {
         width: 60vw;
-        font-size: 12px;
+        font-size: 3vw;
   }
 `;
 
