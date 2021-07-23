@@ -259,6 +259,7 @@ export const Button = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin: 5vh 0;
     @media screen and (max-width: 780px) {
     max-width: 180px;
     width: 39vw;
@@ -271,7 +272,6 @@ export const Button = styled.div`
 export const BlueButton = styled(Button)`
     border: 1px solid #05CFFF;
     color: #05CFFF;
-    margin: 5vh 0;
 `;
 
 
