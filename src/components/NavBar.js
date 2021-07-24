@@ -52,7 +52,7 @@ const NavContent = styled.div`
     color: #000;
     font-size: 18px;
     &:hover {
-        color: #930E14;
+        color: #0A109F;
     }
 `;
 

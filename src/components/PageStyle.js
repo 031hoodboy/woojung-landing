@@ -15,7 +15,6 @@ export const PageBlockWrapper = styled.div`
       max-width: ${maxWidth}px;
     `}
   margin: 0px auto;
-  padding: 24px 64px;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -83,6 +82,7 @@ export const TitleWrpper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5vh;
 `;
 
 export const PageTitleWrpper = styled.div`
@@ -106,6 +106,9 @@ export const Remark = styled.div`
   }
 `;
 
+export const GreenRemark = styled(Remark)`
+    color: #63EA00;
+`;
 export const Title = styled.div`
     font-size: 38px;
     font-weight: 600;
@@ -260,6 +263,9 @@ export const Button = styled.div`
     align-items: center;
     cursor: pointer;
     margin: 5vh 0;
+    &:active {
+    transform: scale(0.99);
+    }
     @media screen and (max-width: 780px) {
     max-width: 180px;
     width: 39vw;
@@ -284,13 +290,12 @@ export const GreenButton = styled(Button)`
 export const CardWrapper = styled.div`
     display: flex;
     width: 90vw;
-    max-width: 1088px;
-    justify-content: space-between; 
+    max-width: 1120px;
+    justify-content: space-around; 
     align-items: center;
     flex-wrap: wrap;
     @media screen and (max-width: 840px) {
         width: 90vw;
-        justify-content: space-around; 
   }
 `;
  
