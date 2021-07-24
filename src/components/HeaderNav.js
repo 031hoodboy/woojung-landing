@@ -118,7 +118,7 @@ const NavContent = styled.div`
     padding-top: 15px;
     font-size: 16px;
     &:hover {
-        color: #930E14;
+        color: #0A109F;
     }
 `;
 
