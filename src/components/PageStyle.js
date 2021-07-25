@@ -14,10 +14,10 @@ export const PageBlockWrapper = styled.div`
     css`
       max-width: ${maxWidth}px;
     `}
-  margin: 0px auto;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
+  margin-bottom: 15vh;
   @media screen and (max-width: ${({ threshold }) =>
       threshold || SMALL_SCREEN_THRESHOLD}px) {
     padding: 0;
@@ -88,7 +88,7 @@ export const TitleWrpper = styled.div`
 export const PageTitleWrpper = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 15vh;
     @media screen and (max-width: ${({ threshold }) =>
       threshold || SMALL_SCREEN_THRESHOLD}px) {
@@ -109,6 +109,7 @@ export const Remark = styled.div`
 export const GreenRemark = styled(Remark)`
     color: #63EA00;
 `;
+
 export const Title = styled.div`
     font-size: 38px;
     font-weight: 600;
@@ -153,11 +154,14 @@ export const ExSubTitle = styled(SubTitle)`
 
 
 export const PageTitle = styled(Title)`
-    border-bottom: 2px solid #851F1C;
+    border-bottom: 2px solid #000;
     padding: 10px 5px;
+    margin-left: 20vw;
     @media screen and (max-width: ${({ threshold }) =>
       threshold || SMALL_SCREEN_THRESHOLD}px) {
     font-size: 20px;
+    margin: 0 auto;
+
   }
 `;
 
@@ -315,4 +319,28 @@ export const Explane = styled.div`
     @media screen and (max-width: 780px) {
         text-align: center;
   }
+`;
+
+export const BlueSpan = styled.span`
+  color: #05CFFF;
+  font-weight: 600;
+`;
+
+export const GreenSpan = styled.span`
+  color: #63EA00;
+  font-weight: 600;
+`;
+
+export const Date = styled.span`
+  font-size: 25px;
+  font-weight: 600;
+  display: flex;
+  padding: 1vh 0;
+  @media screen and (max-width: 1480px) {
+    font-size: 23px;
+  }
+`;
+
+export const Space = styled.span`
+  width: 1vw;
 `;

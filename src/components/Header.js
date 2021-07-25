@@ -34,6 +34,10 @@ const HeaderBlock = styled.div`
     color: #4a5568;
     background: #fff;
     z-index: 2;
+    @media screen and (max-width: 1024px) {
+        width: 90vw;
+    padding: 0 5vw;
+  }
 `;
 
 const LogoWrapper = styled.div`
