@@ -7,6 +7,10 @@ import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/aboutbackground.png';
 import {PageTitleWrpper, PageTitle, NavBarWrapper, NavBlock, SelectNavBlock, PageSubTitle } from '../../components/PageStyle';
 import styled from '@emotion/styled';
+import LicenseImg1 from '../../assets/license1.png';
+import LicenseImg2 from '../../assets/license2.png';
+import LicenseImg3 from '../../assets/license3.png';
+import LicenseImg4 from '../../assets/license4.png';
 
 const BusinessPartner = () => {
     return (
@@ -14,41 +18,44 @@ const BusinessPartner = () => {
             <Header/>
             <MainImg>
                 회사소개
-                <NavBarWrapper>
+            </MainImg>
+            <NavBarWrapper>
                     <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>ceo인사말</NavBlock>
-                    </Link>
-                    <Link to="/vision" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>비전</NavBlock>
-                    </Link>
-                    <Link to="/history" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>연혁</NavBlock>
+                        <NavBlock>회사소개</NavBlock>
                     </Link>
                     <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock>사업파트너</SelectNavBlock>
-                    </Link>
-                    <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>오시는 길</NavBlock>
+                        <SelectNavBlock>사업자등록증 및 면허증</SelectNavBlock>
                     </Link>
                     <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>조직도</NavBlock>
                     </Link>
-                </NavBarWrapper>
-            </MainImg>
+                    <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
+                        <NavBlock>찾아오시는 길</NavBlock>
+                    </Link>
+            </NavBarWrapper>
             <PageTitleWrpper>
-                <PageTitle>사업파트너</PageTitle>
-                <PageSubTitle>더 나은 세상을 만들어가는 일,<br/>글로벌 바이오제약 기업 메디톡스가 먼저 시작합니다.</PageSubTitle>
+                <PageTitle>사업자등록증 및 면허증</PageTitle>
             </PageTitleWrpper>
+            <BarkWrapper>
                 <Blockwrapper>
-                    <Block></Block>
-                    <Block></Block>
-                    <Block></Block>
-                    <Block></Block>
-                    <Block></Block>
-                    <Block></Block>
-                    <Block></Block>
-                    <Block></Block>
+                    <RemarkWrapper>
+                        <Remark>사업자등록증</Remark>
+                        <Block></Block>
+                    </RemarkWrapper>
+                    <RemarkWrapper>
+                        <Remark>소방시설업등록증</Remark>
+                        <Block2></Block2>
+                    </RemarkWrapper>
+                    <RemarkWrapper>
+                        <Remark>소방시설관리업등록증</Remark>
+                        <Block3></Block3>
+                    </RemarkWrapper>
+                    <RemarkWrapper>
+                        <Remark>소방시설관리업등록증</Remark>
+                        <Block4></Block4>
+                    </RemarkWrapper>
                 </Blockwrapper>
+            </BarkWrapper>
             <Footer/>
         </PageWrapper>
     );
@@ -75,12 +82,19 @@ const MainImg = styled.div`
   }
 `;
 
+const BarkWrapper = styled.div`
+    margin-bottom: 10vh;
+    @media screen and (max-width: 1024px) {
+        width: 90vw;
+        margin: 0 auto 20vh auto;
+  }
+`;
+
 const Blockwrapper = styled.div`
     width: 1088px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 5vh auto 20vh auto;
+    margin: 5vh auto 10vh auto;
     @media screen and (max-width: 1220px) {
         width: 90vw;
         justify-content: space-around;
@@ -88,14 +102,50 @@ const Blockwrapper = styled.div`
 `;
 
 const Block = styled.div`
-    border: 1px solid #D0D0D0;
-    width: 260px;
-    height: 140px;
-    margin-bottom: 3vh;
-    @media screen and (max-width: 1220px) {
+    width: 353px;
+    height: 425px;
+    margin: 0;
+    background-image: url(${LicenseImg1});
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    @media screen and (max-width: 780px) {
     width: 42vw;
-    max-width: 174px;
-    height: 83px;
+    height: 50vw;
+    margin: 0;
+  }
+`;
+
+const Block2= styled(Block)`
+    background-image: url(${LicenseImg2});
+`;
+
+const Block3= styled(Block)`
+    background-image: url(${LicenseImg3});
+`;
+
+const Block4= styled(Block)`
+    background-image: url(${LicenseImg4});
+`;
+
+const Remark = styled.div`
+    font-size: 18px;
+    padding: 20px;
+    border-bottom: 1px solid #D0D0D0;
+    text-align: center;
+    @media screen and (max-width: 780px) {
+        padding: 1vw 3vw;
+        font-size: 3.2vw;
+  }
+`;
+
+const RemarkWrapper = styled.div`
+    border: 1px solid #DBDBDB;
+    margin-bottom: 5vh;
+    margin-right: 7.5px;
+    @media screen and (max-width: 1220px) {
+        margin: 0;
+        margin-bottom: 5vh;
   }
 `;
 

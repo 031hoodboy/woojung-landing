@@ -20,7 +20,7 @@ const OrganizeChart = () => {
                     <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>회사소개</NavBlock>
                     </Link>
-                    <Link to="/vision" style={{textDecoration: 'none', color: "#000"}}>
+                    <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>사업자등록증 및 면허증</NavBlock>
                     </Link>
                     <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>

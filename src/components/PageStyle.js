@@ -89,7 +89,15 @@ export const PageTitleWrpper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 1088px;
+    margin: 0 auto;
     margin-top: 15vh;
+    @media screen and (max-width: 1207px) {
+      width: 100vw;
+      display: flex;
+
+      align-items: center;
+  }
     @media screen and (max-width: ${({ threshold }) =>
       threshold || SMALL_SCREEN_THRESHOLD}px) {
     margin-top: 10vh;
@@ -156,7 +164,6 @@ export const ExSubTitle = styled(SubTitle)`
 export const PageTitle = styled(Title)`
     border-bottom: 2px solid #000;
     padding: 10px 5px;
-    margin-left: 20vw;
     @media screen and (max-width: ${({ threshold }) =>
       threshold || SMALL_SCREEN_THRESHOLD}px) {
     font-size: 20px;
