@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import {Link} from 'react-router-dom';
-
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/aboutbackground.png';
 import {PageTitleWrpper, PageTitle, NavBarWrapper, NavBlock, SelectNavBlock} from '../../components/PageStyle';
@@ -16,27 +15,21 @@ const OrganizeChart = () => {
             <Header/>
             <MainImg>
                 회사소개
-                <NavBarWrapper>
+            </MainImg>
+            <NavBarWrapper>
                     <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>ceo인사말</NavBlock>
+                        <NavBlock>회사소개</NavBlock>
                     </Link>
                     <Link to="/vision" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>비전</NavBlock>
-                    </Link>
-                    <Link to="/history" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>연혁</NavBlock>
-                    </Link>
-                    <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>사업파트너</NavBlock>
-                    </Link>
-                    <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>오시는 길</NavBlock>
+                        <NavBlock>사업자등록증 및 면허증</NavBlock>
                     </Link>
                     <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
                         <SelectNavBlock>조직도</SelectNavBlock>
                     </Link>
-                </NavBarWrapper>
-            </MainImg>
+                    <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
+                        <NavBlock>찾아오시는 길</NavBlock>
+                    </Link>
+            </NavBarWrapper>
             <PageTitleWrpper>
                 <PageTitle>조직도</PageTitle>
             </PageTitleWrpper>

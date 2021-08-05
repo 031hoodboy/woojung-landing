@@ -97,6 +97,7 @@ const HelloWrapper = styled.div`
     width: 60vw;
     margin: 5vh 0 5vh 20vw;
     justify-content: space-between;
+    align-items: flex-end;
     @media screen and (max-width: 780px) {
         justify-content: center;
   }
@@ -148,11 +149,15 @@ const Profile = styled.div`
 `;
 
 const Descrip = styled.div`
+    width: 38vw;
     font-size: 18px;
     line-height: 35px;
     font-weight: 300;
     @media screen and (max-width: 1480px) {
         font-size: 16px;
+  }
+  @media screen and (max-width: 1024px) {
+        width: 70vw;
   }
   @media screen and (max-width: 780px) {
        width: 90vw;

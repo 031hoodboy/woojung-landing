@@ -165,50 +165,48 @@ export const PageTitle = styled(Title)`
   }
 `;
 
-
 export const NavBarWrapper = styled.div`
-    width: 60vw;
+    width: 100vw;
     height: 58px;
     display: flex;
+    justify-content: center;
     margin: 0 auto;
-    position: absolute;
     color: #000;
     font-size: 16px;
     font-weight: 400;
     top: calc(30vh + 56px);
-    box-shadow:  0px 3px 6px #d9d9d9;
-    @media screen and (max-width: 1312px) {
-    width: calc(90vw + 3px);
-    height: 80px; 
-    flex-wrap: wrap;
-    top: calc(30vh + 42px); 
-    }
-    @media screen and (max-width: 1024px) {
-        width: calc(90vw + 3px);
+    border-bottom: 1px solid #D9D9D9;
+    align-items: center;
+    @media screen and (max-width: 780px) {
         top: calc(23vh); 
+        height: 50px;
     }
 `;
 
 export const NavBlock = styled.div`
-    width: 10vw;
-    height: 58px;
+    width: 15vw;
+    min-width: 200px;
     border-left: 1px solid #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
-    border-bottom: 1px solid #D9D9D9;
-    @media screen and (max-width: 1312px) {
-    width: 30vw;
-    height: 40px; 
+    font-weight: 300;
+    @media screen and (max-width: 780px) {
+        display: none;
     }
 `;
 
 export const SelectNavBlock = styled(NavBlock)`
-    background: #930E14;
-    color: #fff;
-    border-left: 1px solid #930E14;
+    font-weight: 500;
+    color: #000;
+    border-left: 1px solid #D9D9D9;
+    @media screen and (max-width: 780px) {
+        font-size: 18px;
+        width: 100vw;
+        display: flex;
+    }
 `;
+
 
 export const PageSubTitle = styled.div`
   font-size: 30px;
