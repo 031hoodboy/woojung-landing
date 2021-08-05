@@ -5,16 +5,20 @@ import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/businessdomainbackground.png';
-import {PageTitleWrpper, PageTitle, SubTitle2 } from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, BlueSpan, GreenSpan } from '../../components/PageStyle';
 import styled from '@emotion/styled';
+import ProfileImg from '../../assets/dangerousgoodslicense.png';
 
 const Manufacture = () => {
     return (
         <PageWrapper>
             <Header/>
             <MainImg>
-                사업영역
-                <NavBarWrapper>
+                <MainImgTitle>
+                    사업분야
+                </MainImgTitle>
+            </MainImg>
+            <NavBarWrapper>
                     <Link to="/processing-business" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>정밀가공사업</NavBlock>
                     </Link>
@@ -25,26 +29,24 @@ const Manufacture = () => {
                         <NavBlock>2차전지소재사업</NavBlock>
                     </Link>
                 </NavBarWrapper>
-            </MainImg>
             <PageTitleWrpper>
-                <PageTitle>장비제조사업</PageTitle>
-                <SubTitle2>
-                    반도체 장비 및 디스플레이 장비
-                </SubTitle2>
+                <PageTitle>위험물 인허가/설계</PageTitle>
             </PageTitleWrpper>
-            <BarkWrapper>
-                <Bar>Inerface Board [부품공급]</Bar>
-                <Blockwrapper>
-                    <Block></Block>
-                </Blockwrapper>
-                <Bar>Manipulator 제작</Bar>
-                <Blockwrapper>
-                <RemarkWrapper>
-                        <Block></Block>
-                        <Remark>Test Handler와 Test Docking Machine Docking 장비</Remark>
-                    </RemarkWrapper>                
-                </Blockwrapper>
-            </BarkWrapper>
+            <HelloWrapper>
+                    <Profile/>
+                    <Descrip>
+                        우정에이치앤씨(주)는 풍부한 경험을 겸비한 회사로써, 위험물안전관리법에 의거한 제조소등의 위치/구조 또는 설비에 적합하도록 <BlueSpan>설치허가 및 변경허가의 대행 업무</BlueSpan>를 해드리고 있습니다.
+                        <br/>
+                        <br/>
+                        설치허가 및 변경허가 접수 후, 완공검사 필증 교부까지 마무리 지어드립니다. 또한 고객의 작업장에 알맞도록 지정배수를 계산하여 품목변경도 해드리고 있으며 제조소 등의 <GreenSpan>용도폐지, 지위승계 신고 대행</GreenSpan>도 해드리고 있습니다.
+                        <br/>
+                        <br/>
+                        위험물의 인허가에 관한 신뢰할 수 있는 인허가를 약속드리며, 위험물 시설의 인허가 절차 등에 관한 많은 어려움을 가지고 있었을 것이라 여깁니다.
+                        <br/>
+                        <br/>
+                        당사는 <BlueSpan>위험물 설계, 시공, 완공까지 전반적인 종합컨설팅회사</BlueSpan>로써 항상 신뢰할 수 있는 서비스로 귀사의 부가가치 창출에 기여하겠습니다.
+                    </Descrip>
+                </HelloWrapper>
             <Footer/>
         </PageWrapper>
     );
@@ -59,7 +61,6 @@ const MainImg = styled.div`
     background-repeat: no-repeat;
     background-position: center; 
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
     color: #fff;
@@ -71,105 +72,48 @@ const MainImg = styled.div`
   }
 `;
 
-const NavBarWrapper = styled.div`
-    width: 60vw;
-    height: 58px;
-    display: flex;
-    margin: 0 auto;
-    position: absolute;
-    color: #000;
-    font-size: 16px;
-    font-weight: 400;
-    top: calc(30vh + 56px);
-    box-shadow:  0px 3px 6px #d9d9d9;
-
-    @media screen and (max-width: 1024px) {
-        width: calc(90vw + 3px);
-        top: calc(23vh); 
-        height: 40px;
-    }
-`;
-
-const NavBlock = styled.div`
-    width: 20vw;
-    height: 58px;
-    border-left: 1px solid #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    border-bottom: 1px solid #D9D9D9;
-    @media screen and (max-width: 1024px) {
-    width: 30vw;
-    height: 40px; 
-    font-size: 14px;
-    }
-`;
-
-const SelectNavBlock = styled(NavBlock)`
-    background: #930E14;
-    color: #fff;
-    border-left: 1px solid #930E14;
-`;
-
-const Bar = styled.div`
-    width: 1048px;
-    height: 52px;
-    padding: 0 20px;
-    background: #F2F2F2;
-    margin: 10vh auto 5vh auto;
-    color: #930E14;
-    display: flex;
-    align-items: center;
-    @media screen and (max-width: 1024px) {
-        width: calc(90vw - 40px);
-        height: 2vh;
-        min-height: 30px;
-        margin: 5vh 0;
+const Descrip = styled.div`
+    max-width: 640px;
+    font-size: 20px;
+    line-height: 32px;
+    @media screen and (max-width: 1155px) {
+        margin-top: 5vh;
+  }
+    @media screen and (max-width: 780px) {
         font-size: 16px;
   }
 `;
 
-const BarkWrapper = styled.div`
-    margin-bottom: 10vh;
-    @media screen and (max-width: 1024px) {
-        width: 90vw;
-        margin: 0 auto 20vh auto;
-  }
-`;
-
-
-const Blockwrapper = styled.div`
-    width: 1088px;
+const HelloWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 5vh auto 10vh auto;
-    @media screen and (max-width: 1220px) {
-        width: 90vw;
-        justify-content: space-around;
-  }
-`;
-
-const Block = styled.div`
-    border: 1px solid #D0D0D0;
-    width: 1088px;
-    height: 718px;
-    margin-bottom: 3vh;
-    @media screen and (max-width: 1220px) {
     width: 90vw;
-    max-width: 360px;
-    height: 208px;
+    max-width: 1100px;
+    margin: 5vh auto 15vh auto;
+    justify-content: space-between;
+    @media screen and (max-width: 1155px) {
+        justify-content: center;
   }
 `;
 
-const Remark = styled.div`
-    font-size: 18px;
-    margin-bottom: 5vh;
+const Profile = styled.div`
+    width: 400px;
+    height: 450px;
+    background: #282D27;
+    background-image: url(${ProfileImg});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    @media screen and (max-width: 840px) {
+        max-width: 640px;
+        width: 90vw;
+        height: 60vw;
+  }
 `;
 
-const RemarkWrapper = styled.div`
-
-`;
 
 export default Manufacture;
