@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import {Link} from 'react-router-dom';
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/aboutbackground.png';
-import {PageTitleWrpper, PageTitle, NavBarWrapper, NavBlock, SelectNavBlock} from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, NavBarWrapper, NavBlock, SelectNavBlock, MainImgTitle} from '../../components/PageStyle';
 import styled from '@emotion/styled';
 // import ProfileImg from '../../assets/profile.png';
 import Chart from '../../assets/organizechart.png'
@@ -14,7 +14,9 @@ const OrganizeChart = () => {
         <PageWrapper>
             <Header/>
             <MainImg>
-                회사소개
+                <MainImgTitle>
+                    회사소개
+                </MainImgTitle>
             </MainImg>
             <NavBarWrapper>
                     <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
@@ -48,7 +50,6 @@ const MainImg = styled.div`
     background-repeat: no-repeat;
     background-position: center; 
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
     color: #fff;

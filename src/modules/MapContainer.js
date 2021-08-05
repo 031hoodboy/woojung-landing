@@ -9,7 +9,7 @@ export default function Map() {
   const mapscript = () => {
     let container = document.getElementById("map");
     let options = {
-      center: new kakao.maps.LatLng(36.867091766051, 127.12488130338),
+      center: new kakao.maps.LatLng(36.8221957808745, 127.125855815698),
       level: 4,
     };
     //map
@@ -17,8 +17,8 @@ export default function Map() {
 
     //마커가 표시 될 위치
     let markerPosition = new kakao.maps.LatLng(
-      36.867091766051,
-      127.12488130338
+      36.8221957808745,
+      127.125855815698
     );
 
     // 마커를 생성

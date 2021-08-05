@@ -8,7 +8,6 @@ import BackgroundImg from '../../assets/aboutbackground.png';
 import {PageTitleWrpper, PageTitle, PageBlockWrapper, BlueSpan, GreenSpan, Date, Space } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import ProfileImg from '../../assets/profile.png';
-import SignImg from '../../assets/sign.png';
 
 const Greet = () => {
     return (

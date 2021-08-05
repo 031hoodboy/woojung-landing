@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/aboutbackground.png';
-import {PageTitleWrpper, PageTitle, NavBarWrapper, NavBlock, SelectNavBlock, PageSubTitle } from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, NavBarWrapper, NavBlock, SelectNavBlock, MainImgTitle } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import LicenseImg1 from '../../assets/license1.png';
 import LicenseImg2 from '../../assets/license2.png';
@@ -17,7 +17,9 @@ const BusinessPartner = () => {
         <PageWrapper>
             <Header/>
             <MainImg>
-                회사소개
+                <MainImgTitle>
+                    회사소개
+                </MainImgTitle>
             </MainImg>
             <NavBarWrapper>
                     <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
@@ -70,7 +72,6 @@ const MainImg = styled.div`
     background-repeat: no-repeat;
     background-position: center; 
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
     color: #fff;

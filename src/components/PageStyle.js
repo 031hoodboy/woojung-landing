@@ -77,6 +77,12 @@ export const TitleRow = styled.div`
   margin-bottom: 24px;
 `;
 
+export const MainImgTitle = styled.div`
+margin-left: 20vw;
+@media screen and (max-width: 780px) {
+    margin: 0 auto;
+}
+`;
 
 export const TitleWrpper = styled.div`
     display: flex;
