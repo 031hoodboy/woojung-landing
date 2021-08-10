@@ -19,7 +19,7 @@ const Manufacture = () => {
                 </MainImgTitle>
             </MainImg>
             <NavBarWrapper>
-                    <Link to="/manufacture" style={{textDecoration: 'none', color: "#000"}}>
+                    <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
                         <SelectNavBlock>위험물 인허가/설계</SelectNavBlock>
                     </Link>
                     <Link to="/management-agency" style={{textDecoration: 'none', color: "#000"}}>

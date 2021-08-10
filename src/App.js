@@ -7,7 +7,7 @@ import BusinessPartner from './Pages/About/BusinessPartner';
 import Vision from './Pages/About/Vision';
 import WayToCome from './Pages/About/WayToCome';
 import OrganizeChart from './Pages/About/OrganizeChart';
-import Manufacture from './Pages/BusinessDomain/Manufacture';
+import License from './Pages/BusinessDomain/License';
 import ProcessingBusiness from './Pages/BusinessDomain/ProcessingBusiness';
 import SecondaryBattery from './Pages/BusinessDomain/SecondaryBattery';
 import Measure from './Pages/FacilityStatus/Measure';
@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/business-partner" component={BusinessPartner}  />
         <Route path="/way-to-come" component={WayToCome}  />
         <Route path="/organize-chart" component={OrganizeChart}  />
-        <Route path="/manufacture" component={Manufacture}  />
+        <Route path="/license" component={License}  />
         <Route path="/management-agency" component={ManagementAgency}  />
         <Route path="/inspection" component={Inspection}  />
 
