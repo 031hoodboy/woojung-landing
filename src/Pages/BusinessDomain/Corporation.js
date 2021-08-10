@@ -5,9 +5,9 @@ import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/businessdomainbackground.png';
-import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, BlueSpan, GreenSpan } from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, RedSpan } from '../../components/PageStyle';
 import styled from '@emotion/styled';
-import ProfileImg from '../../assets/dangerousgoodslicense.png';
+import ProfileImg from '../../assets/helmet.png';
 
 const AutomotiveParts = () => {
     return (
@@ -44,16 +44,16 @@ const AutomotiveParts = () => {
             <HelloWrapper>
                     <Profile/>
                     <Descrip>
-                        우정에이치앤씨(주)는 풍부한 경험을 겸비한 회사로써, 위험물안전관리법에 의거한 제조소등의 위치/구조 또는 설비에 적합하도록 <BlueSpan>설치허가 및 변경허가의 대행 업무</BlueSpan>를 해드리고 있습니다.
+                        위험물의 저장 및 취급시설은 위험물안전관리법에서 정하는 기준에 적합하게 설치, 유지하여야 합니다. 위험물설비 및 공사는 관련 기준을 잘 숙지하고 설계도서에 의하되 실무경험이 많은 업체에 의뢰하는 것이 시행착오를 줄이고 경비를 절감하는 효과를 얻을 수 있습니다.
                         <br/>
                         <br/>
-                        설치허가 및 변경허가 접수 후, 완공검사 필증 교부까지 마무리 지어드립니다. 또한 고객의 작업장에 알맞도록 지정배수를 계산하여 품목변경도 해드리고 있으며 제조소 등의 <GreenSpan>용도폐지, 지위승계 신고 대행</GreenSpan>도 해드리고 있습니다.
+                        우정에이치앤씨(주)는 다양한 시공 경험을 바탕으로 사회적 요구에 부응하는 기업으로 나아가고 있습니다.
                         <br/>
                         <br/>
-                        위험물의 인허가에 관한 신뢰할 수 있는 인허가를 약속드리며, 위험물 시설의 인허가 절차 등에 관한 많은 어려움을 가지고 있었을 것이라 여깁니다.
+                        우정에이치앤씨(주)는 위험물 설계 전문업체로서 현장여건에 가장 <RedSpan>적합한 설계도서를 작성</RedSpan>하고, <RedSpan>설계도서를 토대로 책임시공</RedSpan>을 약속합니다.
                         <br/>
                         <br/>
-                        당사는 <BlueSpan>위험물 설계, 시공, 완공까지 전반적인 종합컨설팅회사</BlueSpan>로써 항상 신뢰할 수 있는 서비스로 귀사의 부가가치 창출에 기여하겠습니다.
+                        당사는 신규 설치 및 변경 공사 뿐만 아니라 제조소 등의 <RedSpan>용도폐지 공사</RedSpan>까지 위험물 전 반에 대한 <RedSpan>공사업무를 수행</RedSpan>하고 있습니다.
                     </Descrip>
                 </HelloWrapper>
             <Footer/>
@@ -82,8 +82,8 @@ const MainImg = styled.div`
 `;
 
 const Descrip = styled.div`
-    max-width: 640px;
-    font-size: 20px;
+    max-width: 536px;
+    font-size: 18px;
     line-height: 32px;
     @media screen and (max-width: 1155px) {
         margin-top: 5vh;
@@ -106,8 +106,8 @@ const HelloWrapper = styled.div`
 `;
 
 const Profile = styled.div`
-    width: 400px;
-    height: 450px;
+    width: 508px;
+    height: 536px;
     background: #282D27;
     background-image: url(${ProfileImg});
     background-size: cover;

@@ -191,7 +191,7 @@ export const NavBarWrapper = styled.div`
     top: calc(30vh + 56px);
     border-bottom: 1px solid #D9D9D9;
     align-items: center;
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 1207px) {
         top: calc(23vh); 
         height: 50px;
     }
@@ -205,7 +205,7 @@ export const NavBlock = styled.div`
     justify-content: center;
     align-items: center;
     font-weight: 300;
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 1207px) {
         display: none;
     }
 `;
@@ -214,7 +214,7 @@ export const SelectNavBlock = styled(NavBlock)`
     font-weight: 700;
     color: #000;
     border-left: 1px solid #D9D9D9;
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 1207px) {
         font-size: 18px;
         width: 100vw;
         display: flex;
@@ -340,6 +340,11 @@ export const BlueSpan = styled.span`
 
 export const GreenSpan = styled.span`
   color: #63EA00;
+  font-weight: 600;
+`;
+
+export const RedSpan = styled.span`
+  color: #ED412E;
   font-weight: 600;
 `;
 

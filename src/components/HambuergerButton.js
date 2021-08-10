@@ -26,22 +26,13 @@ const HamburgerButton = () => {
                     <MenuContent>회사소개</MenuContent>
                 </Link>  
                 <Link to="/processing-business" style={{textDecoration: 'none', color: "#000"}}>
-                    <MenuContent>사업영역</MenuContent>
+                    <MenuContent>사업분야</MenuContent>
                 </Link>  
                 <Link to="/processing" style={{textDecoration: 'none', color: "#000"}}>
-                    <MenuContent>설비현황</MenuContent>    
+                    <MenuContent>견적의뢰</MenuContent>    
                 </Link> 
                 <Link to="/introduce" style={{textDecoration: 'none', color: "#000"}}>
-                    <MenuContent>기술현황</MenuContent>    
-                </Link> 
-                <Link to="/news" style={{textDecoration: 'none', color: "#000"}}>
-                    <MenuContent>홍보센터</MenuContent>    
-                </Link> 
-                <Link to="/quote-contact" style={{textDecoration: 'none', color: "#000"}}>
-                    <MenuContent>고객지원</MenuContent>    
-                </Link> 
-                <Link to="/notice" style={{textDecoration: 'none', color: "#000"}}>
-                    <MenuContent>공지사항</MenuContent>    
+                    <MenuContent>커뮤니티</MenuContent>    
                 </Link> 
             </Menu2>
         </ModalWrapper>

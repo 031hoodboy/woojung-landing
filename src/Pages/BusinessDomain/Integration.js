@@ -7,7 +7,7 @@ import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/businessdomainbackground.png';
 import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, BlueSpan, GreenSpan } from '../../components/PageStyle';
 import styled from '@emotion/styled';
-import ProfileImg from '../../assets/dangerousgoodslicense.png';
+import ProfileImg from '../../assets/calculator.png';
 
 const AutomotiveParts = () => {
     return (
