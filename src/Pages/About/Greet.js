@@ -84,28 +84,39 @@ const MainImg = styled.div`
 `;
 
 const MainImgTitle = styled.div`
-    margin-left: 20vw;
-    @media screen and (max-width: 780px) {
-        margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 1088px;
+    margin: 0 auto;
+    @media screen and (max-width: 1207px) {
+      width: 100vw;
+      display: flex;
+
+      align-items: center;
   }
 `;
 
 const HelloWrapper = styled.div`
     display: flex;
     flex-wrap: wrap-reverse;
-    width: 60vw;
-    margin: 5vh 0 5vh 20vw;
+    width: 1088px;
+    margin: 5vh auto 5vh auto;
     justify-content: space-between;
     align-items: flex-end;
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 1208px) {
+        width: 80vw;
         justify-content: center;
+  }
+    @media screen and (max-width: 780px) {
+        width: 90vw;
   }
 `;
 
 const ProfileWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+
 `;
 
 const Hello = styled.div`
@@ -129,12 +140,7 @@ const Profile = styled.div`
     align-items: flex-end;
     justify-content: center;
     flex-direction: column;
-    margin: 0 auto;
     margin-bottom: 3vh;
-    @media screen and (max-width: 1480px) {
-        width: 250px;
-        height: 375px;
-  }
     @media screen and (max-width: 1024px) {
        min-width: 60vw;
        height: 45vw;
@@ -148,13 +154,11 @@ const Profile = styled.div`
 `;
 
 const Descrip = styled.div`
-    width: 38vw;
+    width: 47vw;
     font-size: 18px;
     line-height: 35px;
     font-weight: 300;
-    @media screen and (max-width: 1480px) {
-        font-size: 16px;
-  }
+    max-width: 755px;
   @media screen and (max-width: 1024px) {
         width: 70vw;
   }
@@ -205,7 +209,7 @@ const NavBlock = styled.div`
 `;
 
 const SelectNavBlock = styled(NavBlock)`
-    font-weight: 500;
+    font-weight: 700;
     color: #000;
     border-left: 1px solid #D9D9D9;
     @media screen and (max-width: 780px) {

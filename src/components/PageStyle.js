@@ -9,19 +9,20 @@ export const PageWrapper = styled.div`
 
 export const PageBlockWrapper = styled.div`
   /* width: 80vw; */
-  ${({ maxWidth = 1080 }) =>
-    maxWidth &&
-    css`
-      max-width: ${maxWidth}px;
-    `}
+  width: 1088px;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  margin: 0 auto;
   margin-bottom: 15vh;
+  @media screen and (max-width: 1208px) {
+        width: 80vw;
+  }
   @media screen and (max-width: ${({ threshold }) =>
       threshold || SMALL_SCREEN_THRESHOLD}px) {
+    width: 90vw;
     padding: 0;
   }
+
 `;
 
 export const PageBlockWithTitleContentWrapper = styled.div`
@@ -210,7 +211,7 @@ export const NavBlock = styled.div`
 `;
 
 export const SelectNavBlock = styled(NavBlock)`
-    font-weight: 500;
+    font-weight: 700;
     color: #000;
     border-left: 1px solid #D9D9D9;
     @media screen and (max-width: 780px) {
