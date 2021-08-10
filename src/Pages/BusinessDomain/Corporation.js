@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/businessdomainbackground.png';
-import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, RedSpan } from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, RedSpanBold } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import ProfileImg from '../../assets/helmet.png';
 
@@ -50,10 +50,10 @@ const AutomotiveParts = () => {
                         우정에이치앤씨(주)는 다양한 시공 경험을 바탕으로 사회적 요구에 부응하는 기업으로 나아가고 있습니다.
                         <br/>
                         <br/>
-                        우정에이치앤씨(주)는 위험물 설계 전문업체로서 현장여건에 가장 <RedSpan>적합한 설계도서를 작성</RedSpan>하고, <RedSpan>설계도서를 토대로 책임시공</RedSpan>을 약속합니다.
+                        우정에이치앤씨(주)는 위험물 설계 전문업체로서 현장여건에 가장 <RedSpanBold>적합한 설계도서를 작성</RedSpanBold>하고, <RedSpanBold>설계도서를 토대로 책임시공</RedSpanBold>을 약속합니다.
                         <br/>
                         <br/>
-                        당사는 신규 설치 및 변경 공사 뿐만 아니라 제조소 등의 <RedSpan>용도폐지 공사</RedSpan>까지 위험물 전 반에 대한 <RedSpan>공사업무를 수행</RedSpan>하고 있습니다.
+                        당사는 신규 설치 및 변경 공사 뿐만 아니라 제조소 등의 <RedSpanBold>용도폐지 공사</RedSpanBold>까지 위험물 전 반에 대한 <RedSpanBold>공사업무를 수행</RedSpanBold>하고 있습니다.
                     </Descrip>
                 </HelloWrapper>
             <Footer/>

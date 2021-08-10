@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/businessdomainbackground.png';
-import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, BlueSpan, GreenSpan } from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, RedSpan } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import ProfileImg from '../../assets/calculator.png';
 
@@ -44,16 +44,25 @@ const AutomotiveParts = () => {
             <HelloWrapper>
                     <Profile/>
                     <Descrip>
-                        우정에이치앤씨(주)는 풍부한 경험을 겸비한 회사로써, 위험물안전관리법에 의거한 제조소등의 위치/구조 또는 설비에 적합하도록 <BlueSpan>설치허가 및 변경허가의 대행 업무</BlueSpan>를 해드리고 있습니다.
+                        건축과 설비를 동시에 작업, 타 전문업체에 비해 신속 정확, 외주비 절감효과, 공사 수주를 위한 경쟁력 있는 입찰 내역, 폭넓은 도면과 현장 이해로 보다 상세한 실행 내역, 설계 도면을 가장 충실하게 반영한 설계(예산) 내역 등 이 모두를 위해 더욱 열과 성의를 다하겠습니다.
                         <br/>
                         <br/>
-                        설치허가 및 변경허가 접수 후, 완공검사 필증 교부까지 마무리 지어드립니다. 또한 고객의 작업장에 알맞도록 지정배수를 계산하여 품목변경도 해드리고 있으며 제조소 등의 <GreenSpan>용도폐지, 지위승계 신고 대행</GreenSpan>도 해드리고 있습니다.
                         <br/>
                         <br/>
-                        위험물의 인허가에 관한 신뢰할 수 있는 인허가를 약속드리며, 위험물 시설의 인허가 절차 등에 관한 많은 어려움을 가지고 있었을 것이라 여깁니다.
                         <br/>
+                        ▲ <RedSpan>물량 산출 (건축, 설비, 통신, 소방)</RedSpan>
                         <br/>
-                        당사는 <BlueSpan>위험물 설계, 시공, 완공까지 전반적인 종합컨설팅회사</BlueSpan>로써 항상 신뢰할 수 있는 서비스로 귀사의 부가가치 창출에 기여하겠습니다.
+                        ▲ <RedSpan>입찰 내역</RedSpan> 
+                        <br/>
+                        ▲ <RedSpan>실행 내역</RedSpan>
+                        <br/>
+                        ▲ <RedSpan>설계 내역</RedSpan>
+                        <br/>
+                        ▲ <RedSpan>도급 내역</RedSpan> 
+                        <br/>
+                        ▲ <RedSpan>설계 변경</RedSpan>
+                        <br/>
+                        ▲ <RedSpan>컨설팅, 기타</RedSpan>
                     </Descrip>
                 </HelloWrapper>
             <Footer/>
@@ -82,8 +91,8 @@ const MainImg = styled.div`
 `;
 
 const Descrip = styled.div`
-    max-width: 640px;
-    font-size: 20px;
+    max-width: 536px;
+    font-size: 18px;
     line-height: 32px;
     @media screen and (max-width: 1155px) {
         margin-top: 5vh;
@@ -106,8 +115,8 @@ const HelloWrapper = styled.div`
 `;
 
 const Profile = styled.div`
-    width: 400px;
-    height: 450px;
+    width: 508px;
+    height: 536px;
     background: #282D27;
     background-image: url(${ProfileImg});
     background-size: cover;

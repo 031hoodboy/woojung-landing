@@ -345,9 +345,12 @@ export const GreenSpan = styled.span`
 
 export const RedSpan = styled.span`
   color: #ED412E;
-  font-weight: 600;
 `;
 
+export const RedSpanBold = styled.span`
+  color: #ED412E;
+  font-weight: 600;
+`;
 export const Date = styled.span`
   font-size: 25px;
   font-weight: 600;
