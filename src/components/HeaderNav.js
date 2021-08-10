@@ -26,14 +26,23 @@ const HeaderNav = () => {
                     </Link>
                 </Navigator>
                 <Navigator>
-                    <Link to="/processing-business" style={{textDecoration: 'none'}}>
-                        <NavContent>정밀가공사업</NavContent>
+                    <Link to="/license" style={{textDecoration: 'none'}}>
+                        <NavContent type="trigger">위험물 인허가/설계</NavContent>
                     </Link>
-                    <Link to="/manufacture" style={{textDecoration: 'none'}}>
-                        <NavContent type="trigger">장비제조사업</NavContent>
+                    <Link to="/management-agency" style={{textDecoration: 'none'}}>
+                        <NavContent type="trigger">위험물 안전관리대행</NavContent>
                     </Link>
-                    <Link to="/secondary-battery" style={{textDecoration: 'none'}}>
-                        <NavContent>이차전지소재사업</NavContent>
+                    <Link to="/inspection" style={{textDecoration: 'none'}}>
+                        <NavContent>소방시설안전관리/점검</NavContent>
+                    </Link>
+                    <Link to="/corporation" style={{textDecoration: 'none'}}>
+                        <NavContent type="trigger">소방 공사/위험물 공사</NavContent>
+                    </Link>
+                    <Link to="/automotive-parts" style={{textDecoration: 'none'}}>
+                        <NavContent type="trigger">친환경 자동차 부품</NavContent>
+                    </Link>
+                    <Link to="/integration" style={{textDecoration: 'none'}}>
+                        <NavContent type="trigger">내역(적산)</NavContent>
                     </Link>
                 </Navigator>
                 <Navigator>
@@ -63,8 +72,8 @@ const HeaderNav = () => {
 };
 
 const HeaderBlock = styled.div`
-    width: 70vw;
-    padding: 0 15vw;
+    width: 80vw;
+    padding: 0 10vw;
     position: fixed;
     margin: 0 auto;
     display: flex;
@@ -104,8 +113,8 @@ const Navigator = styled.div`
 `;
 
 const NavContent = styled.div`
-    width: 11vw;
-    max-width: 130px;
+    width: 15vw;
+    max-width: 150px;
     min-width: 100px;
     cursor: pointer;
     color: #000;

@@ -11,7 +11,7 @@ const NavBar = () => {
             <Link to="/greet" style={{textDecoration: 'none'}}>
                 <NavContent>회사소개</NavContent>
             </Link>
-            <Link to="/processing-business" style={{textDecoration: 'none'}}>
+            <Link to="/license" style={{textDecoration: 'none'}}>
                 <NavContent type="trigger">사업분야</NavContent>
             </Link>
             <Link to="/processing" style={{textDecoration: 'none'}}>
@@ -43,9 +43,9 @@ const Navigator = styled.div`
 `;
 
 const NavContent = styled.div`
-    width: 11vw;
+    width: 15vw;
     padding: 26px 0;
-    max-width: 130px;
+    max-width: 150px;
     min-width: 100px;
     text-align: center;
     cursor: pointer;
@@ -62,10 +62,11 @@ const HeaderDropBlock = styled.div`
     top: 71px;
     left: 0;
     width: 100%;
-    height: 240px;
+    height: 250px;
     position: fixed;
     background: #fff;
     display: none;
+    box-shadow:  0px 3px 6px rgba(0, 0, 0, 0.1);
 `;
 
 // const DropContent = styled(NavContent)`
