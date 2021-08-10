@@ -5,11 +5,11 @@ import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/businessdomainbackground.png';
-import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, RedSpan } from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, RedSpan, Devider } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import ProfileImg from '../../assets/calculator.png';
 
-const AutomotiveParts = () => {
+const Intergration = () => {
     return (
         <PageWrapper>
             <Header/>
@@ -45,11 +45,7 @@ const AutomotiveParts = () => {
                     <Profile/>
                     <Descrip>
                         건축과 설비를 동시에 작업, 타 전문업체에 비해 신속 정확, 외주비 절감효과, 공사 수주를 위한 경쟁력 있는 입찰 내역, 폭넓은 도면과 현장 이해로 보다 상세한 실행 내역, 설계 도면을 가장 충실하게 반영한 설계(예산) 내역 등 이 모두를 위해 더욱 열과 성의를 다하겠습니다.
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
+                        <Devider/>
                         ▲ <RedSpan>물량 산출 (건축, 설비, 통신, 소방)</RedSpan>
                         <br/>
                         ▲ <RedSpan>입찰 내역</RedSpan> 
@@ -134,4 +130,4 @@ const Profile = styled.div`
 `;
 
 
-export default AutomotiveParts;
+export default Intergration;

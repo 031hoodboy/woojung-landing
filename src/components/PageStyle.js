@@ -333,6 +333,14 @@ export const Explane = styled.div`
   }
 `;
 
+export const Devider = styled.div`
+  width: 100%;
+  height:15vh;
+  @media screen and (max-width: 840px) {
+    height:5vh;
+  }
+`;
+
 export const BlueSpan = styled.span`
   color: #05CFFF;
   font-weight: 600;
