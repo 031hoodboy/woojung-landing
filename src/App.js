@@ -20,7 +20,8 @@ import QuoteContact from './Pages/CustomerSupport/QuoteContact';
 import News from './Pages/PRCenter/News';
 import Catalogue from './Pages/PRCenter/Catalogue';
 import Notice from './Pages/Notice/Notice';
-
+import ManagementAgency from "./Pages/BusinessDomain/ManagementAgency"
+import Inspection from "./Pages/BusinessDomain/Inspection"
 // import Fee2 from './pages/Fee/Fee2';
 
 const App = () => {
@@ -35,6 +36,9 @@ const App = () => {
         <Route path="/way-to-come" component={WayToCome}  />
         <Route path="/organize-chart" component={OrganizeChart}  />
         <Route path="/manufacture" component={Manufacture}  />
+        <Route path="/management-agency" component={ManagementAgency}  />
+        <Route path="/inspection" component={Inspection}  />
+
         <Route path="/processing-business" component={ProcessingBusiness}  />
         <Route path="/secondary-battery" component={SecondaryBattery}  />
         <Route path="/measure" component={Measure}  />

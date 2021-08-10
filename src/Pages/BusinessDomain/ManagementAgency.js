@@ -9,7 +9,7 @@ import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, Selec
 import styled from '@emotion/styled';
 import ProfileImg from '../../assets/dangerousgoodslicense.png';
 
-const Manufacture = () => {
+const ManagementAgency = () => {
     return (
         <PageWrapper>
             <Header/>
@@ -20,10 +20,10 @@ const Manufacture = () => {
             </MainImg>
             <NavBarWrapper>
                     <Link to="/manufacture" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock>위험물 인허가/설계</SelectNavBlock>
+                        <NavBlock>위험물 인허가/설계</NavBlock>
                     </Link>
                     <Link to="/management-agency" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>위험물 안전관리대행</NavBlock>
+                        <SelectNavBlock>위험물 안전관리대행</SelectNavBlock>
                     </Link>
                     <Link to="/inspection" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>소방시설안전관리/점검</NavBlock>
@@ -39,7 +39,7 @@ const Manufacture = () => {
                     </Link>
                 </NavBarWrapper>
             <PageTitleWrpper>
-                <PageTitle>위험물 인허가/설계</PageTitle>
+                <PageTitle>위험물 안전관리대행</PageTitle>
             </PageTitleWrpper>
             <HelloWrapper>
                     <Profile/>
@@ -125,4 +125,4 @@ const Profile = styled.div`
 `;
 
 
-export default Manufacture;
+export default ManagementAgency;
