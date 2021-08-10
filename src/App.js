@@ -21,7 +21,11 @@ import News from './Pages/PRCenter/News';
 import Catalogue from './Pages/PRCenter/Catalogue';
 import Notice from './Pages/Notice/Notice';
 import ManagementAgency from "./Pages/BusinessDomain/ManagementAgency"
+import Integration from "./Pages/BusinessDomain/Integration"
 import Inspection from "./Pages/BusinessDomain/Inspection"
+import Corporation from "./Pages/BusinessDomain/Corporation"
+import AutomotiveParts from "./Pages/BusinessDomain/AutomotiveParts"
+
 // import Fee2 from './pages/Fee/Fee2';
 
 const App = () => {
@@ -38,6 +42,9 @@ const App = () => {
         <Route path="/license" component={License}  />
         <Route path="/management-agency" component={ManagementAgency}  />
         <Route path="/inspection" component={Inspection}  />
+        <Route path="/corporation" component={Corporation}  />
+        <Route path="/automotive-parts" component={AutomotiveParts}  />
+        <Route path="/integration" component={Integration}  />
 
         <Route path="/processing-business" component={ProcessingBusiness}  />
         <Route path="/secondary-battery" component={SecondaryBattery}  />

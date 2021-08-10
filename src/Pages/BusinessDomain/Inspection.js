@@ -28,13 +28,13 @@ const Inspection = () => {
                     <Link to="/inspection" style={{textDecoration: 'none', color: "#000"}}>
                         <SelectNavBlock>소방시설안전관리/점검</SelectNavBlock>
                     </Link>
-                    <Link to="/processing-business" style={{textDecoration: 'none', color: "#000"}}>
+                    <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>소방 공사/위험물 공사</NavBlock>
                     </Link>
-                    <Link to="/processing-business" style={{textDecoration: 'none', color: "#000"}}>
+                    <Link to="/automotive-parts" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>친환경 자동차 부품</NavBlock>
                     </Link>
-                    <Link to="/processing-business" style={{textDecoration: 'none', color: "#000"}}>
+                    <Link to="/integration" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>내역(적산)</NavBlock>
                     </Link>
                 </NavBarWrapper>
