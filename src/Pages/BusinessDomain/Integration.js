@@ -89,7 +89,7 @@ const MainImg = styled.div`
 const Descrip = styled.div`
     max-width: 536px;
     font-size: 18px;
-    line-height: 32px;
+    line-height: 35px;
     @media screen and (max-width: 1155px) {
         margin-top: 5vh;
   }
@@ -103,10 +103,15 @@ const HelloWrapper = styled.div`
     flex-wrap: wrap;
     width: 90vw;
     max-width: 1100px;
-    margin: 5vh auto 15vh auto;
+    margin: 10vh auto 15vh auto;
     justify-content: space-between;
     @media screen and (max-width: 1155px) {
         justify-content: center;
+  }
+  @media screen and (max-width: 780px) {
+        font-size: 16px;    
+        margin: 5vh auto 15vh auto;
+
   }
 `;
 

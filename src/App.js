@@ -8,8 +8,6 @@ import Vision from './Pages/About/Vision';
 import WayToCome from './Pages/About/WayToCome';
 import OrganizeChart from './Pages/About/OrganizeChart';
 import License from './Pages/BusinessDomain/License';
-import ProcessingBusiness from './Pages/BusinessDomain/ProcessingBusiness';
-import SecondaryBattery from './Pages/BusinessDomain/SecondaryBattery';
 import Measure from './Pages/FacilityStatus/Measure';
 import Contact from './Pages/FacilityStatus/MailContact';
 import Production from './Pages/FacilityStatus/Production';
@@ -46,9 +44,6 @@ const App = () => {
         <Route path="/corporation" component={Corporation}  />
         <Route path="/automotive-parts" component={AutomotiveParts}  />
         <Route path="/integration" component={Integration}  />
-
-        <Route path="/processing-business" component={ProcessingBusiness}  />
-        <Route path="/secondary-battery" component={SecondaryBattery}  />
         <Route path="/measure" component={Measure}  />
         <Route path="/contact" component={Contact}  />
         <Route path="/production" component={Production}  />

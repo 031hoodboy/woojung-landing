@@ -98,16 +98,15 @@ export const PageTitleWrpper = styled.div`
     align-items: flex-start;
     width: 1088px;
     margin: 0 auto;
-    margin-top: 15vh;
+    margin-top: 5vh;
     @media screen and (max-width: 1207px) {
       width: 100vw;
       display: flex;
-
       align-items: center;
   }
     @media screen and (max-width: ${({ threshold }) =>
       threshold || SMALL_SCREEN_THRESHOLD}px) {
-    margin-top: 10vh;
+    margin-top: 8vh;
   }
 `;
 
@@ -175,7 +174,6 @@ export const PageTitle = styled(Title)`
       threshold || SMALL_SCREEN_THRESHOLD}px) {
     font-size: 20px;
     margin: 0 auto;
-
   }
 `;
 
@@ -335,7 +333,7 @@ export const Explane = styled.div`
 
 export const Devider = styled.div`
   width: 100%;
-  height:15vh;
+  height:10vh;
   @media screen and (max-width: 840px) {
     height:5vh;
   }

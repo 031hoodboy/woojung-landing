@@ -5,9 +5,9 @@ import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/businessdomainbackground.png';
-import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, BlueSpan, GreenSpan } from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, RedSpanBold } from '../../components/PageStyle';
 import styled from '@emotion/styled';
-import ProfileImg from '../../assets/dangerousgoodslicense.png';
+import ProfileImg from '../../assets/managementagency.png';
 
 const ManagementAgency = () => {
     return (
@@ -44,16 +44,20 @@ const ManagementAgency = () => {
             <HelloWrapper>
                     <Profile/>
                     <Descrip>
-                        우정에이치앤씨(주)는 풍부한 경험을 겸비한 회사로써, 위험물안전관리법에 의거한 제조소등의 위치/구조 또는 설비에 적합하도록 <BlueSpan>설치허가 및 변경허가의 대행 업무</BlueSpan>를 해드리고 있습니다.
-                        <br/>
-                        <br/>
-                        설치허가 및 변경허가 접수 후, 완공검사 필증 교부까지 마무리 지어드립니다. 또한 고객의 작업장에 알맞도록 지정배수를 계산하여 품목변경도 해드리고 있으며 제조소 등의 <GreenSpan>용도폐지, 지위승계 신고 대행</GreenSpan>도 해드리고 있습니다.
-                        <br/>
-                        <br/>
-                        위험물의 인허가에 관한 신뢰할 수 있는 인허가를 약속드리며, 위험물 시설의 인허가 절차 등에 관한 많은 어려움을 가지고 있었을 것이라 여깁니다.
-                        <br/>
-                        <br/>
-                        당사는 <BlueSpan>위험물 설계, 시공, 완공까지 전반적인 종합컨설팅회사</BlueSpan>로써 항상 신뢰할 수 있는 서비스로 귀사의 부가가치 창출에 기여하겠습니다.
+                    우정에이치앤씨(주)는 위험물안전관리법 시행규칙 제57조 및 소방방재청의 지정을 받아 위험물안전관리자의 업무를 위탁 받아 수행할 수 있는 위험물안전관리대행기관입니다. 기업 활동 규제 완화에 관한 특별조치법 제40조 제1항 제3호의 규정에 의하여, 위험물안전관리자의 업무를 위탁하실 수 있습니다. 고객의 안전을 최우선으로 하며, 고객이 신뢰할 수 있는 위험물안전관리 서비스를 제공하겠습니다.
+                    </Descrip>
+                    <Descrip>
+                    ▲ 위험물 안전관리자의 빈번한 <RedSpanBold>선, 해임 접수</RedSpanBold> 등 소방서 민원업무를 대행 <br/>
+▲ <RedSpanBold>지위승계, 품명이나 등록사항의 변경 신고</RedSpanBold> 등 신고 기간 내에 맞춰 접수함으로써 직·간접 인건비 등 경비, 시간의 절약<br/>
+▲ 기업 활동 규제 완화에 관한 특별조치법에 의하여 법적 선임대상인 안전관리자를 채용하지 않고 대행기관에 업무 위탁을 가능하게 함으로써<br/>
+     기업의 국가기술자격자 채용의 어려움 및 인건비 부담 해소<br/>
+▲ 소방서의 급작스런 단속이나 검사가 생길 시 <RedSpanBold>신속한 대처 가능</RedSpanBold><br/>
+▲ 위험물안전관리법에 의거한 위험물 제조소등의 시설기준(위치, 구조, 설비)에 적합하도록 점검 및 <RedSpanBold>유지관리, 개선방안 제시</RedSpanBold><br/>
+▲ 법 제18조제1항의 규정에 의하여 보존해야 하는 <RedSpanBold>정기점검을 실시하여 결과를 보존</RedSpanBold>하여 드립니다. (해당사업장) - 위험물 저장 또는 취급에 관한<br/>
+     기술기준과 예방규정에 적합하도록 작업자 (안전관리원)에게 <RedSpanBold>안전교육 제공</RedSpanBold><br/>
+▲ <RedSpanBold>예방규정 작성</RedSpanBold><br/>
+▲ 위험물 안전관리 관련 법령정보 및 기술 <RedSpanBold>자료 제공</RedSpanBold><br/>
+▲ 소방방재청 지정 위험물안전관리대행기관의 축적된 기술과 경험을 활용 체계적인 위험물 안전관리 활동이 가능<br/>
                     </Descrip>
                 </HelloWrapper>
             <Footer/>
@@ -82,32 +86,42 @@ const MainImg = styled.div`
 `;
 
 const Descrip = styled.div`
-    max-width: 640px;
-    font-size: 20px;
+    width: 90vw;
+    max-width: 1100px;
+    font-size: 18px;
     line-height: 32px;
+    margin-top: 5vh;
+    line-height: 40px;
     @media screen and (max-width: 1155px) {
         margin-top: 5vh;
   }
     @media screen and (max-width: 780px) {
         font-size: 16px;
+        line-height: 35px;
   }
 `;
 
 const HelloWrapper = styled.div`
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 90vw;
     max-width: 1100px;
-    margin: 5vh auto 15vh auto;
+    margin: 10vh auto 15vh auto;
     justify-content: space-between;
     @media screen and (max-width: 1155px) {
         justify-content: center;
   }
+  @media screen and (max-width: 780px) {
+        font-size: 16px;    
+        margin: 5vh auto 15vh auto;
+  }
 `;
 
 const Profile = styled.div`
-    width: 400px;
-    height: 450px;
+    width: 90vw;
+    max-width: 1100px;
+    height: 270px;
     background: #282D27;
     background-image: url(${ProfileImg});
     background-size: cover;
@@ -121,6 +135,7 @@ const Profile = styled.div`
         max-width: 640px;
         width: 90vw;
         height: 60vw;
+        margin: 0 auto;
   }
 `;
 
