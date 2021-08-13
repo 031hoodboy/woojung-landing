@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import {ExTitle, PageBlockWrapper, BlueButton, ExSubTitle, CardWrapper, ExplaneWrapper, Explane } from '../../components/PageStyle';
 import PhtoImg from '../../assets/drill.png';
+import {Link} from 'react-router-dom';
 
 const FifthSection = () => {
     return (
@@ -14,7 +15,9 @@ const FifthSection = () => {
                         <ExTitle>소방 시설관리</ExTitle>
                         <ExSubTitle>최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고있습니다. 최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고.</ExSubTitle>
                         </Explane>
-                        <BlueButton>더 보기</BlueButton>
+                        <Link to="/inspection" style={{textDecoration: "none"}}>
+                            <BlueButton>더 보기</BlueButton>
+                        </Link>
                     </ExplaneWrapper>
                 </CardWrapper>
             </PageBlockWrapper>
