@@ -11,7 +11,7 @@ import License from './Pages/BusinessDomain/License';
 import ProcessingBusiness from './Pages/BusinessDomain/ProcessingBusiness';
 import SecondaryBattery from './Pages/BusinessDomain/SecondaryBattery';
 import Measure from './Pages/FacilityStatus/Measure';
-import Processing from './Pages/FacilityStatus/Processing';
+import Processing from './Pages/FacilityStatus/MailContact';
 import Production from './Pages/FacilityStatus/Production';
 import Introduce from './Pages/Technology/Introduce';
 import Patent from './Pages/Technology/Patent';

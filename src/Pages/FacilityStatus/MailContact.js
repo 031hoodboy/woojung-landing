@@ -6,10 +6,10 @@ import {Link} from 'react-router-dom';
 import Email from '../../components/Email';
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/customersupportbackground.png';
-import {PageTitleWrpper, PageTitle, SubTitle2, MainImgTitle } from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, NavBarWrapper, MainImgTitle } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 
-const QuoteContact = () => {
+const MailContact = () => {
     return (
         <PageWrapper>
             <Header/>
@@ -22,16 +22,9 @@ const QuoteContact = () => {
                     <Link to="/quote-contact" style={{textDecoration: 'none', color: "#000"}}>
                         <SelectNavBlock>견적의뢰</SelectNavBlock>
                     </Link>
-                    <Link to="/recruitment" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>채용안내</NavBlock>
-                    </Link>
                 </NavBarWrapper>
             <PageTitleWrpper>
                 <PageTitle>견적의뢰</PageTitle>
-                <SubTitle2>
-                고효율 태양광 셀과 고출력 태양광 모듈 신기술을 상용화 함으로써<br/>
-                화석 연료의 사용을 감축할 수 있도록 기술개발과 상용화에 매진하고 있습니다.
-                </SubTitle2>
                 <Email/>
             </PageTitleWrpper>
 
@@ -60,45 +53,19 @@ const MainImg = styled.div`
   }
 `;
 
-const NavBarWrapper = styled.div`
-    width: 60vw;
-    height: 58px;
-    display: flex;
-    margin: 0 auto;
-    position: absolute;
-    color: #000;
-    font-size: 16px;
-    font-weight: 400;
-    top: calc(30vh + 56px);
-    box-shadow:  0px 3px 6px #d9d9d9;
-
-    @media screen and (max-width: 1024px) {
-        width: calc(90vw + 3px);
-        top: calc(23vh); 
-        height: 40px;
-    }
-`;
-
-const NavBlock = styled.div`
-    width: 30vw;
-    height: 58px;
-    border-left: 1px solid #D9D9D9;
+const SelectNavBlock = styled.div`
+    width: 15vw;
+    min-width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
-    border-bottom: 1px solid #D9D9D9;
-    @media screen and (max-width: 1024px) {
-    width: 45vw;
-    height: 40px; 
-    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    @media screen and (max-width: 1207px) {
+        font-size: 18px;
+        width: 100vw;
+        display: flex;
     }
 `;
 
-const SelectNavBlock = styled(NavBlock)`
-    background: #930E14;
-    color: #fff;
-    border-left: 1px solid #930E14;
-`;
-
-export default QuoteContact;
+export default MailContact;

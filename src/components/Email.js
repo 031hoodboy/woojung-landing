@@ -153,8 +153,8 @@ const Button = styled.input`
     margin: 0 auto;
     width: 90vw;
     height: 60px;
-    border: 1px solid #930E14;
-    background: #930E14;
+    border: 1px solid #05CFFF;
+    background: #05CFFF;
     color: #fff;
     font-size: 20px;
     display: flex;

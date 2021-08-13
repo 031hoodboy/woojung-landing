@@ -39,13 +39,13 @@ const Background = styled.div`
     background-position: center; 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
 `;
 
 const Card1 = styled.div`
-    width: 365px;
-    height: 123px;
+    width: 300px;
+    height: 110px;
     background-image: url(${Card1Img});
     background-size: cover;
     background-repeat: no-repeat;
