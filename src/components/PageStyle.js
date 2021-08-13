@@ -79,9 +79,16 @@ export const TitleRow = styled.div`
 `;
 
 export const MainImgTitle = styled.div`
-margin-left: 20vw;
-@media screen and (max-width: 780px) {
-    margin: 0 auto;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+width: 1088px;
+margin: 0 auto;
+@media screen and (max-width: 1207px) {
+  width: 100vw;
+  display: flex;
+
+  align-items: center;
 }
 `;
 

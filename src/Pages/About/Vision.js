@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/aboutbackground.png';
-import {PageTitleWrpper, PageBlockWrapper, PageTitle, NavBarWrapper, NavBlock, SelectNavBlock, PageSubTitle } from '../../components/PageStyle';
+import {PageTitleWrpper, PageBlockWrapper, PageTitle, NavBarWrapper, NavBlock, SelectNavBlock, PageSubTitle, MainImgTitle } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import VisionImg from '../../assets/vision.png';
 
@@ -14,8 +14,11 @@ const Vision = () => {
         <PageWrapper>
             <Header/>
             <MainImg>
-                회사소개
-                <NavBarWrapper>
+                <MainImgTitle>
+                    회사소개
+                </MainImgTitle>
+            </MainImg>
+            <NavBarWrapper>
                 <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
                     <NavBlock>ceo인사말</NavBlock>
                     </Link>
@@ -35,7 +38,6 @@ const Vision = () => {
                     <NavBlock>조직도</NavBlock>
                     </Link>
                 </NavBarWrapper>
-            </MainImg>
             <PageTitleWrpper>
                 <PageTitle>비전</PageTitle>
             </PageTitleWrpper>
