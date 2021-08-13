@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { ExTitle, PageBlockWrapper, GreenButton, ExSubTitle, CardWrapper, ExplaneWrapper, Explane } from '../../components/PageStyle';
 import PhtoImg from '../../assets/alarm.png';
+import {Link} from 'react-router-dom';
 
 const FourthSection = () => {
     return (
@@ -14,7 +15,9 @@ const FourthSection = () => {
                         <ExTitle>위험물 안전관리대행</ExTitle>
                         <ExSubTitle>최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고있습니다. 최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고.</ExSubTitle>
                         </Explane>
-                        <GreenButton>더 보기</GreenButton>
+                        <Link to="/management-agency" style={{textDecoration: "none"}}>
+                            <GreenButton>더 보기</GreenButton>
+                        </Link>
                     </ExplaneWrapper>
                 </ReverseCardWrapper>
             </PageBlockWrapper>
