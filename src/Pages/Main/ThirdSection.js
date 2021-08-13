@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import {TitleWrpper, Remark, Title, ExTitle, PageBlockWrapper, BlueButton, ExSubTitle, CardWrapper, ExplaneWrapper, Explane } from '../../components/PageStyle';
 import PhtoImg from '../../assets/helmet.png';
+import {Link} from 'react-router-dom';
 
 const ThirdSection = () => {
     return (
@@ -18,7 +19,9 @@ const ThirdSection = () => {
                         <ExTitle>위험물 인허가/설계</ExTitle>
                         <ExSubTitle>최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고있습니다. 최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고.</ExSubTitle>
                         </Explane>
-                        <BlueButton>더 보기</BlueButton>
+                        <Link to="/license" style={{textDecoration: "none"}}>
+                                <BlueButton>더 보기</BlueButton>
+                        </Link>
                     </ExplaneWrapper>
                 </CardWrapper>
             </PageBlockWrapper>
