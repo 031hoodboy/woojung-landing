@@ -11,7 +11,7 @@ import License from './Pages/BusinessDomain/License';
 import ProcessingBusiness from './Pages/BusinessDomain/ProcessingBusiness';
 import SecondaryBattery from './Pages/BusinessDomain/SecondaryBattery';
 import Measure from './Pages/FacilityStatus/Measure';
-import Processing from './Pages/FacilityStatus/MailContact';
+import Contact from './Pages/FacilityStatus/MailContact';
 import Production from './Pages/FacilityStatus/Production';
 import Introduce from './Pages/Technology/Introduce';
 import Patent from './Pages/Technology/Patent';
@@ -25,12 +25,13 @@ import Integration from "./Pages/BusinessDomain/Integration"
 import Inspection from "./Pages/BusinessDomain/Inspection"
 import Corporation from "./Pages/BusinessDomain/Corporation"
 import AutomotiveParts from "./Pages/BusinessDomain/AutomotiveParts"
-
+import ScrollTop from './components/PageTop';
 // import Fee2 from './pages/Fee/Fee2';
 
 const App = () => {
   return (
     <BrowserRouter>
+    <ScrollTop/>
       <Switch>
         <Route path="/" component={Main} exact />
         <Route path="/greet" component={Greet}  />
@@ -49,7 +50,7 @@ const App = () => {
         <Route path="/processing-business" component={ProcessingBusiness}  />
         <Route path="/secondary-battery" component={SecondaryBattery}  />
         <Route path="/measure" component={Measure}  />
-        <Route path="/processing" component={Processing}  />
+        <Route path="/contact" component={Contact}  />
         <Route path="/production" component={Production}  />
         <Route path="/introduce" component={Introduce}  />
         <Route path="/patent" component={Patent}  />

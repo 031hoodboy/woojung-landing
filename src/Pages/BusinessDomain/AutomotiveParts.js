@@ -82,8 +82,8 @@ const MainImg = styled.div`
 `;
 
 const Descrip = styled.div`
-    max-width: 640px;
-    font-size: 20px;
+    max-width: 536px;
+    font-size: 18px;
     line-height: 32px;
     @media screen and (max-width: 1155px) {
         margin-top: 5vh;
@@ -106,8 +106,8 @@ const HelloWrapper = styled.div`
 `;
 
 const Profile = styled.div`
-    width: 400px;
-    height: 450px;
+    width: 508px;
+    height: 536px;
     background: #282D27;
     background-image: url(${ProfileImg});
     background-size: cover;
@@ -123,6 +123,5 @@ const Profile = styled.div`
         height: 60vw;
   }
 `;
-
 
 export default AutomotiveParts;

@@ -46,14 +46,8 @@ const HeaderNav = () => {
                     </Link>
                 </Navigator>
                 <Navigator>
-                    <Link to="processing" style={{textDecoration: 'none'}}>
-                        <NavContent>가공설비</NavContent>
-                    </Link>
-                    <Link to="/measure" style={{textDecoration: 'none'}}>
-                        <NavContent type="trigger">측정설비</NavContent>
-                    </Link>
-                    <Link to="/production" style={{textDecoration: 'none'}}>
-                        <NavContent>생산설비</NavContent>
+                    <Link to="/contact" style={{textDecoration: 'none'}}>
+                        <NavContent>견적의뢰</NavContent>
                     </Link>
                 </Navigator>
                 <Navigator>

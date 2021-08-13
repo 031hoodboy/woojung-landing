@@ -14,7 +14,7 @@ const NavBar = () => {
             <Link to="/license" style={{textDecoration: 'none'}}>
                 <NavContent type="trigger">사업분야</NavContent>
             </Link>
-            <Link to="/processing" style={{textDecoration: 'none'}}>
+            <Link to="/contact" style={{textDecoration: 'none'}}>
                 <NavContent>견적의뢰</NavContent>
             </Link>
             <Link to="/introduce" style={{textDecoration: 'none'}}>
