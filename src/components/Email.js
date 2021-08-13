@@ -34,15 +34,15 @@ export default function Email() {
     <form className="contact-form" onSubmit={sendEmail}>
         <Blockwrapper>
         <InputWrapper>
-            <Label>회사명</Label>
+            <Label>이름</Label>
             <Input type="text" name="company-name" />
         </InputWrapper>
         <InputWrapper>
-            <Label>직급</Label>
+            <Label>분류</Label>
             <Input type="text" name="user-rank" />
         </InputWrapper>
         <InputWrapper>
-            <Label>이름</Label>
+            <Label>이메일</Label>
             <Input type="text" name="user-name" />
         </InputWrapper>
         <InputWrapper>
@@ -50,7 +50,7 @@ export default function Email() {
             <Input type="text" name="contact-number" />
         </InputWrapper>
         <InputWrapper>
-            <Label>이메일</Label>
+            <Label>제목</Label>
             <EmailInput type="text" name="contact-number" />
         </InputWrapper>
         <InputWrapper>
@@ -59,8 +59,8 @@ export default function Email() {
         </InputWrapper>
         <TermsWrapper>
             <Label >
-                <input type="checkbox" onClick={onToggleCheckBox} checked={CheckBoxopen}/> 
-                약관에 동의합니다.
+                {/* <input type="checkbox" onClick={onToggleCheckBox} checked={CheckBoxopen}/>  */}
+                *약관에 동의합니다.
             </Label>        
         </TermsWrapper>
         {CheckBoxopen?
