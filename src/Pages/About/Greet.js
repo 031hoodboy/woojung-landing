@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import {Link} from 'react-router-dom';
@@ -8,8 +8,16 @@ import BackgroundImg from '../../assets/aboutbackground.png';
 import {PageTitleWrpper, PageTitle, PageBlockWrapper, BlueSpan, GreenSpan, Date, Space } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import ProfileImg from '../../assets/profile.png';
+import ArrowImg from '../../assets/arrow.png';
+import {css} from '@emotion/react';
 
 const Greet = () => {
+
+    const [open, setopen] = useState(false);
+    const onToggle = () => {
+        setopen(!open);
+    }
+
     return (
         <PageWrapper>
             <Header/>
@@ -18,9 +26,9 @@ const Greet = () => {
                     회사소개
                 </MainImgTitle>
             </MainImg>
-            <NavBarWrapper>
+            <NavBarWrapper open={open} >
                     <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock>회사소개</SelectNavBlock>
+                        <SelectNavBlock onClick={onToggle}>회사소개<Arrow/> </SelectNavBlock>
                     </Link>
                     <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>사업자등록증 및 면허증</NavBlock>
@@ -31,6 +39,20 @@ const Greet = () => {
                     <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>찾아오시는 길</NavBlock>
                     </Link>
+                    <MobileNavBarWrapper open={open}>
+                        <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileSelectNavBlock>회사소개</MobileSelectNavBlock>
+                        </Link>
+                        <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>사업자등록증 및 면허증</MobileNavBlock>
+                        </Link>
+                        <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>조직도</MobileNavBlock>
+                        </Link>
+                        <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>찾아오시는 길</MobileNavBlock>
+                        </Link>
+                    </MobileNavBarWrapper>
             </NavBarWrapper>
             <PageTitleWrpper>
                 <PageTitle>회사소개</PageTitle>
@@ -153,6 +175,21 @@ const Profile = styled.div`
   }
 `;
 
+const Arrow = styled.div`
+    width: 17px;
+    height: 9px;
+    background-image: url(${ArrowImg});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    display: none;
+    position: absolute;
+    right: 5%;
+  @media screen and (max-width: 780px) {
+    display: flex;
+  }
+`;
+
 const Descrip = styled.div`
     width: 47vw;
     font-size: 18px;
@@ -186,13 +223,24 @@ const NavBarWrapper = styled.div`
     color: #000;
     font-size: 16px;
     font-weight: 400;
-    top: calc(30vh + 56px);
     border-bottom: 1px solid #D9D9D9;
     align-items: center;
     @media screen and (max-width: 780px) {
-        top: calc(23vh); 
         height: 50px;
+        flex-direction: column;
+        border: none;
+        ${props => props.open && css`
+        height: 200px;
+    `}
     }
+`;
+
+const MobileNavBarWrapper = styled(NavBarWrapper)`
+    display: none;
+    flex-direction: column;
+    ${props => props.open && css`
+        display: flex;
+    `}
 `;
 
 const NavBlock = styled.div`
@@ -216,6 +264,25 @@ const SelectNavBlock = styled(NavBlock)`
         font-size: 18px;
         width: 100vw;
         display: flex;
+        height: 50px;
+        border-bottom: 1px solid #D9D9D9;
+    }
+`;
+
+const MobileNavBlock = styled(NavBlock)`
+        height: 50px;
+    @media screen and (max-width: 780px) {
+        display: flex;
+        font-size: 18px;
+        width: 100vw;
+        border-bottom: 1px solid #D9D9D9;
+    }
+`;
+
+const MobileSelectNavBlock = styled(SelectNavBlock)`
+    display: none;
+    @media screen and (max-width: 780px) {
+        display: none;
     }
 `;
 
