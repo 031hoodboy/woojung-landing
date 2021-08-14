@@ -226,15 +226,15 @@ const NavBarWrapper = styled.div`
     border-bottom: 1px solid #D9D9D9;
     align-items: center;
     @media screen and (max-width: 780px) {
-        width: calc(100vw - 1px);
+        width: calc(100vw);
         height: 50px;
         flex-direction: column;
         justify-content: flex-end;
         border: none;
-        ${props => props.open && css`
+    }
+    ${props => props.open && css`
         height: 204px;
     `}
-    }
 `;
 
 const MobileNavBarWrapper = styled(NavBarWrapper)`
@@ -267,7 +267,7 @@ const SelectNavBlock = styled(NavBlock)`
         font-size: 18px;
         width: 100vw;
         display: flex;
-        min-height: 49px;
+        max-height: 49px;
         border-bottom: 1px solid #D9D9D9;
         text-align: center;
     }
