@@ -226,13 +226,12 @@ const NavBarWrapper = styled.div`
     border-bottom: 1px solid #D9D9D9;
     align-items: center;
     @media screen and (max-width: 780px) {
-        width: calc(100vw - 1px);
+        width: 100vw;
         height: 50px;
         flex-direction: column;
-        justify-content: flex-end;
         border: none;
         ${props => props.open && css`
-        height: 204px;
+        height: 100%;
     `}
     }
 `;
