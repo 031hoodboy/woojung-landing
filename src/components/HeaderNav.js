@@ -51,11 +51,8 @@ const HeaderNav = () => {
                     </Link>
                 </Navigator>
                 <Navigator>
-                    <Link to="/introduce" style={{textDecoration: 'none'}}>
-                        <NavContent>연구소 소개</NavContent>
-                    </Link>
-                    <Link to="/patent" style={{textDecoration: 'none'}}>
-                        <NavContent type="trigger">특허 및 인증</NavContent>
+                    <Link to="/notice" style={{textDecoration: 'none'}}>
+                        <NavContent>공지사항</NavContent>
                     </Link>
                 </Navigator>
             </NavigatorWrapper>

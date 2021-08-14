@@ -17,7 +17,7 @@ const NavBar = () => {
             <Link to="/contact" style={{textDecoration: 'none'}}>
                 <NavContent>견적의뢰</NavContent>
             </Link>
-            <Link to="/introduce" style={{textDecoration: 'none'}}>
+            <Link to="/notice" style={{textDecoration: 'none'}}>
                 <NavContent>커뮤니티</NavContent>
             </Link>
             <HeaderDropBlock>
