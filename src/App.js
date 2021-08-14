@@ -8,16 +8,13 @@ import WayToCome from './Pages/About/WayToCome';
 import OrganizeChart from './Pages/About/OrganizeChart';
 import License from './Pages/BusinessDomain/License';
 import Contact from './Pages/FacilityStatus/MailContact';
-import Recruitment from './Pages/CustomerSupport/Recruitment';
-import QuoteContact from './Pages/CustomerSupport/QuoteContact';
 import ManagementAgency from "./Pages/BusinessDomain/ManagementAgency"
 import Integration from "./Pages/BusinessDomain/Integration"
 import Inspection from "./Pages/BusinessDomain/Inspection"
 import Corporation from "./Pages/BusinessDomain/Corporation"
+import AutomotiveParts from "./Pages/BusinessDomain/AutomotiveParts"
 import Notice from "./Pages/Community/Notice"
 import NoticeInfo from "./Pages/Community/NoticeInfo"
-
-import AutomotiveParts from "./Pages/BusinessDomain/AutomotiveParts"
 import ScrollTop from './components/PageTop';
 
 // import Fee2 from './pages/Fee/Fee2';
@@ -40,11 +37,8 @@ const App = () => {
         <Route path="/automotive-parts" component={AutomotiveParts}  />
         <Route path="/integration" component={Integration}  />
         <Route path="/contact" component={Contact}  />
-        <Route path="/recruitment" component={Recruitment}  />
-        <Route path="/quote-contact" component={QuoteContact}  />
         <Route path="/notice" component={Notice}  />
         <Route path="/notice-info" component={NoticeInfo}  />
-
       </Switch>
     </BrowserRouter>
   )
