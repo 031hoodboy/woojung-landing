@@ -226,11 +226,12 @@ const NavBarWrapper = styled.div`
     border-bottom: 1px solid #D9D9D9;
     align-items: center;
     @media screen and (max-width: 780px) {
+        width: calc(100vw - 1px);
         height: 50px;
         flex-direction: column;
         border: none;
         ${props => props.open && css`
-        height: 200px;
+        height: 204px;
     `}
     }
 `;
@@ -253,6 +254,7 @@ const NavBlock = styled.div`
     font-weight: 300;
     @media screen and (max-width: 780px) {
         display: none;
+        border: none;
     }
 `;
 
@@ -264,13 +266,15 @@ const SelectNavBlock = styled(NavBlock)`
         font-size: 18px;
         width: 100vw;
         display: flex;
-        height: 50px;
+        height: 49px;
         border-bottom: 1px solid #D9D9D9;
+        text-align: center;
     }
 `;
 
 const MobileNavBlock = styled(NavBlock)`
-        height: 50px;
+        height: 49px;
+        font-size: 18px;
     @media screen and (max-width: 780px) {
         display: flex;
         font-size: 18px;
