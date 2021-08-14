@@ -229,6 +229,7 @@ const NavBarWrapper = styled.div`
         width: calc(100vw - 1px);
         height: 50px;
         flex-direction: column;
+        justify-content: flex-end;
         border: none;
         ${props => props.open && css`
         height: 204px;
@@ -266,7 +267,7 @@ const SelectNavBlock = styled(NavBlock)`
         font-size: 18px;
         width: 100vw;
         display: flex;
-        height: 49px;
+        min-height: 49px;
         border-bottom: 1px solid #D9D9D9;
         text-align: center;
     }
