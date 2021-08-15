@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 import SgtNoneImg from '../assets/sgtnone.png'
+import {css} from '@emotion/react';
 
-const HeaderNav = () => {
-    return (
-        <>
+export default withRouter(({location: {pathname}}) => (
+    <>
         <HeaderBlock>
             <LogoWrapper>
                     <Logo />
@@ -13,54 +13,54 @@ const HeaderNav = () => {
             <NavigatorWrapper>
                 <Navigator>
                     <Link to="/greet" style={{textDecoration: 'none'}}>
-                        <NavContent>회사소개</NavContent>
+                        <NavContent current={pathname === "/greet"}>회사소개</NavContent>
                     </Link>
                     <Link to="/business-partner" style={{textDecoration: 'none'}}>
-                        <NavContent>사업자등록증</NavContent>
+                        <NavContent current={pathname === "/business-partner"}>사업자등록증</NavContent>
                     </Link>
                     <Link to="/organize-chart" style={{textDecoration: 'none'}}>
-                        <NavContent>조직도</NavContent>
+                        <NavContent current={pathname === "/organize-chart"}>조직도</NavContent>
                     </Link>
                     <Link to="/way-to-come" style={{textDecoration: 'none'}}>
-                        <NavContent>찾아오시는 길</NavContent>
+                        <NavContent current={pathname === "/way-to-come"}>찾아오시는 길</NavContent>
                     </Link>
                 </Navigator>
                 <Navigator>
                     <Link to="/license" style={{textDecoration: 'none'}}>
-                        <NavContent type="trigger">위험물 인허가/설계</NavContent>
+                        <NavContent current={pathname === "/license"} >위험물 인허가/설계</NavContent>
                     </Link>
                     <Link to="/management-agency" style={{textDecoration: 'none'}}>
-                        <NavContent type="trigger">위험물 안전관리대행</NavContent>
+                        <NavContent current={pathname === "/management-agency"}>위험물 안전관리대행</NavContent>
                     </Link>
                     <Link to="/inspection" style={{textDecoration: 'none'}}>
-                        <NavContent>소방시설안전관리/점검</NavContent>
+                        <NavContent current={pathname === "/inspection"}>소방시설안전관리/점검</NavContent>
                     </Link>
                     <Link to="/corporation" style={{textDecoration: 'none'}}>
-                        <NavContent type="trigger">소방 공사/위험물 공사</NavContent>
+                        <NavContent current={pathname === "/corporation"}>소방 공사/위험물 공사</NavContent>
                     </Link>
                     <Link to="/automotive-parts" style={{textDecoration: 'none'}}>
-                        <NavContent type="trigger">친환경 자동차 부품</NavContent>
+                        <NavContent current={pathname === "/automotive-parts"}>친환경 자동차 부품</NavContent>
                     </Link>
                     <Link to="/integration" style={{textDecoration: 'none'}}>
-                        <NavContent type="trigger">내역(적산)</NavContent>
+                        <NavContent current={pathname === "/integration"}>내역(적산)</NavContent>
                     </Link>
                 </Navigator>
                 <Navigator>
                     <Link to="/contact" style={{textDecoration: 'none'}}>
-                        <NavContent>견적의뢰</NavContent>
+                        <NavContent current={pathname === "/contact"}>견적의뢰</NavContent>
                     </Link>
                 </Navigator>
                 <Navigator>
                     <Link to="/notice" style={{textDecoration: 'none'}}>
-                        <NavContent>공지사항</NavContent>
+                        <NavContent current={pathname === "/notice"}>공지사항</NavContent>
                     </Link>
                 </Navigator>
             </NavigatorWrapper>
         </HeaderBlock>
 
         </>
-    );
-};
+    )
+)
 
 const HeaderBlock = styled.div`
     width: 80vw;
@@ -114,10 +114,12 @@ const NavContent = styled.div`
     &:hover {
         color: #0A109F;
     }
+    ${props => props.current && css`
+        color: #0A109F;
+    `}
 `;
 
 const NavigatorWrapper = styled.div`
     display: flex;
 `;
 
-export default HeaderNav;
