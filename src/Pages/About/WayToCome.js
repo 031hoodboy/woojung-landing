@@ -35,7 +35,8 @@ const WayToCome = () => {
                     </Link>
                     <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
                         <SelectNavBlock onClick={onToggle}>찾아오시는 길<Arrow/></SelectNavBlock>
-                    </Link>                    <MobileNavBarWrapper open={open}>
+                    </Link>                    
+                    <MobileNavBarWrapper open={open}>
                         <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>회사소개</MobileNavBlock>
                         </Link>

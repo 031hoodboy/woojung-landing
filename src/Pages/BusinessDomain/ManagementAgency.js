@@ -1,15 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/businessdomainbackground.png';
-import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, NavBlock, SelectNavBlock, RedSpanBold } from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, MobileNavBarWrapper, NavBlock, SelectNavBlock, RedSpanBold, Arrow, MobileSelectNavBlock, MobileNavBlock } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import ProfileImg from '../../assets/managementagency.png';
 
 const ManagementAgency = () => {
+
+    const [open, setopen] = useState(false);
+    const onToggle = () => {
+        setopen(!open);
+    }
+
     return (
         <PageWrapper>
             <Header/>
@@ -18,12 +24,12 @@ const ManagementAgency = () => {
                     사업분야
                 </MainImgTitle>
             </MainImg>
-            <NavBarWrapper>
+            <NavBarWrapper open={open}>
                     <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>위험물 인허가/설계</NavBlock>
                     </Link>
                     <Link to="/management-agency" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock>위험물 안전관리대행</SelectNavBlock>
+                        <SelectNavBlock onClick={onToggle}>위험물 안전관리대행<Arrow/></SelectNavBlock>
                     </Link>
                     <Link to="/inspection" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>소방시설안전관리/점검</NavBlock>
@@ -37,6 +43,26 @@ const ManagementAgency = () => {
                     <Link to="/integration" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>내역(적산)</NavBlock>
                     </Link>
+                    <MobileNavBarWrapper open={open}>
+                        <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>위험물 인허가/설계</MobileNavBlock>
+                        </Link>
+                        <Link to="/management-agency" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileSelectNavBlock>위험물 안전관리대행</MobileSelectNavBlock>
+                        </Link>
+                        <Link to="/inspection" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>소방시설안전관리/점검</MobileNavBlock>
+                        </Link>
+                        <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>소방 공사/위험물 공사</MobileNavBlock>
+                        </Link>
+                        <Link to="/automotive-parts" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>친환경 자동차 부품</MobileNavBlock>
+                        </Link>
+                        <Link to="/integration" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>내역(적산)</MobileNavBlock>
+                        </Link>
+                    </MobileNavBarWrapper>
                 </NavBarWrapper>
             <PageTitleWrpper>
                 <PageTitle>위험물 안전관리대행</PageTitle>
