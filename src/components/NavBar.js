@@ -1,49 +1,68 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 import HeaderNav from './HeaderNav';
+import {css} from '@emotion/react';
 
-const NavBar = () => {
-
-    return (
-
-        <Navigator>
+export default withRouter(({location: {pathname}}) => (
+    <Navigator>
             <Link to="/greet" style={{textDecoration: 'none'}}>
-                <NavContent>회사소개</NavContent>
+                <NavContent
+                 current={
+                    pathname === "/greet" 
+                    || pathname === "/business-partner" 
+                    || pathname === "/organize-chart" 
+                    || pathname === "/way-to-come"}>
+                회사소개</NavContent>
             </Link>
             <Link to="/license" style={{textDecoration: 'none'}}>
-                <NavContent type="trigger">사업분야</NavContent>
+            <NavContent
+                 current={
+                    pathname === "/license" 
+                    || pathname === "/management-agency" 
+                    || pathname === "/inspection" 
+                    || pathname === "/corporation"
+                    || pathname === "/automotive-parts"
+                    || pathname === "/integration"}>
+            사업분야</NavContent>
             </Link>
             <Link to="/contact" style={{textDecoration: 'none'}}>
-                <NavContent>견적의뢰</NavContent>
+                <NavContent         
+                    current={
+                        pathname === "/contact"}
+                >
+                견적의뢰</NavContent>
             </Link>
             <Link to="/notice" style={{textDecoration: 'none'}}>
-                <NavContent>커뮤니티</NavContent>
+            <NavContent         
+                    current={
+                        pathname === "/notice"}
+                >커뮤니티</NavContent>
             </Link>
             <HeaderDropBlock>
                 <HeaderNav/>
             </HeaderDropBlock> 
-        </Navigator>
-        
+            </Navigator>
+        )
     );
-};
+
 
 const Navigator = styled.div`
-    display: flex;
-    justify-content: space-around;
-    @media screen and (max-width: 1024px) {
-    display: none;
+display: flex;
+justify-content: space-around;
+@media screen and (max-width: 1024px) {
+display: none;
+}
+&:hover {
+    color: #5d6b83;
+    >div {
+      display: block;
   }
-  &:hover {
-        color: #5d6b83;
-        >div {
-          display: block;
-      }
-    }
+}
 `;
 
 const NavContent = styled.div`
-    width: 15vw;
+ width: 15vw;
     padding: 26px 0;
     max-width: 150px;
     min-width: 100px;
@@ -54,6 +73,10 @@ const NavContent = styled.div`
     &:hover {
         color: #0A109F;
     }
+${props => props.current && css`
+    color: #0A109F;
+    font-weight: 600;
+`}
 `;
 
 const HeaderDropBlock = styled.div`
@@ -68,29 +91,3 @@ const HeaderDropBlock = styled.div`
     display: none;
     box-shadow:  0px 3px 6px rgba(0, 0, 0, 0.1);
 `;
-
-// const DropContent = styled(NavContent)`
-//     padding: 10px 46px;
-//     font-size: 16px;
-// `;
-
-// const Ul = styled.div`
-//     display: none;
-//     position: absolute;
-//     margin-top: 45px;
-//     padding: 20px 20px 10px 20px;
-//     text-decoration: none;
-//     flex-direction: flex-end;
-//     background: #fff;
-//     border: 1px solid #e2e8f0;
-//     border-radius: 3px;
-// `;
-
-// const Li = styled.div`
-//     text-decoration: none;
-//     margin-bottom: 10px;
-// `;
-
-// const DropWrapper = styled.div`
-// `;
-export default NavBar;

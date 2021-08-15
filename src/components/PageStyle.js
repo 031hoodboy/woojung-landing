@@ -129,7 +129,7 @@ export const NavBarWrapper = styled.div`
     font-weight: 400;
     border-bottom: 1px solid #D9D9D9;
     align-items: center;
-    @media screen and (max-width: 1208px) {
+    @media screen and (max-width: 1207px) {
         width: 100vw;
         height: 50px;
         flex-direction: column;
@@ -156,7 +156,7 @@ export const NavBlock = styled.div`
     justify-content: center;
     align-items: center;
     font-weight: 300;
-    @media screen and (max-width: 1208px) {
+    @media screen and (max-width: 1207px) {
         display: none;
         border: none;
     }
@@ -166,7 +166,7 @@ export const SelectNavBlock = styled(NavBlock)`
     font-weight: 700;
     color: #000;
     border-left: 1px solid #D9D9D9;
-    @media screen and (max-width: 1208px) {
+    @media screen and (max-width: 1207px) {
         font-size: 18px;
         width: 100vw;
         display: flex;
@@ -179,7 +179,7 @@ export const SelectNavBlock = styled(NavBlock)`
 export const MobileNavBlock = styled(NavBlock)`
         height: 49px;
         font-size: 18px;
-    @media screen and (max-width: 1208px) {
+    @media screen and (max-width: 1207px) {
         display: flex;
         font-size: 18px;
         width: 100vw;
@@ -189,7 +189,7 @@ export const MobileNavBlock = styled(NavBlock)`
 
 export const MobileSelectNavBlock = styled(SelectNavBlock)`
     display: none;
-    @media screen and (max-width: 1208px) {
+    @media screen and (max-width: 1207px) {
         display: none;
     }
 `;
