@@ -9,7 +9,7 @@ import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, MobileNavBarWra
 import styled from '@emotion/styled';
 import ProfileImg from '../../assets/fireextinguisher.png';
 
-const ManagementAgency = () => {
+const Inspection = () => {
 
     const [open, setopen] = useState(false);
     const onToggle = () => {
@@ -169,4 +169,4 @@ const Profile = styled.div`
   }
 `;
 
-export default ManagementAgency;
+export default Inspection;
