@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/aboutbackground.png';
-import {PageTitleWrpper, PageTitle, NavBarWrapper, NavBlock, SelectNavBlock, MainImgTitle } from '../../components/PageStyle';
+import {PageTitleWrpper, 
+        PageTitle, 
+        NavBarWrapper, 
+        NavBlock, 
+        SelectNavBlock, 
+        MainImgTitle, 
+        MobileNavBarWrapper,
+        MobileSelectNavBlock,
+        MobileNavBlock,
+
+} from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import LicenseImg1 from '../../assets/license1.png';
 import LicenseImg2 from '../../assets/license2.png';
 import LicenseImg3 from '../../assets/license3.png';
 import LicenseImg4 from '../../assets/license4.png';
+import ArrowImg from '../../assets/arrow.png';
 
 const BusinessPartner = () => {
+    const [open, setopen] = useState(false);
+    const onToggle = () => {
+        setopen(!open);
+    }
     return (
         <PageWrapper>
             <Header/>
@@ -21,12 +36,12 @@ const BusinessPartner = () => {
                     회사소개
                 </MainImgTitle>
             </MainImg>
-            <NavBarWrapper>
+            <NavBarWrapper open={open}>
                     <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>회사소개</NavBlock>
                     </Link>
                     <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock>사업자등록증 및 면허증</SelectNavBlock>
+                        <SelectNavBlock onClick={onToggle}>사업자등록증 및 면허증<Arrow/></SelectNavBlock>
                     </Link>
                     <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>조직도</NavBlock>
@@ -34,6 +49,20 @@ const BusinessPartner = () => {
                     <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>찾아오시는 길</NavBlock>
                     </Link>
+                    <MobileNavBarWrapper open={open}>
+                        <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>회사소개</MobileNavBlock>
+                        </Link>
+                        <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileSelectNavBlock>사업자등록증 및 면허증</MobileSelectNavBlock>
+                        </Link>
+                        <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>조직도</MobileNavBlock>
+                        </Link>
+                        <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>찾아오시는 길</MobileNavBlock>
+                        </Link>
+                    </MobileNavBarWrapper>
             </NavBarWrapper>
             <PageTitleWrpper>
                 <PageTitle>사업자등록증 및 면허증</PageTitle>
@@ -147,6 +176,22 @@ const RemarkWrapper = styled.div`
     @media screen and (max-width: 1220px) {
         margin: 0;
         margin-bottom: 5vh;
+  }
+`;
+
+
+const Arrow = styled.div`
+    width: 17px;
+    height: 9px;
+    background-image: url(${ArrowImg});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    display: none;
+    position: absolute;
+    right: 5%;
+  @media screen and (max-width: 780px) {
+    display: flex;
   }
 `;
 
