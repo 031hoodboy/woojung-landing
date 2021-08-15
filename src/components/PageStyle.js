@@ -251,18 +251,18 @@ export const ExSubTitle = styled(SubTitle)`
 `;
 
 export const Arrow = styled.div`
-width: 17px;
-height: 9px;
-background-image: url(${ArrowImg});
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center; 
-display: none;
-position: absolute;
-right: 5%;
-@media screen and (max-width: 780px) {
-display: flex;
-}
+  width: 17px;
+  height: 9px;
+  background-image: url(${ArrowImg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  display: none;
+  position: absolute;
+  right: 5%;
+  @media screen and (max-width: 1207px) {
+      display: flex;
+    }
 `;
 
 export const PageTitle = styled(Title)`
