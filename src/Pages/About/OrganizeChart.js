@@ -1,15 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import {Link} from 'react-router-dom';
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/aboutbackground.png';
-import {PageTitleWrpper, PageTitle, NavBarWrapper, NavBlock, SelectNavBlock, MainImgTitle} from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, NavBarWrapper, NavBlock, SelectNavBlock, MainImgTitle, MobileNavBarWrapper, MobileSelectNavBlock, MobileNavBlock, Arrow} from '../../components/PageStyle';
 import styled from '@emotion/styled';
 // import ProfileImg from '../../assets/profile.png';
 import Chart from '../../assets/organizechart.png'
 
 const OrganizeChart = () => {
+
+    const [open, setopen] = useState(false);
+    const onToggle = () => {
+        setopen(!open);
+    }
+
     return (
         <PageWrapper>
             <Header/>
@@ -18,7 +24,7 @@ const OrganizeChart = () => {
                     회사소개
                 </MainImgTitle>
             </MainImg>
-            <NavBarWrapper>
+            <NavBarWrapper open={open}>
                     <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>회사소개</NavBlock>
                     </Link>
@@ -26,11 +32,25 @@ const OrganizeChart = () => {
                         <NavBlock>사업자등록증 및 면허증</NavBlock>
                     </Link>
                     <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock>조직도</SelectNavBlock>
+                        <SelectNavBlock onClick={onToggle}>조직도<Arrow/></SelectNavBlock>
                     </Link>
                     <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>찾아오시는 길</NavBlock>
                     </Link>
+                    <MobileNavBarWrapper open={open}>
+                        <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>회사소개</MobileNavBlock>
+                        </Link>
+                        <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>사업자등록증 및 면허증</MobileNavBlock>
+                        </Link>
+                        <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileSelectNavBlock>조직도</MobileSelectNavBlock>
+                        </Link>
+                        <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>찾아오시는 길</MobileNavBlock>
+                        </Link>
+                    </MobileNavBarWrapper>
             </NavBarWrapper>
             <PageTitleWrpper>
                 <PageTitle>조직도</PageTitle>

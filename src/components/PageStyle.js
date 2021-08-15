@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import {css} from '@emotion/react';
 import { SMALL_SCREEN_THRESHOLD } from "../constant";
+import ArrowImg from '../assets/arrow.png';
 
 export const PageWrapper = styled.div`
   width: 100%;
@@ -249,6 +250,20 @@ export const ExSubTitle = styled(SubTitle)`
   }
 `;
 
+export const Arrow = styled.div`
+width: 17px;
+height: 9px;
+background-image: url(${ArrowImg});
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center; 
+display: none;
+position: absolute;
+right: 5%;
+@media screen and (max-width: 780px) {
+display: flex;
+}
+`;
 
 export const PageTitle = styled(Title)`
     border-bottom: 2px solid #000;
