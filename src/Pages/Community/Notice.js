@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import './Pagenation.css'
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/prbackground.png';
-import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, SelectNavBlock} from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper} from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
@@ -250,4 +250,19 @@ const BordHeaderTitle = styled.div`
 `;
 
 const BoardHeaderRegisDate = styled(Num)`
+`;
+
+const SelectNavBlock = styled.div`
+    width: 15vw;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #000;
+    @media screen and (max-width: 1207px) {
+        font-size: 18px;
+        width: 100vw;
+        display: flex;
+    }
 `;
