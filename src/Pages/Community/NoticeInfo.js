@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/prbackground.png';
-import {PageTitleWrpper, PageTitle, SubTitle2 } from '../../components/PageStyle';
+import {PageTitleWrpper, MainImgTitle, PageTitle, NavBarWrapper } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import axios from 'axios';
 
@@ -46,22 +46,17 @@ const NewsInfo = ({location}) => {
         <PageWrapper>
             <Header/>
             <MainImg>
-                홍보센터
-                <NavBarWrapper>
-                    <Link to="/news" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock>뉴스</SelectNavBlock>
-                    </Link>
-                    <Link to="/catalogue" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>E-카탈로그</NavBlock>
-                    </Link>
-                </NavBarWrapper>
+                <MainImgTitle>
+                커뮤니티
+                </MainImgTitle>
             </MainImg>
+            <NavBarWrapper>
+                    <Link to="/notice" style={{textDecoration: 'none', color: "#000"}}>
+                        <SelectNavBlock>공지사항</SelectNavBlock>
+                    </Link>
+            </NavBarWrapper>
             <PageTitleWrpper>
-                <PageTitle>뉴스</PageTitle>
-                <SubTitle2>
-                고효율 태양광 셀과 고출력 태양광 모듈 신기술을 상용화 함으로써<br/>
-                화석 연료의 사용을 감축할 수 있도록 기술개발과 상용화에 매진하고 있습니다.
-                </SubTitle2>
+                <PageTitle>공지사항</PageTitle>
             </PageTitleWrpper>
             <BoardWrapper>
                 {newscard.map(newscards => (
@@ -96,6 +91,7 @@ const NewsInfo = ({location}) => {
     );
 }
 
+
 const MainImg = styled.div`
     width: 100%;
     height: 25vh;
@@ -111,13 +107,6 @@ const MainImg = styled.div`
     color: #fff;
     font-size: 45px;
     font-weight: 600;
-    @font-face {
-        font-family: 'EliceDigitalBaeum_Bold';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
-        font-weight: bold;
-        font-style: normal;
-    }
-    font-family: 'EliceDigitalBaeum_Bold';
     @media screen and (max-width: 1024px) {
         height: 17vh;
         font-size: 26px;
@@ -132,7 +121,7 @@ const BoardWrapper = styled.div`
     margin: 10vh 0;
     @media screen and (max-width: 1024px) {
         width: 90vw;
-        margin: 0 auto 0 auto;
+        margin: 10vh auto 0 auto;
   }
 `;
 
@@ -160,7 +149,7 @@ const BoardHeader = styled.div`
     width: 90vw;
     max-width: 1088px;
     height: 52px;
-    border-top: 2px solid #851F1C;
+    border-top: 2px solid #0A109F;
     border-bottom: 1px solid #DBDBDB;
     display: flex;
     align-items: center;
@@ -230,52 +219,27 @@ const Button = styled.div`
     color: #fff;
     font-size: 15px;
     border-radius: 5px;
-    background: #930E14;
+    background: #0A109F;
     padding: 10px 20px;
     cursor: pointer;
     margin: 3vh 0;
     
 `;
 
-
-const NavBarWrapper = styled.div`
-    width: 60vw;
-    height: 58px;
-    display: flex;
-    margin: 0 auto;
-    position: absolute;
-    color: #000;
-    font-size: 16px;
-    font-weight: 400;
-    top: calc(25vh + 56px);
-    box-shadow:  0px 3px 6px rgba(0, 0, 0, 0.1);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    @media screen and (max-width: 1024px) {
-        width: calc(90vw + 3px);
-        top: calc(23vh); 
-        height: 40px;
-    }
-`;
-
-const NavBlock = styled.div`
-    width: 30vw;
-    height: 58px;
-    border-left: 1px solid #D9D9D9;
+const SelectNavBlock = styled.div`
+    width: 15vw;
+    min-width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
-    @media screen and (max-width: 1024px) {
-    width: 45vw;
-    height: 40px; 
-    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    @media screen and (max-width: 1207px) {
+        font-size: 18px;
+        width: 100vw;
+        display: flex;
     }
 `;
 
-const SelectNavBlock = styled(NavBlock)`
-    background: #930E14;
-    color: #fff;
-    border-left: 1px solid #930E14;
-`;
 
 export default NewsInfo;
