@@ -187,7 +187,8 @@ const BoardContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: center;
+    height: 74px;
   }
 `;
 
@@ -207,6 +208,8 @@ const BordTitle = styled.div`
         font-size: 12px;
         padding: 0;
         flex: 0;
+        margin-bottom: 10px;
+        font-weight: 600;
   }
 `;
 
@@ -242,7 +245,7 @@ const BoardHeader = styled.div`
     color: #fff;
     @media screen and (max-width: 780px) {
         background: none;
-        border-bottom: 2px solid #930E14;
+        border-bottom: 2px solid #0A109F;
   }
 `;
 
