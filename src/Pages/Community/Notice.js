@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import './Pagenation.css'
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/prbackground.png';
-import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper} from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, MainImgTitle, Arrow} from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
@@ -71,6 +71,7 @@ export default class News extends Component {
         this.receivedData()
     }
     render() {
+        
     return (
         <PageWrapper>
             <Header/>
@@ -80,10 +81,10 @@ export default class News extends Component {
                 </MainImgTitle>
             </MainImg>
             <NavBarWrapper>
-                    <Link to="/notice" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock>공지사항</SelectNavBlock>
-                    </Link>
-                </NavBarWrapper>
+                <Link to="/notice" style={{textDecoration: 'none', color: "#000"}}>
+                    <SelectNavBlock>공지사항<Arrow/></SelectNavBlock>
+                </Link>
+            </NavBarWrapper>
             <PageTitleWrpper>
                 <PageTitle>공지사항</PageTitle>
             </PageTitleWrpper>
@@ -267,5 +268,23 @@ const SelectNavBlock = styled.div`
         font-size: 18px;
         width: 100vw;
         display: flex;
+    }
+`;
+
+export const NavBarWrapper = styled.div`
+    width: 100vw;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid #D9D9D9;
+    align-items: center;
+    @media screen and (max-width: 1207px) {
+        width: 100vw;
+        height: 50px;
+        flex-direction: column;
     }
 `;

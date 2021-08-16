@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/prbackground.png';
-import {PageTitleWrpper, MainImgTitle, PageTitle, NavBarWrapper } from '../../components/PageStyle';
+import {PageTitleWrpper, MainImgTitle, PageTitle, Arrow } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import axios from 'axios';
 
@@ -52,7 +52,7 @@ const NewsInfo = ({location}) => {
             </MainImg>
             <NavBarWrapper>
                     <Link to="/notice" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock>공지사항</SelectNavBlock>
+                        <SelectNavBlock>공지사항<Arrow/></SelectNavBlock>
                     </Link>
             </NavBarWrapper>
             <PageTitleWrpper>
@@ -241,5 +241,22 @@ const SelectNavBlock = styled.div`
     }
 `;
 
+export const NavBarWrapper = styled.div`
+    width: 100vw;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid #D9D9D9;
+    align-items: center;
+    @media screen and (max-width: 1207px) {
+        width: 100vw;
+        height: 50px;
+        flex-direction: column;
+    }
+`;
 
 export default NewsInfo;

@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 import Email from '../../components/Email';
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/customersupportbackground.png';
-import {PageTitleWrpper, PageTitle, NavBarWrapper, MainImgTitle } from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, MainImgTitle, Arrow } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 
 const MailContact = () => {
@@ -19,8 +19,8 @@ const MailContact = () => {
                 </MainImgTitle>
             </MainImg>
             <NavBarWrapper>
-                    <Link to="/quote-contact" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock>견적의뢰</SelectNavBlock>
+                    <Link to="/contact" style={{textDecoration: 'none', color: "#000"}}>
+                        <SelectNavBlock>견적의뢰<Arrow/></SelectNavBlock>
                     </Link>
                 </NavBarWrapper>
             <PageTitleWrpper>
@@ -65,6 +65,24 @@ const SelectNavBlock = styled.div`
         font-size: 18px;
         width: 100vw;
         display: flex;
+    }
+`;
+
+export const NavBarWrapper = styled.div`
+    width: 100vw;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid #D9D9D9;
+    align-items: center;
+    @media screen and (max-width: 1207px) {
+        width: 100vw;
+        height: 50px;
+        flex-direction: column;
     }
 `;
 
