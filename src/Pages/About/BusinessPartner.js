@@ -124,7 +124,7 @@ const Blockwrapper = styled.div`
     width: 1088px;
     display: flex;
     flex-wrap: wrap;
-    margin: 5vh auto 10vh auto;
+    margin: 10vh auto 10vh auto;
     @media screen and (max-width: 1220px) {
         width: 90vw;
         justify-content: space-around;

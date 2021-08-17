@@ -15,6 +15,7 @@ export const PageBlockWrapper = styled.div`
   flex-direction: column;
   margin: 0 auto;
   margin-bottom: 15vh;
+  margin-top: 5vh;
   @media screen and (max-width: 1208px) {
         width: 80vw;
   }
