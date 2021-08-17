@@ -9,13 +9,22 @@ import BackgroundImg from '../../assets/prbackground.png';
 import {PageTitleWrpper, MainImgTitle, PageTitle, Arrow } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import axios from 'axios';
-
+import { Document, Page } from 'react-pdf';
+import { pdfjs } from 'react-pdf';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const NewsInfo = ({location}) => {
 
     const [newscard, setNewscard] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+
+    const [numPages, setNumPages] = useState(null);
+    const [pageNumber, setPageNumber] = useState(1);
+  
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
 
     const history = useHistory();
 
@@ -63,14 +72,22 @@ const NewsInfo = ({location}) => {
                     (newscards.idx === location.props?.id?
                         <>
                         <BoardHeader>
-                            <BordTitle>{newscards.subject}</BordTitle>
+                            <BordTitle>{newscards?.subject}</BordTitle>
                         </BoardHeader>
                         <BorderSubTitle>
                             <RegisDate>등록일: {newscards.regdate.split("", 10)}</RegisDate>
                         </BorderSubTitle>
                         <BoardContent>
-                            <NewsImg src={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url} alt="pdf" typeof="application/pdf"/>
-                            <NewssContnet>{newscards.content}</NewssContnet>
+                            {/* <Link to={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url} target="_blank" download>Download</Link> */}
+                            <div>
+                                <Document
+                                    file={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url}
+                                    onLoadSuccess={onDocumentLoadSuccess}
+                                >
+                                </Document>
+                            </div>  
+                            <a href={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url} target="_blank" rel="noopener noreferrer" download>다운로드</a>
+                            <NewssContnet>{newscards?.content}</NewssContnet>
                         </BoardContent>
                     </>
                     :
@@ -125,7 +142,7 @@ const BoardWrapper = styled.div`
   }
 `;
 
-const NewsImg = styled.img`
+const NewsImg = styled.div`
     height: 400px;
     max-width: 600px;
     background-size: contain;
