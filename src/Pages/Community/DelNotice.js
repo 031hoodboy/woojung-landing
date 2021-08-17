@@ -106,7 +106,7 @@ const Blockwrapper = styled.div`
     justify-content: center;
     @media screen and (max-width: 1220px) {
         width: 90vw;
-        justify-content: space-between;
+        justify-content: space-around;
   }
 `;
 
