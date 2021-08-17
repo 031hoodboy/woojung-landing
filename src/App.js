@@ -8,14 +8,17 @@ import WayToCome from './Pages/About/WayToCome';
 import OrganizeChart from './Pages/About/OrganizeChart';
 import License from './Pages/BusinessDomain/License';
 import Contact from './Pages/FacilityStatus/MailContact';
-import ManagementAgency from "./Pages/BusinessDomain/ManagementAgency"
-import Integration from "./Pages/BusinessDomain/Integration"
-import Inspection from "./Pages/BusinessDomain/Inspection"
-import Corporation from "./Pages/BusinessDomain/Corporation"
-import AutomotiveParts from "./Pages/BusinessDomain/AutomotiveParts"
-import Notice from "./Pages/Community/Notice"
-import NoticeInfo from "./Pages/Community/NoticeInfo"
+import ManagementAgency from "./Pages/BusinessDomain/ManagementAgency";
+import Integration from "./Pages/BusinessDomain/Integration";
+import Inspection from "./Pages/BusinessDomain/Inspection";
+import Corporation from "./Pages/BusinessDomain/Corporation";
+import AutomotiveParts from "./Pages/BusinessDomain/AutomotiveParts";
+import Notice from "./Pages/Community/Notice";
+import NoticeInfo from "./Pages/Community/NoticeInfo";
 import ScrollTop from './components/PageTop';
+import DelNotice from './Pages/Community/DelNotice';
+import AddNotice from './Pages/Community/AddNotice';
+import UpdateNotice from './Pages/Community/UpdateNotice';
 
 // import Fee2 from './pages/Fee/Fee2';
 
@@ -38,6 +41,9 @@ const App = () => {
         <Route path="/integration" component={Integration}  />
         <Route path="/contact" component={Contact}  />
         <Route path="/notice" component={Notice}  />
+        <Route path="/delete-notice" component={DelNotice}  />
+        <Route path="/update-notice" component={UpdateNotice}  />
+        <Route path="/add-notice" component={AddNotice}  />
         <Route path="/notice-info" component={NoticeInfo}  />
       </Switch>
     </BrowserRouter>

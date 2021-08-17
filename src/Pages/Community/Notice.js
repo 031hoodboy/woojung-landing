@@ -27,7 +27,7 @@ export default class News extends Component {
     
     receivedData() {
         axios
-            .get(`https://www.sgtapi.co.kr/news/newslist.do`)
+            .get(`https://www.wooapi.co.kr/notice/noticelist.do`)
             .then(res => {
                 const data = res.data;
                 const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
@@ -39,7 +39,7 @@ export default class News extends Component {
                         </Wrapper>
                         <BordTitle
                   
-                        >{newscards.news_sub}</BordTitle>
+                        >{newscards.subject}</BordTitle>
                         <Wrapper>
                             <RegisDate>{newscards.regdate.split("", 10)}</RegisDate>
                             <Look>조회</Look>

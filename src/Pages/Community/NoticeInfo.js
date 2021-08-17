@@ -26,7 +26,7 @@ const NewsInfo = ({location}) => {
             setNewscard(null);
             setLoading(true);
             const response = await axios.get(
-            `https://www.sgtapi.co.kr/news/newslist.do`
+            `https://www.wooapi.co.kr/notice/noticelist.do`
             );
             setNewscard(response.data); 
         } catch (e) {
@@ -63,14 +63,14 @@ const NewsInfo = ({location}) => {
                     (newscards.idx === location.props?.id?
                         <>
                         <BoardHeader>
-                            <BordTitle>{newscards.news_sub}</BordTitle>
+                            <BordTitle>{newscards.subject}</BordTitle>
                         </BoardHeader>
                         <BorderSubTitle>
                             <RegisDate>등록일: {newscards.regdate.split("", 10)}</RegisDate>
                         </BorderSubTitle>
                         <BoardContent>
-                            <NewsImg src={"https://sgtapi.co.kr" + newscards?.care_image_list?.[0].url} alt=""/>
-                            <NewssContnet>{newscards.newscon}</NewssContnet>
+                            <NewsImg src={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url} alt="pdf" typeof="application/pdf"/>
+                            <NewssContnet>{newscards.content}</NewssContnet>
                         </BoardContent>
                     </>
                     :
