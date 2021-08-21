@@ -79,13 +79,13 @@ const NewsInfo = ({location}) => {
                         </BorderSubTitle>
                         <BoardContent>
                             {/* <Link to={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url} target="_blank" download>Download</Link> */}
-                            <div>
+                            <DocumentWrapper>
                                 <Document
                                     file={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url}
                                     onLoadSuccess={onDocumentLoadSuccess}
                                 >
                                 </Document>
-                            </div>  
+                            </DocumentWrapper>  
                             <a href={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url} target="_blank" rel="noopener noreferrer" download>다운로드</a>
                             <NewssContnet>{newscards?.content}</NewssContnet>
                         </BoardContent>
@@ -274,6 +274,10 @@ export const NavBarWrapper = styled.div`
         height: 50px;
         flex-direction: column;
     }
+`;
+
+const DocumentWrapper = styled.div`
+    padding: 50px;
 `;
 
 export default NewsInfo;
