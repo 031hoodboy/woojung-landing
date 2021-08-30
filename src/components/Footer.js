@@ -8,10 +8,9 @@ const Footer = () => {
             <FooterBlock>
             <Logo/>
             <InfoWrapper>
-                <Content>(주)에스지티</Content>
-                <Content>Tel 041-548-0127(대표)   041-547-0127(기업부설연구소)&nbsp;&nbsp;&nbsp;<Content>Fax 041-548-1234</Content> </Content>
-                <Content>주소 : 충청남도 천안시 서북구 직산읍 모시리 215번지</Content>
-                <Content>Copyright 2021 SGT CO. All Rights Reserved. </Content>
+                <Content>우정에이치엔씨(주) ㅣ 대표 : 장두희 ㅣ <Content>사업자등록번호 : 312-86-64352</Content></Content>
+                <Content>주소 : 충청남도 천안시 서북구 백석3로 130-14, 4층(백석동)  <Content>ㅣ TEL : 041-565-7010~3</Content></Content>
+                <Content>Copyright 2021 Woojung. All Rights Reserved. </Content>
             </InfoWrapper>
             </FooterBlock>
         </FooterBcakgroundBlock>
@@ -42,6 +41,11 @@ const Content = styled.div`
     align-items: center;
     @media screen and (max-width: 840px) {
         font-size: 14px;
+  }
+  @media screen and (max-width: 453px) {
+        font-size: 14px;
+        padding: 0;
+        padding-top: 10px;
   }
 `;
 
