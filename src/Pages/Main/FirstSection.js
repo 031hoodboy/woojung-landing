@@ -54,22 +54,29 @@ const ContentWrapper = styled.div`
 const FirstTitle = styled(Title)`
     color: #fff;
     font-size: 50px;
-    @media screen and (max-width: 840px) {
-    font-size: 7vw;
+    line-height: 70px;
+    margin: 0;
+    @media screen and (max-width: 760px) {
+    line-height: 10vw;
+    font-size: 24px;
+    margin-top: 5vh;
   }
 `;
 
 const FirstSubTitle = styled(SubTitle)`
+    font-size: 18px;
     color: #fff;
-    @media screen and (max-width: 840px) {
+    @media screen and (max-width: 760px) {
         width: 60vw;
-        font-size: 3vw;
+        font-size: 12px;
+        line-height: 5vw;
   }
 `;
 
 const FirstButton1 = styled(Button)`
     color: #fff;
     background: #05CFFF;
+    margin: 0;
 `;
 
 const FirstButton2 = styled(FirstButton1)`
