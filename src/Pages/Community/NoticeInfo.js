@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import {Link} from 'react-router-dom';
-
+import ReactDOM from "react-dom";
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/prbackground.png';
 import {PageTitleWrpper, MainImgTitle, PageTitle, Arrow } from '../../components/PageStyle';
@@ -11,6 +11,7 @@ import styled from '@emotion/styled';
 import axios from 'axios';
 import { Document, Page } from 'react-pdf';
 import { pdfjs } from 'react-pdf';
+import FileViewer from "./FileViewer";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const NewsInfo = ({location}) => {
@@ -80,6 +81,13 @@ const NewsInfo = ({location}) => {
                         <BoardContent>
                             {/* <Link to={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url} target="_blank" download>Download</Link> */}
                             <DocumentWrapper>
+                                <div>
+                                    <Document
+                                    file="https://s3-ap-southeast-1.amazonaws.com/happay-local/HVP/BILL20198261213473719445688HP.pdf"
+                             >
+                                    <Page pageNumber={1} />
+                                    </Document>
+                                </div>
                                 <Document
                                     file={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url}
                                     onLoadSuccess={onDocumentLoadSuccess}
@@ -108,6 +116,8 @@ const NewsInfo = ({location}) => {
     );
 }
 
+const rootElement = document.getElementById("root");
+ReactDOM.render(<NewsInfo />, rootElement);
 
 const MainImg = styled.div`
     width: 100%;
