@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import Map3 from '../../modules/MapContainer3';
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/aboutbackground.png';
-import {PageTitleWrpper, PageTitle, PageBlockWrapper, NavBarWrapper, NavBlock, SelectNavBlock, MainImgTitle, MobileNavBarWrapper, MobileSelectNavBlock, MobileNavBlock, Arrow} from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, NavBarWrapper, NavBlock, SelectNavBlock, MainImgTitle, MobileNavBarWrapper, MobileSelectNavBlock, MobileNavBlock, Arrow} from '../../components/PageStyle';
 import styled from '@emotion/styled';
 
 const ChungjuFactory = () => {
@@ -152,7 +152,7 @@ const MapNavBlock = styled.div`
     border-left: 1px solid #98C355;
     color: #8AC53F;
     cursor: pointer;
-    @media screen and (max-width: 840px) {
+    @media screen and (max-width: 760px) {
         height: 10vw;
         font-size: 12px;
   }

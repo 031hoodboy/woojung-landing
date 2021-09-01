@@ -152,7 +152,7 @@ const MapNavBlock = styled.div`
     border-left: 1px solid #98C355;
     color: #8AC53F;
     cursor: pointer;
-    @media screen and (max-width: 840px) {
+    @media screen and (max-width: 760px) {
         height: 10vw;
         font-size: 12px;
   }
