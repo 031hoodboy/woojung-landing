@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import {Link} from 'react-router-dom';
+import Map2 from '../../modules/MapContainer2';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/aboutbackground.png';
@@ -134,7 +135,7 @@ const MainImg = styled.div`
 `;
 
 const BarkWrapper = styled.div`
-    margin-bottom: 10vh;
+    margin-bottom: 30vh;
     @media screen and (max-width: 1024px) {
         width: 90vw;
         margin: 0 auto 20vh auto;

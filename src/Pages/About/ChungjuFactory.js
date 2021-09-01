@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import {Link} from 'react-router-dom';
-import Map from '../../modules/MapContainer';
+import Map3 from '../../modules/MapContainer3';
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/aboutbackground.png';
 import {PageTitleWrpper, PageTitle, PageBlockWrapper, NavBarWrapper, NavBlock, SelectNavBlock, MainImgTitle, MobileNavBarWrapper, MobileSelectNavBlock, MobileNavBlock, Arrow} from '../../components/PageStyle';
 import styled from '@emotion/styled';
 
-const WayToCome = () => {
+const ChungjuFactory = () => {
 
     const [open, setopen] = useState(false);
     const onToggle = () => {
@@ -56,19 +56,19 @@ const WayToCome = () => {
             </PageTitleWrpper>
             <MapNavBar>
                 <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
-                    <SelectMapNavBlock style={{border: 'none'}} >본사</SelectMapNavBlock>
+                    <MapNavBlock style={{border: 'none'}} >본사</MapNavBlock>
                 </Link>
                 <Link to="/seonggeo-factory" style={{textDecoration: 'none', color: "#000"}}>
                     <MapNavBlock>성거공장</MapNavBlock>
                 </Link>
                 <Link to="/chungju-factory" style={{textDecoration: 'none', color: "#000"}}>
-                    <MapNavBlock>청주공장</MapNavBlock>
+                    <SelectMapNavBlock>청주공장</SelectMapNavBlock>
                 </Link>
             </MapNavBar>
                 <MapContainer>
-                    <Map />
+                    <Map3 />
                     <InfoWrapper>
-                        <Info><b>주소 </b> 충청남도 천안시 서북구 백석3로 130-14, 4층(백석동)</Info>
+                        <Info><b>주소 </b> (충주공장) 충북 충주시 산척면 동충주산업단지 E4-2 BL</Info>
                         <Info><b>tel</b> 041-565-7010~3</Info>
                     </InfoWrapper>
                 </MapContainer>
@@ -164,4 +164,4 @@ const SelectMapNavBlock = styled(MapNavBlock)`
 `;
 
 
-export default WayToCome;
+export default ChungjuFactory;
