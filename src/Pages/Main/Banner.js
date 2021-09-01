@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <Background>
             <Content>
-                안전한 가나다라 마바사아 자차카타파하.
+                충청지역 최고의 기술 및 노하우 보유 소방/위험물 종합컨설팅 회사
             </Content>
         </Background>
     );
@@ -14,7 +14,7 @@ const Banner = () => {
 
 const Background = styled.div`
     width: 100vw;
-    height: 30vh;
+    height: 25vh;
     background: #fff;
     background-image: url(${BackgroundImg});
     background-size: cover;
@@ -32,7 +32,7 @@ const Content = styled.div`
     width: 80vw;
     padding: 0 10vw;
     position: absolute;
-    height: 30vh;
+    height: 25vh;
     display: flex;
     flex-wrap: wrap;
     text-align: center;

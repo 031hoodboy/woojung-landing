@@ -1,41 +1,78 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import ToolImg from '../../assets/tool.png';
-import RulerImg from '../../assets/ruler.png';
-import BrickImg from '../../assets/brick.png';
+import Card1Img from '../../assets/card1img.png';
+import Card2Img from '../../assets/card2img.png';
+import Card3Img from '../../assets/card3img.png';
+import Card4Img from '../../assets/card4img.png';
+import Card5Img from '../../assets/card5img.png';
 
 const SecondSection = () => {
     return (
         <Background>
             <CardWrapper>
-                <CardBlock>
-                    <Tool/>
-                    <CardTitle>최고수준의 기술인력</CardTitle>
-                    <CardSubTitle>
-                        최고수준의 기술인력으로<br/>
-                        가나다라 마바사아 자차카타파하<br/>
-                        가나다라마 바사아 자차카타파<br/>
-                    </CardSubTitle>
-                </CardBlock>
-                <CardBlock>
-                    <Ruler/>
-                    <CardTitle>최고수준의 기술인력</CardTitle>
-                    <CardSubTitle>
-                        최고수준의 기술인력으로<br/>
-                        가나다라 마바사아 자차카타파하<br/>
-                        가나다라마 바사아 자차카타파<br/>
-                    </CardSubTitle>
-                </CardBlock>
-                <CardBlock>
-                    <Brick/>
-                    <CardTitle>최고수준의 기술인력</CardTitle>
-                    <CardSubTitle>
-                        최고수준의 기술인력으로<br/>
-                        가나다라 마바사아 자차카타파하<br/>
-                        가나다라마 바사아 자차카타파<br/>
-                    </CardSubTitle>
-                </CardBlock>
+                <Card1>
+                    <Card1Background>
+                        <CardTitleWrapper>
+                            <CardTitle>위험물 인허가/설계</CardTitle>
+                            <CardSubtitle>
+                                편리하고 안전한 위험물 설치허가 <br/>
+                                및 변경허가 대행업무를 바탕으로<br/>
+                                위험물 설계, 시공, 완공까지 전반<br/>
+                                적인 종합컨설팅 서비스 제공<br/>
+                            </CardSubtitle>
+                            <Button>더보기</Button>
+                        </CardTitleWrapper>
+                    </Card1Background>
+                </Card1>
+                <Card1>
+                    <Card2Background>
+                        <CardTitleWrapper>
+                            <CardTitle>위험물 안전관리대행</CardTitle>
+                            <CardSubtitle>
+                                고객을 위한, 고객이 신뢰할 수 있는<br/>
+                                위험물안전관리 서비스 제공
+                            </CardSubtitle>
+                            <Button>더보기</Button>
+                        </CardTitleWrapper>
+                    </Card2Background>
+                </Card1>
+                <Card1>
+                    <Card3Background>
+                        <CardTitleWrapper>
+                            <CardTitle>소방 시설관리</CardTitle>
+                            <CardSubtitle>
+                                전문인력과 첨단장비를 활용한 정밀한 <br/>
+                                소방시설 점검 및 보완 서비스 제공
+                            </CardSubtitle>
+                            <Button>더보기</Button>
+                        </CardTitleWrapper>
+                    </Card3Background>
+                </Card1>
+                <Card1>
+                    <Card4Background>
+                        <CardTitleWrapper>
+                            <CardTitle>소방 공사/위험물 공사</CardTitle>
+                            <CardSubtitle>
+                                설치 및 변경, 용도폐지 등 위험물 <br/>
+                                전반에 대한 공사업무 서비스 제공
+                            </CardSubtitle>
+                            <Button>더보기</Button>
+                        </CardTitleWrapper>
+                    </Card4Background>
+                </Card1>
+                <Card1>
+                    <Card5Background>
+                        <CardTitleWrapper>
+                            <CardTitle>전기자동차</CardTitle>
+                            <CardSubtitle>
+                                친환경 자동차 BMA 공급을 통한<br/>
+                                자동차 부품 전문 제조
+                            </CardSubtitle>
+                            <Button>더보기</Button>
+                        </CardTitleWrapper>
+                    </Card5Background>
+                </Card1>
             </CardWrapper>
         </Background>
     );
@@ -43,7 +80,6 @@ const SecondSection = () => {
 
 const Background = styled.div`
     width: 100vw;
-    padding: 10vh 0;
     background: #fff;
     background-size: cover;
     background-repeat: no-repeat;
@@ -55,73 +91,84 @@ const Background = styled.div`
 `;
 
 const CardWrapper =  styled.div`
-    width: 1088px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    @media screen and (max-width: 1088px) {
-        width: 90vw;
-        flex-direction: column;
-        align-items: center;
-    }
-`;
-
-const CardBlock =  styled.div`
-    width: 210px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 1088px;
-    justify-content: space-between;
-    margin: 5vh 0;
-    overflow: hidden;
-`;
-
-const Tool = styled.div`
-    width: 120px;
-    height: 120px;
-    background-image: url(${ToolImg});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-`;
-
-const Ruler = styled.div`
-    width: 120px;
-    height: 120px;
-    background-image: url(${RulerImg});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-`;
-
-const Brick = styled.div`
-    width: 120px;
-    height: 120px;
-    background-image: url(${BrickImg});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 `;
 
 const CardTitle = styled.div`
-    font-size: 20px;
-    font-weight: 600;
-    margin: 20px 0;
+    font-size: 1.8vw;
+    color: #fff;
+    margin-bottom: 2.5vw;
 `;
 
-const CardSubTitle = styled.div`
-    font-size: 16px;
+const Card1 = styled.div`
+    width: 20vw;
+    height: 20vw;
+    overflow: hidden;
 `;
+
+const Card1Background = styled.div`
+    width: 20vw;
+    height: 20vw;
+    background-image: url(${Card1Img});
+    background-size: 101%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;  
+    &:hover{
+        background-size: 105%;
+    }
+`;
+
+const Card2Background = styled(Card1Background)`
+    background-image: url(${Card2Img});
+`;
+
+const Card3Background = styled(Card1Background)`
+    background-image: url(${Card3Img});
+`;
+
+const Card4Background = styled(Card1Background)`
+    background-image: url(${Card4Img});
+`;
+
+const Card5Background = styled(Card1Background)`
+    background-image: url(${Card5Img});
+`;
+
+const CardTitleWrapper = styled.div`
+    margin: auto;
+    width: 17vw;
+    height: 17vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    text-align: center;
+`;
+
+const CardSubtitle = styled.div`
+    font-size: 1vw;
+    color: #fff;
+    width: 17vw;
+    height: 7vw;
+`;
+
+const Button = styled.div`
+    width: 8vw;
+    height: 2vw;
+    font-size: 0.9vw;
+    background-color: rgba(0, 0, 0, 0.7);;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+`;
+
 
 export default SecondSection;

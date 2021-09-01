@@ -5,10 +5,6 @@ import {PageWrapper} from '../../components/PageStyle';
 
 import FirstSection from './FirstSection';
 import SecondSection from './SecondSection';
-import ThirdSection from './ThirdSection';
-import FourthSection from './FourthSection';
-import FifthSection from './FifthSection';
-import SixthSection from './SixthSection';
 import SeventhSection from './SeventhSection';
 import Banner from './Banner';
 
@@ -18,10 +14,6 @@ const Main = () => {
             <Header/>
                 <FirstSection/>
                 <SecondSection/>
-                <ThirdSection/>
-                <FourthSection/>
-                <FifthSection/>
-                <SixthSection/>
                 <SeventhSection/>
                 <Banner/>
             <Footer/>

@@ -98,7 +98,6 @@ export const TitleWrpper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5vh;
 `;
 
 export const PageTitleWrpper = styled.div`
@@ -358,9 +357,8 @@ export const GreenButton = styled(Button)`
 
 
 export const CardWrapper = styled.div`
-    display: flex;
     width: 90vw;
-    max-width: 1120px;
+    display: flex;
     justify-content: space-around; 
     align-items: center;
     flex-wrap: wrap;

@@ -84,7 +84,8 @@ const NewsInfo = ({location}) => {
                                 <div>
                                     <Document
                                     file="https://s3-ap-southeast-1.amazonaws.com/happay-local/HVP/BILL20198261213473719445688HP.pdf"
-                             >
+                                    style={{width: "200px"}}
+                                    >
                                     <Page pageNumber={1} />
                                     </Document>
                                 </div>

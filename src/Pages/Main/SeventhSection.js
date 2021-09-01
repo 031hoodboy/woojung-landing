@@ -12,7 +12,6 @@ import Card6Img from '../../assets/firesafty.png';
 const SeventhSection = () => {
     return (
         <Background>
-        <PageBlockWrapper>
             <TitleWrpper>
                 <GreenRemark>PARTNERS</GreenRemark>
                 <Title>사업파트너</Title>
@@ -25,7 +24,6 @@ const SeventhSection = () => {
                 <Card5></Card5>
                 <Card6></Card6>
             </CardWrapper>
-        </PageBlockWrapper>
     </Background>
     );
 }
@@ -44,8 +42,11 @@ const Background = styled.div`
 `;
 
 const Card1 = styled.div`
-    width: 300px;
-    height: 110px;
+    width: 12vw;
+    height: 4.5vw;
+    min-width: 168px;
+    min-height: 65px;
+    margin: 0 1vw;
     background-image: url(${Card1Img});
     background-size: cover;
     background-repeat: no-repeat;
@@ -59,6 +60,8 @@ const Card1 = styled.div`
     font-weight: 600;
     margin-top: 5vh;
     @media screen and (max-width: 840px) {
+        margin: 0;
+        margin-top: 5vh;
         width: 168px;
         height: 65px;
   }
