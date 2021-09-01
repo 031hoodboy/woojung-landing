@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/businessdomainbackground.png';
-import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, MobileNavBarWrapper, NavBlock, SelectNavBlock, BlueSpan, GreenSpan, Arrow, MobileSelectNavBlock, MobileNavBlock } from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, MobileNavBarWrapper, NavBlock, BlueSpan, GreenSpan, Arrow, MobileSelectNavBlock, MobileNavBlock } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import ProfileImg from '../../assets/dangerousgoodslicense.png';
 
@@ -25,42 +25,30 @@ const License = () => {
                 </MainImgTitle>
             </MainImg>
             <NavBarWrapper open={open}>
-                    <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock onClick={onToggle}>위험물 인허가/설계<Arrow/></SelectNavBlock>
-                    </Link>
-                    <Link to="/management-agency" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>위험물 안전관리대행</NavBlock>
-                    </Link>
                     <Link to="/inspection" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>소방시설안전관리/점검</NavBlock>
+                    </Link>
+                    <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
+                        <SelectNavBlock onClick={onToggle}>위험물 안전관리대행/설계/인허가<Arrow/></SelectNavBlock>
                     </Link>
                     <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>소방 공사/위험물 공사</NavBlock>
                     </Link>
                     <Link to="/automotive-parts" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>친환경 자동차 부품</NavBlock>
-                    </Link>
-                    <Link to="/integration" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>내역(적산)</NavBlock>
+                        <NavBlock>전기자동차</NavBlock>
                     </Link>
                     <MobileNavBarWrapper open={open}>
-                        <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileSelectNavBlock>위험물 인허가/설계</MobileSelectNavBlock>
-                        </Link>
-                        <Link to="/management-agency" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>위험물 안전관리대행</MobileNavBlock>
-                        </Link>
                         <Link to="/inspection" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>소방시설안전관리/점검</MobileNavBlock>
+                            <MobileNavBlock onClick={onToggle}>소방시설안전관리/점검</MobileNavBlock>
+                        </Link>
+                        <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileSelectNavBlock>위험물 안전관리대행/설계/인허가</MobileSelectNavBlock>
                         </Link>
                         <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>소방 공사/위험물 공사</MobileNavBlock>
                         </Link>
                         <Link to="/automotive-parts" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>친환경 자동차 부품</MobileNavBlock>
-                        </Link>
-                        <Link to="/integration" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>내역(적산)</MobileNavBlock>
+                            <MobileNavBlock>전기자동차</MobileNavBlock>
                         </Link>
                     </MobileNavBarWrapper>
                 </NavBarWrapper>
@@ -154,5 +142,21 @@ const Profile = styled.div`
   }
 `;
 
+export const SelectNavBlock = styled(NavBlock)`
+    font-weight: 700;
+    color: #000;
+    border-left: 1px solid #D9D9D9;
+    width: 17vw;
+    max-width: 255px;
+    @media screen and (max-width: 1207px) {
+        font-size: 18px;
+        width: 100vw;
+        max-width: 1000000px;
+        display: flex;
+        min-height: 49px;
+        border-bottom: 1px solid #D9D9D9;
+        text-align: center;
+    }
+`;
 
 export default License;

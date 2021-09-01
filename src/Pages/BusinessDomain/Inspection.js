@@ -25,42 +25,30 @@ const Inspection = () => {
                 </MainImgTitle>
             </MainImg>
             <NavBarWrapper open={open}>
-                    <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>위험물 인허가/설계</NavBlock>
-                    </Link>
-                    <Link to="/management-agency" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>위험물 안전관리대행</NavBlock>
-                    </Link>
                     <Link to="/inspection" style={{textDecoration: 'none', color: "#000"}}>
                         <SelectNavBlock onClick={onToggle}>소방시설안전관리/점검<Arrow/></SelectNavBlock>
+                    </Link>
+                    <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
+                        <NavBlock style={{width: "17vw", maxWidth: "255px"}}>위험물 안전관리대행/설계/인허가</NavBlock>
                     </Link>
                     <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>소방 공사/위험물 공사</NavBlock>
                     </Link>
                     <Link to="/automotive-parts" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>친환경 자동차 부품</NavBlock>
-                    </Link>
-                    <Link to="/integration" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>내역(적산)</NavBlock>
+                        <NavBlock>전기자동차</NavBlock>
                     </Link>
                     <MobileNavBarWrapper open={open}>
-                        <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>위험물 인허가/설계</MobileNavBlock>
-                        </Link>
-                        <Link to="/management-agency" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>위험물 안전관리대행</MobileNavBlock>
-                        </Link>
                         <Link to="/inspection" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileSelectNavBlock>소방시설안전관리/점검</MobileSelectNavBlock>
+                            <MobileSelectNavBlock onClick={onToggle}>소방시설안전관리/점검<Arrow/></MobileSelectNavBlock>
+                        </Link>
+                        <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>위험물 안전관리대행/설계/인허가</MobileNavBlock>
                         </Link>
                         <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>소방 공사/위험물 공사</MobileNavBlock>
                         </Link>
                         <Link to="/automotive-parts" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>친환경 자동차 부품</MobileNavBlock>
-                        </Link>
-                        <Link to="/integration" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>내역(적산)</MobileNavBlock>
+                            <MobileNavBlock>전기자동차</MobileNavBlock>
                         </Link>
                     </MobileNavBarWrapper>
                 </NavBarWrapper>
@@ -70,7 +58,8 @@ const Inspection = () => {
             <HelloWrapper>
                     <Profile/>
                     <Descrip>
-                    특정소방대상물의 관계인은 소방시설 설치유지 및 안전관리에 관한 법률(제25조)과 화재안전기준에 적합하게 유지되도록 자체점검을 실시하거나, 소방관리업자에게 정기적으로 점검하여야 합니다.
+                    우정에이치앤씨(주)는 특정소방대상물 및 공공기관 소방안전관리 위탁대행업체로서 대상처 대상으로 소방시설안전관리를 실시하여 소방시설의 
+안전을 최우선으로 생각하며,  소방대상물의 작동유무 및 유지관리에 필요한 점검을 실시하여 소방시설 설치유지 및 안전관리에 관한 법률(제25조)과 화재안전기준에 적합하게 최상의 서비스를 제공합니다.
                     </Descrip>
                     <Descrip>
                         ▲ <RedSpanBold>소방시설 안전관리</RedSpanBold> <br/>

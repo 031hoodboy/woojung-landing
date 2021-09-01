@@ -15,7 +15,6 @@ import {PageTitleWrpper,
         MobileSelectNavBlock,
         MobileNavBlock,
         Arrow
-
 } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import LicenseImg1 from '../../assets/license1.png';
@@ -27,7 +26,7 @@ import LicenseImg6 from '../../assets/license6.png';
 import LicenseImg7 from '../../assets/license7.png';
 import LicenseImg8 from '../../assets/license8.png';
 
-const BusinessPartner = () => {
+const BusinessPerformance = () => {
     const [open, setopen] = useState(false);
     const onToggle = () => {
         setopen(!open);
@@ -48,10 +47,10 @@ const BusinessPartner = () => {
                         <NavBlock>조직도</NavBlock>
                     </Link>
                     <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock onClick={onToggle}>사업자등록증 및 면허증 <Arrow/> </SelectNavBlock>
+                        <NavBlock>사업자등록증 및 면허증</NavBlock>
                     </Link>
                     <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>사업실적</NavBlock>
+                        <SelectNavBlock onClick={onToggle}>사업실적 <Arrow/></SelectNavBlock>
                     </Link>
                     <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>찾아오시는 길</NavBlock>
@@ -63,8 +62,11 @@ const BusinessPartner = () => {
                         <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>조직도</MobileNavBlock>
                         </Link>
+                        <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>사업자등록증 및 면허증</MobileNavBlock>
+                        </Link>
                         <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>사업실적</MobileNavBlock>
+                            <MobileSelectNavBlock>사업실적</MobileSelectNavBlock>
                         </Link>
                         <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>찾아오시는 길</MobileNavBlock>
@@ -218,4 +220,4 @@ const RemarkWrapper = styled.div`
   }
 `;
 
-export default BusinessPartner;
+export default BusinessPerformance;

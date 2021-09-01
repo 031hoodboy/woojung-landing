@@ -30,11 +30,14 @@ const Greet = () => {
                     <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
                         <SelectNavBlock onClick={onToggle}>회사소개<Arrow/> </SelectNavBlock>
                     </Link>
+                    <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
+                        <NavBlock>조직도</NavBlock>
+                    </Link>
                     <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>사업자등록증 및 면허증</NavBlock>
                     </Link>
-                    <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>조직도</NavBlock>
+                    <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
+                        <NavBlock>사업실적</NavBlock>
                     </Link>
                     <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>찾아오시는 길</NavBlock>
@@ -43,11 +46,14 @@ const Greet = () => {
                         <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileSelectNavBlock>회사소개</MobileSelectNavBlock>
                         </Link>
+                        <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>조직도</MobileNavBlock>
+                        </Link>
                         <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>사업자등록증 및 면허증</MobileNavBlock>
                         </Link>
-                        <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>조직도</MobileNavBlock>
+                        <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>사업실적</MobileNavBlock>
                         </Link>
                         <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>찾아오시는 길</MobileNavBlock>
@@ -260,7 +266,7 @@ const MobileNavBarWrapper = styled(NavBarWrapper)`
 `;
 
 const NavBlock = styled.div`
-    width: 15vw;
+    width: 10vw;
     min-width: 200px;
     border-left: 1px solid #D9D9D9;
     display: flex;

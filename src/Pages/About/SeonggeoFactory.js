@@ -27,24 +27,30 @@ const SeonggeoFactory = () => {
                     <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>회사소개</NavBlock>
                     </Link>
-                    <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>사업자등록증 및 면허증</NavBlock>
-                    </Link>
                     <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>조직도</NavBlock>
                     </Link>
+                    <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
+                        <NavBlock>사업자등록증 및 면허증</NavBlock>
+                    </Link>
+                    <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
+                        <NavBlock>사업실적</NavBlock>
+                    </Link>
                     <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock onClick={onToggle}>찾아오시는 길<Arrow/></SelectNavBlock>
-                    </Link>                    
+                        <SelectNavBlock onClick={onToggle}>찾아오시는 길 <Arrow/></SelectNavBlock>
+                    </Link>
                     <MobileNavBarWrapper open={open}>
                         <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>회사소개</MobileNavBlock>
                         </Link>
+                        <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>조직도</MobileNavBlock>
+                        </Link>
                         <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>사업자등록증 및 면허증</MobileNavBlock>
                         </Link>
-                        <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>조직도</MobileNavBlock>
+                        <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>사업실적</MobileNavBlock>
                         </Link>
                         <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileSelectNavBlock>찾아오시는 길</MobileSelectNavBlock>

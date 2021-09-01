@@ -24,15 +24,18 @@ const OrganizeChart = () => {
                     회사소개
                 </MainImgTitle>
             </MainImg>
-            <NavBarWrapper open={open}>
+            <NavBarWrapper open={open} >
                     <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>회사소개</NavBlock>
+                        <NavBlock>회사소개 </NavBlock>
+                    </Link>
+                    <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
+                        <SelectNavBlock onClick={onToggle}>조직도<Arrow/></SelectNavBlock>
                     </Link>
                     <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>사업자등록증 및 면허증</NavBlock>
                     </Link>
-                    <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock onClick={onToggle}>조직도<Arrow/></SelectNavBlock>
+                    <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
+                        <NavBlock>사업실적</NavBlock>
                     </Link>
                     <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>찾아오시는 길</NavBlock>
@@ -44,8 +47,8 @@ const OrganizeChart = () => {
                         <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>사업자등록증 및 면허증</MobileNavBlock>
                         </Link>
-                        <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileSelectNavBlock>조직도</MobileSelectNavBlock>
+                        <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>사업실적</MobileNavBlock>
                         </Link>
                         <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>찾아오시는 길</MobileNavBlock>

@@ -3,6 +3,7 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import Main from './Pages/Main/Main';
 import Greet from './Pages/About/Greet';
 import BusinessPartner from './Pages/About/BusinessPartner';
+import BusinessPerformance from './Pages/About/BusinessPerformance';
 import Vision from './Pages/About/Vision';
 import WayToCome from './Pages/About/WayToCome';
 import SeonggeoFactory from './Pages/About/SeonggeoFactory';
@@ -31,6 +32,7 @@ const App = () => {
       <Switch>
         <Route path="/" component={Main} exact />
         <Route path="/greet" component={Greet}  />
+        <Route path="/business-performance" component={BusinessPerformance}  />
         <Route path="/vision" component={Vision}  />
         <Route path="/business-partner" component={BusinessPartner} />
         <Route path="/way-to-come" component={WayToCome} />

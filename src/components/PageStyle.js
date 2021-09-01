@@ -149,7 +149,7 @@ export const MobileNavBarWrapper = styled(NavBarWrapper)`
 `;
 
 export const NavBlock = styled.div`
-    width: 15vw;
+    width: 12vw;
     min-width: 200px;
     border-left: 1px solid #D9D9D9;
     display: flex;
