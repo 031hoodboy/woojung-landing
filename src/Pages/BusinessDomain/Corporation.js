@@ -29,7 +29,7 @@ const Corporation = () => {
                         <NavBlock>소방시설안전관리/점검</NavBlock>
                     </Link>
                     <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>위험물 안전관리대행/설계/인허가</NavBlock>
+                        <NavBlock style={{width: "17vw", maxWidth: "255px"}}>위험물 안전관리대행/설계/인허가</NavBlock>
                     </Link>
                     <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
                         <SelectNavBlock onClick={onToggle}>소방 공사/위험물 공사<Arrow/></SelectNavBlock>
