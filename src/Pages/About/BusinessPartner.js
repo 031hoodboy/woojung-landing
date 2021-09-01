@@ -21,6 +21,11 @@ import LicenseImg1 from '../../assets/license1.png';
 import LicenseImg2 from '../../assets/license2.png';
 import LicenseImg3 from '../../assets/license3.png';
 import LicenseImg4 from '../../assets/license4.png';
+import LicenseImg5 from '../../assets/license5.png';
+import LicenseImg6 from '../../assets/license6.png';
+import LicenseImg7 from '../../assets/license7.png';
+import LicenseImg8 from '../../assets/license8.png';
+
 import ArrowImg from '../../assets/arrow.png';
 
 const BusinessPartner = () => {
@@ -74,16 +79,32 @@ const BusinessPartner = () => {
                         <Block></Block>
                     </RemarkWrapper>
                     <RemarkWrapper>
+                        <Remark>연구개발전담부서 인정서</Remark>
+                        <Block2/>
+                    </RemarkWrapper>
+                    <RemarkWrapper>
+                        <Remark>사업재편계획 승인증</Remark>
+                        <Block3/>
+                    </RemarkWrapper>
+                    <RemarkWrapper>
+                        <Remark>소방시설관리업등록증</Remark>
+                        <Block4/>
+                    </RemarkWrapper>
+                    <RemarkWrapper>
                         <Remark>소방시설업등록증</Remark>
-                        <Block2></Block2>
+                        <Block5/>
                     </RemarkWrapper>
                     <RemarkWrapper>
                         <Remark>소방시설관리업등록증</Remark>
-                        <Block3></Block3>
+                        <Block6/>
                     </RemarkWrapper>
                     <RemarkWrapper>
-                        <Remark>소방시설관리업등록증</Remark>
-                        <Block4></Block4>
+                        <Remark>중소기업 확인서</Remark>
+                        <Block7/>
+                    </RemarkWrapper>
+                    <RemarkWrapper>
+                        <Remark>벤처기업 확인서</Remark>
+                        <Block8/>
                     </RemarkWrapper>
                 </Blockwrapper>
             </BarkWrapper>
@@ -156,6 +177,22 @@ const Block3= styled(Block)`
 
 const Block4= styled(Block)`
     background-image: url(${LicenseImg4});
+`;
+
+const Block5= styled(Block)`
+    background-image: url(${LicenseImg5});
+`;
+
+const Block6= styled(Block)`
+    background-image: url(${LicenseImg6});
+`;
+
+const Block7= styled(Block)`
+    background-image: url(${LicenseImg7});
+`;
+
+const Block8= styled(Block)`
+    background-image: url(${LicenseImg8});
 `;
 
 const Remark = styled.div`
