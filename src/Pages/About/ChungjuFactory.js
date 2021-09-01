@@ -159,6 +159,7 @@ const MapNavBlock = styled.div`
 `;
 
 const SelectMapNavBlock = styled(MapNavBlock)`
+    width: 30vw;
     background-color: #8AC53F;
     color: #fff;
 `;
