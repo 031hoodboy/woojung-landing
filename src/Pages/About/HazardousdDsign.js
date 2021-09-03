@@ -91,7 +91,7 @@ export default class News extends Component {
                 <CardWrapper>
                 <BoardHeader>
                         <BuyerTitle style={{border: 'none'}}>발주처</BuyerTitle>
-                        <ConsNameTitle>공사명</ConsNameTitle>
+                        <ConsNameTitle>위험물 설계</ConsNameTitle>
                         <FieldsTitle>분야</FieldsTitle>
                         <RegdateTitle>비고</RegdateTitle>
                 </BoardHeader>
@@ -171,6 +171,7 @@ const CardWrapper = styled.div`
     margin-bottom: 5vh;
     overflow-x: scroll;
     border: 1px solid #8AC53F;
+    border-bottom: none;
     @media screen and (max-width: 880px) {
         justify-content: space-around;
   }
@@ -183,6 +184,7 @@ const BoardContent = styled.div`
     align-items: center;
     justify-content: space-between;
     color: #000;
+    border-bottom: 1px solid #8AC53F;
     @media screen and (max-width: 780px) {
     display: flex;
     align-items: center;
