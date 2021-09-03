@@ -1,36 +1,73 @@
-import React, { useState } from 'react';
+import React, {Component} from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import {Link} from 'react-router-dom';
-
+import './Pagenation.css'
 import {PageWrapper} from '../../components/PageStyle';
-import BackgroundImg from '../../assets/aboutbackground.png';
-import {PageTitleWrpper, 
-        PageTitle, 
-        NavBarWrapper, 
-        NavBlock, 
-        SelectNavBlock, 
-        MainImgTitle, 
-        MobileNavBarWrapper,
-        MobileSelectNavBlock,
-        MobileNavBlock,
-        Arrow
-} from '../../components/PageStyle';
+import BackgroundImg from '../../assets/prbackground.png';
+import { Title, PageBlockWrapper, BlueSpan, GreenSpan, Date, Space, NavBarWrapper, NavBlock, SelectNavBlock, MobileNavBarWrapper, MobileSelectNavBlock, MobileNavBlock, Arrow, MainImgTitle } from '../../components/PageStyle';
 import styled from '@emotion/styled';
-import LicenseImg1 from '../../assets/license1.png';
-import LicenseImg2 from '../../assets/license2.png';
-import LicenseImg3 from '../../assets/license3.png';
-import LicenseImg4 from '../../assets/license4.png';
-import LicenseImg5 from '../../assets/license5.png';
-import LicenseImg6 from '../../assets/license6.png';
-import LicenseImg7 from '../../assets/license7.png';
-import LicenseImg8 from '../../assets/license8.png';
+import axios from 'axios';
+import ReactPaginate from 'react-paginate';
+import BusinessPerformanceNavbar from './BusinessPerformanceNavbar';
+import TableNavbar from './TableNavbar';
 
-const BusinessPerformance = () => {
-    const [open, setopen] = useState(false);
-    const onToggle = () => {
-        setopen(!open);
+export default class News extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            offset: 0,
+            data: [],
+            perPage: 4,
+            currentPage: 0
+        };
+        this.handlePageClick = this
+            .handlePageClick
+            .bind(this);
     }
+    
+    receivedData() {
+        axios
+            .get(`https://www.wooapi.co.kr/business/businesslist.do`)
+            .then(res => {
+                const data = res.data;
+                const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
+                const postData = slice.map(businesslist => 
+                        <BoardContent key={businesslist.idx}>
+                            <Num>{businesslist.buyer}</Num>
+                            <Num>{businesslist.cons_name}</Num>
+                            <Num>{businesslist.fields}</Num>
+                            <Num>{businesslist.regdate}</Num>
+                    </BoardContent>
+                )
+
+                this.setState({
+                    pageCount: Math.ceil(data.length / this.state.perPage),
+                   
+                    postData
+                })
+            });
+    }
+    handlePageClick = (e) => {
+        const selectedPage = e.selected;
+        const offset = selectedPage * this.state.perPage;
+        this.setState({
+            currentPage: selectedPage,
+            offset: offset
+        }, () => {
+            this.receivedData()
+        });
+
+    };
+
+
+    componentDidMount() {
+        this.receivedData()
+    }
+
+    render() {
+
     return (
         <PageWrapper>
             <Header/>
@@ -39,82 +76,42 @@ const BusinessPerformance = () => {
                     회사소개
                 </MainImgTitle>
             </MainImg>
-            <NavBarWrapper open={open} >
-                    <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>회사소개</NavBlock>
-                    </Link>
-                    <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>조직도</NavBlock>
-                    </Link>
-                    <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>사업자등록증 및 면허증</NavBlock>
-                    </Link>
-                    <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock onClick={onToggle}>사업실적 <Arrow/></SelectNavBlock>
-                    </Link>
-                    <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>찾아오시는 길</NavBlock>
-                    </Link>
-                    <MobileNavBarWrapper open={open}>
-                        <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>회사소개</MobileNavBlock>
-                        </Link>
-                        <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>조직도</MobileNavBlock>
-                        </Link>
-                        <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>사업자등록증 및 면허증</MobileNavBlock>
-                        </Link>
-                        <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileSelectNavBlock>사업실적</MobileSelectNavBlock>
-                        </Link>
-                        <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>찾아오시는 길</MobileNavBlock>
-                        </Link>
-                    </MobileNavBarWrapper>
-            </NavBarWrapper>
+            <BusinessPerformanceNavbar/>
             <PageTitleWrpper>
-                <PageTitle>사업자등록증 및 면허증</PageTitle>
+                <PageTitle>사업실적</PageTitle>
+                <TableNavbar/>
             </PageTitleWrpper>
-            <BarkWrapper>
-                <Blockwrapper>
-                    <RemarkWrapper>
-                        <Remark>사업자등록증</Remark>
-                        <Block></Block>
-                    </RemarkWrapper>
-                    <RemarkWrapper>
-                        <Remark>연구개발전담부서 인정서</Remark>
-                        <Block2/>
-                    </RemarkWrapper>
-                    <RemarkWrapper>
-                        <Remark>사업재편계획 승인증</Remark>
-                        <Block3/>
-                    </RemarkWrapper>
-                    <RemarkWrapper>
-                        <Remark>소방시설관리업등록증</Remark>
-                        <Block4/>
-                    </RemarkWrapper>
-                    <RemarkWrapper>
-                        <Remark>소방시설업등록증</Remark>
-                        <Block5/>
-                    </RemarkWrapper>
-                    <RemarkWrapper>
-                        <Remark>소방시설관리업등록증</Remark>
-                        <Block6/>
-                    </RemarkWrapper>
-                    <RemarkWrapper>
-                        <Remark>중소기업 확인서</Remark>
-                        <Block7/>
-                    </RemarkWrapper>
-                    <RemarkWrapper>
-                        <Remark>벤처기업 확인서</Remark>
-                        <Block8/>
-                    </RemarkWrapper>
-                </Blockwrapper>
-            </BarkWrapper>
+            <NewsCardWrapper>
+                <CardWrapper>
+                <BoardHeader>
+                        <Num>발주처</Num>
+                        <Num>공사명</Num>
+                        <Num>분야</Num>
+                        <Num>비고</Num>
+                </BoardHeader>
+                    {this.state.postData}
+                </CardWrapper>
+                <Paginate>
+                    <ReactPaginate
+                        previousLabel={"<"}
+                        nextLabel={">"}
+                        breakLabel={"..."}
+                        breakClassName={"break-me"}
+                        pageCount={this.state.pageCount}
+                        marginPagesDisplayed={2}
+                        pageRangeDisplayed={4}
+                        onPageChange={this.handlePageClick}
+                        containerClassName={"pagination"}
+                        subContainerClassName={"pages pagination"}
+                        activeClassName={"active"}
+                    />
+                </Paginate>
+            </NewsCardWrapper>
+                
             <Footer/>
         </PageWrapper>
     );
+}
 }
 
 const MainImg = styled.div`
@@ -137,87 +134,143 @@ const MainImg = styled.div`
   }
 `;
 
-const BarkWrapper = styled.div`
-    margin-bottom: 30vh;
-    @media screen and (max-width: 1024px) {
-        width: 90vw;
-        margin: 0 auto 20vh auto;
+const NewsCardWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10vh 0;
+    @media screen and (max-width: 880px) {
+        justify-content: space-around;
+        padding: 5vh 0 20vh 0;
   }
 `;
 
-const Blockwrapper = styled.div`
-    width: 1088px;
+const Paginate = styled.div`
+    padding: 3vh auto 5vh auto;
+    cursor: pointer;
+`;
+
+const CardWrapper = styled.div`
     display: flex;
+    width: 90vw;
+    max-width: 1088px;
+    margin: 0 auto;
+    justify-content: space-around;
     flex-wrap: wrap;
-    margin: 10vh auto 10vh auto;
-    @media screen and (max-width: 1220px) {
-        width: 90vw;
+    margin-bottom: 5vh;
+    @media screen and (max-width: 880px) {
         justify-content: space-around;
   }
-`;
-
-const Block = styled.div`
-    width: 353px;
-    height: 425px;
-    margin: 0;
-    background-image: url(${LicenseImg1});
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center; 
-    @media screen and (max-width: 780px) {
-    width: 42vw;
-    height: 50vw;
-    margin: 0;
+  @media screen and (max-width: 780px) {
+        border-top: 2px solid #8AC53F;
   }
 `;
 
-const Block2= styled(Block)`
-    background-image: url(${LicenseImg2});
+const BoardContent = styled.div`
+    width: 90vw;
+    max-width: 1088px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+    border-bottom: 1px solid #DBDBDB;
+    @media screen and (max-width: 780px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 74px;
+  }
 `;
 
-const Block3= styled(Block)`
-    background-image: url(${LicenseImg3});
-`;
-
-const Block4= styled(Block)`
-    background-image: url(${LicenseImg4});
-`;
-
-const Block5= styled(Block)`
-    background-image: url(${LicenseImg5});
-`;
-
-const Block6= styled(Block)`
-    background-image: url(${LicenseImg6});
-`;
-
-const Block7= styled(Block)`
-    background-image: url(${LicenseImg7});
-`;
-
-const Block8= styled(Block)`
-    background-image: url(${LicenseImg8});
-`;
-
-const Remark = styled.div`
-    font-size: 18px;
-    padding: 20px;
-    border-bottom: 1px solid #D0D0D0;
+const Num = styled.div`
+    flex: 1;
     text-align: center;
+`;
+
+const BordTitle = styled.div`
+    flex:1;
+    padding: 0 50px;
+    cursor: pointer;
     @media screen and (max-width: 780px) {
-        padding: 1vw 3vw;
-        font-size: 3.2vw;
+        font-size: 12px;
+        padding: 0;
+        flex: 0;
+        margin-bottom: 10px;
+        font-weight: 600;
   }
 `;
 
-const RemarkWrapper = styled.div`
-    border: 1px solid #DBDBDB;
-    margin-bottom: 5vh;
-    margin-right: 7.5px;
-    @media screen and (max-width: 1220px) {
-        margin: 0;
-        margin-bottom: 5vh;
+const RegisDate = styled.div`
+    @media screen and (max-width: 780px) {
+        font-size: 12px;
+        padding: 0;
   }
 `;
 
-export default BusinessPerformance;
+const Look = styled.div`
+    min-width: 20px;
+    margin: 0 20px;
+    @media screen and (max-width: 780px) {
+        font-size: 12px;
+        padding: 0;
+  }
+`;
+
+ const Wrapper = styled.div`
+    display: flex;
+    flex: 1;
+`;
+
+const BoardHeader = styled.div`
+    width: 90vw;
+    max-width: 1088px;
+    height: 52px;
+    background-color: #8AC53F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    @media screen and (max-width: 780px) {
+        display: none;
+  }
+`;
+
+const BordHeaderTitle = styled.div`
+
+`;
+
+const BoardHeaderRegisDate = styled(Num)`
+
+`;
+
+export const PageTitleWrpper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1088px;
+    margin: 0 auto;
+    margin-top: 8vh;
+    @media screen and (max-width: 1207px) {
+        width: 90vw;
+        flex-direction: column;
+        align-items: center;
+  }
+  @media screen and (max-width: 880px) {
+    margin-top: 8vh;
+}
+`;
+
+const PageTitle = styled(Title)`
+    border-bottom: 2px solid #000;
+    margin: 0;
+    @media screen and (max-width: 1207px) {
+    margin-bottom: 10vh;
+  }
+    @media screen and (max-width: 880px) {
+    font-size: 20px;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+  }
+`;

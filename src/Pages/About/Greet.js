@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/aboutbackground.png';
-import {PageTitleWrpper, PageTitle, PageBlockWrapper, BlueSpan, GreenSpan, Date, Space } from '../../components/PageStyle';
+import {PageTitleWrpper, PageTitle, PageBlockWrapper, BlueSpan, GreenSpan, Date, Space, NavBarWrapper, NavBlock, SelectNavBlock, MobileNavBarWrapper, MobileSelectNavBlock, MobileNavBlock, Arrow } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import ProfileImg from '../../assets/profile.png';
 import ArrowImg from '../../assets/arrow.png';
@@ -189,21 +189,6 @@ const Profile = styled.div`
   }
 `;
 
-const Arrow = styled.div`
-    width: 17px;
-    height: 9px;
-    background-image: url(${ArrowImg});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-    display: none;
-    position: absolute;
-    right: 5%;
-  @media screen and (max-width: 780px) {
-    display: flex;
-  }
-`;
-
 const Descrip = styled.div`
     width: 47vw;
     font-size: 18px;
@@ -233,82 +218,6 @@ const DateDescrip = styled.span`
         justify-content: flex-start;
         text-align: left;
   }
-`;
-
-const NavBarWrapper = styled.div`
-    width: 100vw;
-    height: 58px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    color: #000;
-    font-size: 16px;
-    font-weight: 400;
-    border-bottom: 1px solid #D9D9D9;
-    align-items: center;
-    @media screen and (max-width: 780px) {
-        width: 100vw;
-        height: 50px;
-        flex-direction: column;
-        border: none;
-        ${props => props.open && css`
-        height: 100%;
-    `}
-    }
-`;
-
-const MobileNavBarWrapper = styled(NavBarWrapper)`
-    display: none;
-    flex-direction: column;
-    ${props => props.open && css`
-        display: flex;
-    `}
-`;
-
-const NavBlock = styled.div`
-    width: 10vw;
-    min-width: 200px;
-    border-left: 1px solid #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 300;
-    @media screen and (max-width: 780px) {
-        display: none;
-        border: none;
-    }
-`;
-
-const SelectNavBlock = styled(NavBlock)`
-    font-weight: 700;
-    color: #000;
-    border-left: 1px solid #D9D9D9;
-    @media screen and (max-width: 780px) {
-        font-size: 18px;
-        width: 100vw;
-        display: flex;
-        min-height: 49px;
-        border-bottom: 1px solid #D9D9D9;
-        text-align: center;
-    }
-`;
-
-const MobileNavBlock = styled(NavBlock)`
-        height: 49px;
-        font-size: 18px;
-    @media screen and (max-width: 780px) {
-        display: flex;
-        font-size: 18px;
-        width: 100vw;
-        border-bottom: 1px solid #D9D9D9;
-    }
-`;
-
-const MobileSelectNavBlock = styled(SelectNavBlock)`
-    display: none;
-    @media screen and (max-width: 780px) {
-        display: none;
-    }
 `;
 
 export default Greet;
