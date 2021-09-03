@@ -34,12 +34,18 @@ export default class News extends Component {
                 const data = res.data;
                 const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
                 const postData = slice.map(businesslist => 
-                        <BoardContent key={businesslist.idx}>
-                            <Num>{businesslist.buyer}</Num>
-                            <Num>{businesslist.cons_name}</Num>
-                            <Num>{businesslist.fields}</Num>
-                            <Num>{businesslist.regdate}</Num>
-                    </BoardContent>
+                    <div>
+                        {businesslist.cate === '소방공사실' ?
+                            <BoardContent key={businesslist.idx}>
+                                <Buyer style={{border: 'none'}}>{businesslist.buyer}</Buyer>
+                                <ConsName>{businesslist.cons_name}</ConsName>
+                                <Fields>{businesslist.fields}</Fields>
+                                <Regdate>{businesslist.regdate}</Regdate>
+                            </BoardContent>
+                        :
+                            null
+                        }
+                    </div>
                 )
 
                 this.setState({
@@ -84,14 +90,15 @@ export default class News extends Component {
             <NewsCardWrapper>
                 <CardWrapper>
                 <BoardHeader>
-                        <Num>발주처</Num>
-                        <Num>공사명</Num>
-                        <Num>분야</Num>
-                        <Num>비고</Num>
+                        <BuyerTitle style={{border: 'none'}}>발주처</BuyerTitle>
+                        <ConsNameTitle>공사명</ConsNameTitle>
+                        <FieldsTitle>분야</FieldsTitle>
+                        <RegdateTitle>비고</RegdateTitle>
                 </BoardHeader>
                     {this.state.postData}
                 </CardWrapper>
-                <Paginate>
+            </NewsCardWrapper>
+            <Paginate>
                     <ReactPaginate
                         previousLabel={"<"}
                         nextLabel={">"}
@@ -106,8 +113,6 @@ export default class News extends Component {
                         activeClassName={"active"}
                     />
                 </Paginate>
-            </NewsCardWrapper>
-                
             <Footer/>
         </PageWrapper>
     );
@@ -139,43 +144,45 @@ const NewsCardWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    padding: 10vh 0;
+    padding: 10vh 0 0 0;
+    width: 100vw;
+    overflow-y: scroll;
+    @media screen and (max-width: 1207px) {
+        width: 90vw;
+        overflow-y: scroll;
+        margin: 0 auto;
+  }
     @media screen and (max-width: 880px) {
         justify-content: space-around;
-        padding: 5vh 0 20vh 0;
+        padding: 5vh 0 0vh 0;
   }
 `;
 
 const Paginate = styled.div`
-    padding: 3vh auto 5vh auto;
-    cursor: pointer;
+    margin: 0vh auto 20vh auto;
 `;
 
 const CardWrapper = styled.div`
     display: flex;
-    width: 90vw;
     max-width: 1088px;
     margin: 0 auto;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 5vh;
+    overflow-x: scroll;
+    border: 1px solid #8AC53F;
     @media screen and (max-width: 880px) {
         justify-content: space-around;
-  }
-  @media screen and (max-width: 780px) {
-        border-top: 2px solid #8AC53F;
   }
 `;
 
 const BoardContent = styled.div`
-    width: 90vw;
-    max-width: 1088px;
+    width: 1088px;
     height: 52px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #000;
-    border-bottom: 1px solid #DBDBDB;
     @media screen and (max-width: 780px) {
     display: flex;
     align-items: center;
@@ -184,76 +191,70 @@ const BoardContent = styled.div`
   }
 `;
 
-const Num = styled.div`
+const Buyer = styled.div`
+flex: 1.2;
+text-align: center;
+border-left: 1px solid #8AC53F;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+`;
+
+const ConsName = styled(Buyer)`
+    flex: 1.5;
+`;
+
+const Fields = styled(Buyer)`
     flex: 1;
-    text-align: center;
 `;
 
-const BordTitle = styled.div`
-    flex:1;
-    padding: 0 50px;
-    cursor: pointer;
-    @media screen and (max-width: 780px) {
-        font-size: 12px;
-        padding: 0;
-        flex: 0;
-        margin-bottom: 10px;
-        font-weight: 600;
-  }
+const Regdate = styled(Buyer)`
+    flex: 0.5;
 `;
 
-const RegisDate = styled.div`
-    @media screen and (max-width: 780px) {
-        font-size: 12px;
-        padding: 0;
-  }
+const BuyerTitle = styled.div`
+flex: 1.2;
+text-align: center;
+border-left: 1px solid #fff;
+font-weight: 700;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
 `;
 
-const Look = styled.div`
-    min-width: 20px;
-    margin: 0 20px;
-    @media screen and (max-width: 780px) {
-        font-size: 12px;
-        padding: 0;
-  }
+const ConsNameTitle = styled(BuyerTitle)`
+    flex: 1.5;
 `;
 
- const Wrapper = styled.div`
-    display: flex;
+const FieldsTitle = styled(BuyerTitle)`
     flex: 1;
+`;
+
+const RegdateTitle = styled(BuyerTitle)`
+    flex: 0.5;
 `;
 
 const BoardHeader = styled.div`
-    width: 90vw;
-    max-width: 1088px;
+    width: 1088px;
     height: 52px;
     background-color: #8AC53F;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #fff;
-    @media screen and (max-width: 780px) {
-        display: none;
-  }
-`;
-
-const BordHeaderTitle = styled.div`
-
-`;
-
-const BoardHeaderRegisDate = styled(Num)`
-
 `;
 
 export const PageTitleWrpper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 1088px;
+    width: 90vw;
+    max-width: 1088px;
     margin: 0 auto;
     margin-top: 8vh;
     @media screen and (max-width: 1207px) {
-        width: 90vw;
         flex-direction: column;
         align-items: center;
   }

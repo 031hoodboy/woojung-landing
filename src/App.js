@@ -4,6 +4,9 @@ import Main from './Pages/Main/Main';
 import Greet from './Pages/About/Greet';
 import BusinessPartner from './Pages/About/BusinessPartner';
 import BusinessPerformance from './Pages/About/BusinessPerformance';
+import SafetyManagement from './Pages/About/SafetyManagement';
+import HazardousdDsign from './Pages/About/HazardousdDsign';
+
 import Vision from './Pages/About/Vision';
 import WayToCome from './Pages/About/WayToCome';
 import SeonggeoFactory from './Pages/About/SeonggeoFactory';
