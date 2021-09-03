@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import styled from '@emotion/styled';
 import {css} from '@emotion/react';
-import ArrowImg from '../../assets/arrow.png';
+import ArrowImg from '../../../assets/arrow.png';
 
 const TableNavbar = () => {
 
@@ -14,22 +14,22 @@ const TableNavbar = () => {
     return (
             <NavBarWrapper open={open} >
                     <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock onClick={onToggle}>소방공사실적<Arrow/></SelectNavBlock>
+                        <NavBlock>소방공사실적</NavBlock>
                     </Link>
-                    <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>위험물설계인허가실적</NavBlock>
+                    <Link to="/hazardousd-dsign" style={{textDecoration: 'none', color: "#000"}}>
+                        <SelectNavBlock onClick={onToggle}>위험물설계인허가실적<Arrow/></SelectNavBlock>
                     </Link>
-                    <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
+                    <Link to="/safety-management" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>위험물안전관리대행실적</NavBlock>
                     </Link>
                     <MobileNavBarWrapper open={open}>
-                        <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
-                        <MobileSelectNavBlock>소방공사실적</MobileSelectNavBlock>
+                        <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileNavBlock>소방공사실적</MobileNavBlock>
                         </Link>
-                        <Link to="/organize-chart" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>위험물설계인허가실적</MobileNavBlock>
+                        <Link to="/hazardousd-dsign" style={{textDecoration: 'none', color: "#000"}}>
+                            <MobileSelectNavBlock>위험물설계인허가실적</MobileSelectNavBlock>
                         </Link>
-                        <Link to="/business-partner" style={{textDecoration: 'none', color: "#000"}}>
+                        <Link to="/safety-management" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>위험물안전관리대행실적</MobileNavBlock>
                         </Link>
                     </MobileNavBarWrapper>

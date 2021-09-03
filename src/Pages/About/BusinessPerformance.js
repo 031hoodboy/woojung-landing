@@ -10,7 +10,7 @@ import styled from '@emotion/styled';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 import BusinessPerformanceNavbar from './BusinessPerformanceNavbar';
-import TableNavbar from './TableNavbar';
+import TableNavbar from './TableNavbar/TableNavbar';
 
 export default class News extends Component {
 
