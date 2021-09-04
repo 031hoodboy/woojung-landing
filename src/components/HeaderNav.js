@@ -15,34 +15,31 @@ export default withRouter(({location: {pathname}}) => (
                     <Link to="/greet" style={{textDecoration: 'none'}}>
                         <NavContent current={pathname === "/greet"}>회사소개</NavContent>
                     </Link>
-                    <Link to="/business-partner" style={{textDecoration: 'none'}}>
-                        <NavContent current={pathname === "/business-partner"}>사업자등록증</NavContent>
-                    </Link>
                     <Link to="/organize-chart" style={{textDecoration: 'none'}}>
                         <NavContent current={pathname === "/organize-chart"}>조직도</NavContent>
+                    </Link>
+                    <Link to="/business-partner" style={{textDecoration: 'none'}}>
+                        <NavContent current={pathname === "/business-partner"}>사업자등록증/면허증</NavContent>
+                    </Link>
+                    <Link to="/business-performance" style={{textDecoration: 'none'}}>
+                        <NavContent current={pathname === "/way-to-come"}>사업 실적</NavContent>
                     </Link>
                     <Link to="/way-to-come" style={{textDecoration: 'none'}}>
                         <NavContent current={pathname === "/way-to-come"}>찾아오시는 길</NavContent>
                     </Link>
                 </Navigator>
                 <Navigator>
-                    <Link to="/license" style={{textDecoration: 'none'}}>
-                        <NavContent current={pathname === "/license"} >위험물 인허가/설계</NavContent>
-                    </Link>
-                    <Link to="/management-agency" style={{textDecoration: 'none'}}>
-                        <NavContent current={pathname === "/management-agency"}>위험물 안전관리대행</NavContent>
-                    </Link>
                     <Link to="/inspection" style={{textDecoration: 'none'}}>
-                        <NavContent current={pathname === "/inspection"}>소방시설안전관리/점검</NavContent>
+                        <NavContent current={pathname === "/inspection"} >소방시설 안전관리/점검</NavContent>
+                    </Link>
+                    <Link to="/license" style={{textDecoration: 'none'}}>
+                        <NavContent current={pathname === "/license"}>위험물 안전관리대행/설계/인허가</NavContent>
                     </Link>
                     <Link to="/corporation" style={{textDecoration: 'none'}}>
-                        <NavContent current={pathname === "/corporation"}>소방 공사/위험물 공사</NavContent>
+                        <NavContent current={pathname === "/corporation"}>소방/위험물 공사</NavContent>
                     </Link>
                     <Link to="/automotive-parts" style={{textDecoration: 'none'}}>
-                        <NavContent current={pathname === "/automotive-parts"}>친환경 자동차 부품</NavContent>
-                    </Link>
-                    <Link to="/integration" style={{textDecoration: 'none'}}>
-                        <NavContent current={pathname === "/integration"}>내역(적산)</NavContent>
+                        <NavContent current={pathname === "/automotive-parts"}>전기자동차</NavContent>
                     </Link>
                 </Navigator>
                 <Navigator>

@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import {Link} from 'react-router-dom';
 import './Pagenation.css'
 import {PageWrapper} from '../../components/PageStyle';
 import BackgroundImg from '../../assets/prbackground.png';
-import { Title, PageBlockWrapper, BlueSpan, GreenSpan, Date, Space, NavBarWrapper, NavBlock, SelectNavBlock, MobileNavBarWrapper, MobileSelectNavBlock, MobileNavBlock, Arrow, MainImgTitle } from '../../components/PageStyle';
+import { Title, MainImgTitle } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
@@ -19,7 +18,7 @@ export default class News extends Component {
         this.state = {
             offset: 0,
             data: [],
-            perPage: 4,
+            perPage: 20,
             currentPage: 0
         };
         this.handlePageClick = this
