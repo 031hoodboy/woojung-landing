@@ -37,13 +37,7 @@ export default class News extends Component {
                         <Wrapper>
                             <Num>{newscards.idx}</Num>
                         </Wrapper>
-                        <BordTitle
-                  
-                        >{newscards.subject}</BordTitle>
-                        <Wrapper>
-                            <RegisDate>{newscards.regdate.split("", 10)}</RegisDate>
-                            <Look>조회</Look>
-                        </Wrapper>
+                        <BordTitle>{newscards.subject}</BordTitle>
                     </BoardContent>
                     </Link> 
                 )
@@ -95,10 +89,6 @@ export default class News extends Component {
                         <Num>번호</Num>
                     </Wrapper>
                     <BordHeaderTitle>제목</BordHeaderTitle>
-                    <Wrapper>
-                        <BoardHeaderRegisDate>등록일</BoardHeaderRegisDate>
-                        <Look>조회</Look>
-                    </Wrapper>
                 </BoardHeader>
                     {this.state.postData}
                 </CardWrapper>
@@ -242,7 +232,6 @@ const BoardHeader = styled.div`
     background-color: #0A109F;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     color: #fff;
     @media screen and (max-width: 780px) {
         background: none;
@@ -251,6 +240,7 @@ const BoardHeader = styled.div`
 `;
 
 const BordHeaderTitle = styled.div`
+    padding: 0 50px;
 `;
 
 const BoardHeaderRegisDate = styled(Num)`
