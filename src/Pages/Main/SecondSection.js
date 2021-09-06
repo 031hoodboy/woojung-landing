@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import {Link} from 'react-router-dom';
 
 import Card1Img from '../../assets/card1img.png';
 import Card2Img from '../../assets/card2img.png';
@@ -21,7 +22,9 @@ const SecondSection = () => {
                                 위험물 설계, 시공, 완공까지 전반<br/>
                                 적인 종합컨설팅 서비스 제공<br/>
                             </CardSubtitle>
-                            <Button>더보기</Button>
+                            <Link to="/license" style={{textDecoration: "none"}}>
+                                <Button>더보기</Button>
+                            </Link>
                         </CardTitleWrapper>
                     </Card1Background>
                 </Card1>
@@ -33,7 +36,9 @@ const SecondSection = () => {
                                 고객을 위한, 고객이 신뢰할 수 있는<br/>
                                 위험물안전관리 서비스 제공
                             </CardSubtitle>
-                            <Button>더보기</Button>
+                            <Link to="/license" style={{textDecoration: "none"}}>
+                                <Button>더보기</Button>
+                            </Link>
                         </CardTitleWrapper>
                     </Card2Background>
                 </Card1>
@@ -45,7 +50,9 @@ const SecondSection = () => {
                                 전문인력과 첨단장비를 활용한 정밀한 <br/>
                                 소방시설 점검 및 보완 서비스 제공
                             </CardSubtitle>
-                            <Button>더보기</Button>
+                            <Link to="/inspection" style={{textDecoration: "none"}}>
+                                <Button>더보기</Button>
+                            </Link>
                         </CardTitleWrapper>
                     </Card3Background>
                 </Card1>
@@ -57,7 +64,9 @@ const SecondSection = () => {
                                 설치 및 변경, 용도폐지 등 위험물 <br/>
                                 전반에 대한 공사업무 서비스 제공
                             </CardSubtitle>
-                            <Button>더보기</Button>
+                            <Link to="/corporation" style={{textDecoration: "none"}}>
+                                <Button>더보기</Button>
+                            </Link>
                         </CardTitleWrapper>
                     </Card4Background>
                 </Card1>
@@ -69,7 +78,9 @@ const SecondSection = () => {
                                 친환경 자동차 BMA 공급을 통한<br/>
                                 자동차 부품 전문 제조
                             </CardSubtitle>
-                            <Button>더보기</Button>
+                            <Link to="/automotive-parts" style={{textDecoration: "none"}}>
+                                <Button>더보기</Button>
+                            </Link>
                         </CardTitleWrapper>
                     </Card5Background>
                 </Card1>
