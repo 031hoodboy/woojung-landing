@@ -80,21 +80,7 @@ const NewsInfo = ({location}) => {
                         </BorderSubTitle>
                         <BoardContent>
                             {/* <Link to={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url} target="_blank" download>Download</Link> */}
-                            <DocumentWrapper>
-                                <div>
-                                    <Document
-                                    file="https://s3-ap-southeast-1.amazonaws.com/happay-local/HVP/BILL20198261213473719445688HP.pdf"
-                                    style={{width: "200px"}}
-                                    >
-                                    <Page pageNumber={1} />
-                                    </Document>
-                                </div>
-                                <Document
-                                    file={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url}
-                                    onLoadSuccess={onDocumentLoadSuccess}
-                                >
-                                </Document>
-                            </DocumentWrapper>  
+                            <NewsImg src={"https://www.wooapi.co.kr" + newscards?.care_image_list?.[0].url} alt=""/>
                             <a href={"https://www.wooapi.co.kr" + newscards?.add_file_list?.[0].url} target="_blank" rel="noopener noreferrer" download>다운로드</a>
                             <NewssContnet>{newscards?.content}</NewssContnet>
                         </BoardContent>
