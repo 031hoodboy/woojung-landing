@@ -10,16 +10,23 @@ const Footer = () => {
             <InfoWrapper>
                 <Content>우정에이치엔씨(주) ㅣ 대표 : 장두희 ㅣ <Content>사업자등록번호 : 312-86-64352</Content></Content>
                 <Content>주소 : 충청남도 천안시 서북구 백석3로 130-14, 4층(백석동)  <Content>ㅣ TEL : 041-565-7010~3</Content></Content>
-                <Content>Copyright 2021 Woojung. All Rights Reserved. </Content>
+                <Content><Address>(성거공장) 충남 천안시 서북구 천흥1길 17(성거읍)</Address></Content>
+                <Content><Address>(충주공장) 충북 충주시 산척면 동충주산업단지 E4-2 BL</Address></Content>
+                <Content>문의메일 : one119@one119.co.kr / one119@chol.com</Content>
+                <Content><Copyright>Copyright 2021 Woojung. All Rights Reserved. </Copyright></Content>
             </InfoWrapper>
             </FooterBlock>
         </FooterBcakgroundBlock>
     );
 }
 const FooterBcakgroundBlock = styled.div`
-    padding: 5vh 0vw;
+    padding-top: 5vh;
     background: #000;  
     display: flex;
+    padding-bottom: 10px;
+    @media screen and (max-width: 840px) {
+        padding-bottom: 5vh;
+  }
 `;
 
 const FooterBlock = styled.div`
@@ -29,6 +36,7 @@ const FooterBlock = styled.div`
     flex-wrap: wrap;
     @media screen and (max-width: 840px) {
         padding: 0 5vw;
+
   }
 `;
 
@@ -65,6 +73,20 @@ const Logo = styled.div`
 
 const InfoWrapper = styled.div`
 
+`;
+
+const Address = styled.div`
+    margin-left: 50px;
+    @media screen and (max-width: 840px) {
+        margin: 0;
+  }
+`;
+
+const Copyright = styled.div`
+        margin-top: 3vh;
+    @media screen and (max-width: 840px) {
+        margin-top: 0;
+  }
 `;
 
 export default Footer;
