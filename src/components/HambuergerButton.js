@@ -25,7 +25,7 @@ const HamburgerButton = () => {
                 <Link to="/greet" style={{textDecoration: 'none', color: "#000"}}>
                     <MenuContent>회사소개</MenuContent>
                 </Link>  
-                <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
+                <Link to="/inspection" style={{textDecoration: 'none', color: "#000"}}>
                     <MenuContent>사업분야</MenuContent>
                 </Link>  
                 <Link to="/contact" style={{textDecoration: 'none', color: "#000"}}>

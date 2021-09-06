@@ -15,15 +15,14 @@ export default withRouter(({location: {pathname}}) => (
                     || pathname === "/way-to-come"}>
                 회사소개</NavContent>
             </Link>
-            <Link to="/license" style={{textDecoration: 'none'}}>
+            <Link to="/inspection" style={{textDecoration: 'none'}}>
             <NavContent
                  current={
-                    pathname === "/license" 
-                    || pathname === "/management-agency" 
-                    || pathname === "/inspection" 
-                    || pathname === "/corporation"
+                    pathname === "/inspection" 
+                    || pathname === "/license" 
+                    || pathname === "/corporation" 
                     || pathname === "/automotive-parts"
-                    || pathname === "/integration"}>
+                }>
             사업분야</NavContent>
             </Link>
             <Link to="/contact" style={{textDecoration: 'none'}}>
