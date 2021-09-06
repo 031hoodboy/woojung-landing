@@ -12,7 +12,7 @@ export default function Email() {
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm('service_qxsljjm', 'template_cimhrx5', e.target, 'user_rPii7nPm5yyhTBFy6yWqj')
+    emailjs.sendForm('service_xwu0hvn', 'template_t50hfxa', e.target, 'user_x1acVV0eCa9xatGgN9366')
       .then((result) => {
           console.log(result.text);
       }, (error) => {

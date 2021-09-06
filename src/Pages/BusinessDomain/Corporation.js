@@ -8,6 +8,8 @@ import BackgroundImg from '../../assets/businessdomainbackground.png';
 import {PageTitleWrpper, PageTitle, MainImgTitle, NavBarWrapper, MobileNavBarWrapper, NavBlock, SelectNavBlock, RedSpanBold, Arrow, MobileSelectNavBlock, MobileNavBlock } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import ProfileImg from '../../assets/helmet.png';
+import Chart1Img from '../../assets/chart1.png';
+import Chart2Img from '../../assets/chart2.png';
 
 const Corporation = () => {
 
@@ -64,12 +66,24 @@ const Corporation = () => {
                         우정에이치앤씨(주)는 다양한 시공 경험을 바탕으로 사회적 요구에 부응하는 기업으로 나아가고 있습니다.
                         <br/>
                         <br/>
-                        우정에이치앤씨(주)는 위험물 설계 전문업체로서 현장여건에 가장 <RedSpanBold>적합한 설계도서를 작성</RedSpanBold>하고, <RedSpanBold>설계도서를 토대로 책임시공</RedSpanBold>을 약속합니다.
+                        우정에이치앤씨(주)는 위험물 설계 전문업체로서 현장여건에 가장 적합한 설계도서를 작성하고, 설계도서를 토대로 책임시공을 약속합니다.
                         <br/>
                         <br/>
-                        당사는 신규 설치 및 변경 공사 뿐만 아니라 제조소 등의 <RedSpanBold>용도폐지 공사</RedSpanBold>까지 위험물 전 반에 대한 <RedSpanBold>공사업무를 수행</RedSpanBold>하고 있습니다.
+                        당사는 신규 설치 및 변경 공사 뿐만 아니라 제조소 등의 용도폐지 공사까지 위험물 전 반에 대한 공사업무를 수행하고 있습니다.
                     </Descrip>
                 </HelloWrapper>
+                <PageTitleWrpper>
+                    <SubTitle>1. 소방기술자의 배치기준</SubTitle>
+                </PageTitleWrpper>
+                <ChartWrapper>
+                    <Chart1/>
+                </ChartWrapper>
+                <PageTitleWrpper>
+                    <SubTitle>소방시설공사업</SubTitle>
+                </PageTitleWrpper>
+                <ChartWrapper>
+                    <Chart2/>
+                </ChartWrapper>
             <Footer/>
         </PageWrapper>
     );
@@ -112,7 +126,7 @@ const HelloWrapper = styled.div`
     flex-wrap: wrap;
     width: 90vw;
     max-width: 1100px;
-    margin: 10vh auto 15vh auto;
+    margin: 10vh auto 0 auto;
     justify-content: space-between;
     @media screen and (max-width: 1155px) {
         justify-content: center;
@@ -143,5 +157,45 @@ const Profile = styled.div`
   }
 `;
 
+const SubTitle = styled.div`
+    font-size: 25px;
+    margin: 10vh 0 5vh 0;
+    font-weight: 600;
+    @media screen and (max-width: 780px) {
+        width: 90vw;
+        font-size: 18px;    
+  }
+`;
+
+const Chart1 = styled.div`
+    width: 1088px;
+    height: 872px;
+    background-image: url(${Chart1Img});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+
+`;
+
+const Chart2 = styled(Chart1)`
+    background-image: url(${Chart2Img});
+    height: 773px;
+    margin-bottom: 20vh;
+`;
+
+const ChartWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95vw;
+    overflow-y: scroll;
+    margin-left: 5vw;
+`;
 
 export default Corporation;
