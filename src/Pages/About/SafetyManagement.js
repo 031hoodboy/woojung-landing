@@ -203,7 +203,11 @@ justify-content: center;
 `;
 
 const ConsName = styled(Buyer)`
-    flex: 2.5;
+    flex: 1.5;
+`;
+
+const Fields = styled(Buyer)`
+    flex: 1;
 `;
 
 const Regdate = styled(Buyer)`
@@ -222,7 +226,11 @@ justify-content: center;
 `;
 
 const ConsNameTitle = styled(BuyerTitle)`
-    flex: 2.5;
+    flex: 1.5;
+`;
+
+const FieldsTitle = styled(BuyerTitle)`
+    flex: 1;
 `;
 
 const RegdateTitle = styled(BuyerTitle)`
@@ -244,26 +252,29 @@ const BoardHeader = styled.div`
     }
 `;
 
-export const PageTitleWrpper = styled.div`
+const PageTitleWrpper = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    width: 90vw;
-    max-width: 1088px;
+    width: 1088px;
     margin: 0 auto;
-    margin-top: 8vh;
+    margin-top: 5vh;
     @media screen and (max-width: 1207px) {
-        flex-direction: column;
-        align-items: center;
+      width: 90vw;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
   }
-  @media screen and (max-width: 880px) {
+  @media screen and (max-width: 780px) {
     margin-top: 8vh;
-}
+  }
 `;
 
 const PageTitle = styled(Title)`
     border-bottom: 2px solid #000;
     margin: 0;
+    padding: 10px 0;
+    margin: 20px 0;
+    height: 45px;
     @media screen and (max-width: 1207px) {
     margin-bottom: 10vh;
   }
@@ -271,5 +282,6 @@ const PageTitle = styled(Title)`
     font-size: 20px;
     margin: 0 auto;
     margin-bottom: 10vh;
+    height: 23px;
   }
 `;

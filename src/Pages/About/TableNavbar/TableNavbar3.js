@@ -37,6 +37,7 @@ const TableNavbar = () => {
     );
 }
 
+
 const NavBarWrapper = styled.div`
         width: 275px;
         height: 50px;
@@ -46,20 +47,23 @@ const NavBarWrapper = styled.div`
         height: 100%;
     `}
     @media screen and (max-width: 1207px) {
-        width: 100%;
+        width: 100vw;
+        margin: 0 auto;
   }
 `;
 
-export const MobileNavBarWrapper = styled(NavBarWrapper)`
+const MobileNavBarWrapper = styled(NavBarWrapper)`
     display: none;
     flex-direction: column;
     ${props => props.open && css`
         display: flex;
     `}
+    @media screen and (max-width: 1207px) {
+        margin: 0 auto;
+  }
 `;
 
-export const NavBlock = styled.div`
-
+const NavBlock = styled.div`
         display: none;
         border: none;
 `;
@@ -77,12 +81,13 @@ export const SelectNavBlock = styled.div`
     display: flex;
     min-height: 49px;
     text-align: center;
+    margin-top: 35px;
     @media screen and (max-width: 1207px) {
         width: calc(90vw - 40px);
   }
 `;
 
-export const MobileNavBlock = styled(SelectNavBlock)`
+const MobileNavBlock = styled.div`
     width: 12vw;
     width: 235px;
     padding: 0 20px;
@@ -101,10 +106,8 @@ export const MobileNavBlock = styled(SelectNavBlock)`
   }
 `;
 
-export const MobileSelectNavBlock = styled(SelectNavBlock)`
-
-        display: none;
-
+const MobileSelectNavBlock = styled(SelectNavBlock)`
+    display: none;
 `;
 
 const Arrow = styled.div`
