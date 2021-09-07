@@ -40,7 +40,7 @@ const AutomotiveParts = () => {
                     <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>소방 공사/위험물 공사</NavBlock>
                     </Link>
-                    <Link to="/automotive-parts" style={{textDecoration: 'none', color: "#000"}}>
+                    <Link to="/automotive-parts" style={{textDecoration: 'none', color: "#000", borderRight: "1px solid #D9D9D9"}}>
                         <SelectNavBlock onClick={onToggle}>전기자동차<Arrow/></SelectNavBlock>
                     </Link>
                     <MobileNavBarWrapper open={open}>

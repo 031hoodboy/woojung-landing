@@ -36,7 +36,7 @@ const SeonggeoFactory = () => {
                     <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>사업실적</NavBlock>
                     </Link>
-                    <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
+                    <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000", borderRight: "1px solid #D9D9D9"}}>
                         <SelectNavBlock onClick={onToggle}>찾아오시는 길 <Arrow/></SelectNavBlock>
                     </Link>
                     <MobileNavBarWrapper open={open}>

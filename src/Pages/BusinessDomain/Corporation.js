@@ -36,7 +36,7 @@ const Corporation = () => {
                     <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
                         <SelectNavBlock onClick={onToggle}>소방 공사/위험물 공사<Arrow/></SelectNavBlock>
                     </Link>
-                    <Link to="/automotive-parts" style={{textDecoration: 'none', color: "#000"}}>
+                    <Link to="/automotive-parts" style={{textDecoration: 'none', color: "#000", borderRight: "1px solid #D9D9D9"}}>
                         <NavBlock>전기자동차</NavBlock>
                     </Link>
                     <MobileNavBarWrapper open={open}>

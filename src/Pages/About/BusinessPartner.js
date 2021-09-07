@@ -53,7 +53,7 @@ const BusinessPartner = () => {
                     <Link to="/business-performance" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>사업실적</NavBlock>
                     </Link>
-                    <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000"}}>
+                    <Link to="/way-to-come" style={{textDecoration: 'none', color: "#000", borderRight: "1px solid #D9D9D9"}}>
                         <NavBlock>찾아오시는 길</NavBlock>
                     </Link>
                     <MobileNavBarWrapper open={open}>
