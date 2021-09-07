@@ -110,12 +110,20 @@ const CardTitle = styled.div`
     font-size: 1.8vw;
     color: #fff;
     margin-bottom: 2.5vw;
+    @media screen and (max-width: 840px) {
+        font-size: 8vw;
+        margin-bottom: 8vw;
+    }
 `;
 
 const Card1 = styled.div`
     width: 20vw;
     height: 20vw;
     overflow: hidden;
+    @media screen and (max-width: 840px) {
+        width: 100vw;
+        height: 100vw;
+  }
 `;
 
 const Card1Background = styled.div`
@@ -132,6 +140,10 @@ const Card1Background = styled.div`
     &:hover{
         background-size: 105%;
     }
+    @media screen and (max-width: 840px) {
+        width: 100vw;
+        height: 100vw;
+  }
 `;
 
 const Card2Background = styled(Card1Background)`
@@ -159,6 +171,10 @@ const CardTitleWrapper = styled.div`
     justify-content: center;
     align-items: space-between;
     text-align: center;
+    @media screen and (max-width: 840px) {
+        width: 90vw;
+        height: 90vw;
+  }
 `;
 
 const CardSubtitle = styled.div`
@@ -166,6 +182,11 @@ const CardSubtitle = styled.div`
     color: #fff;
     width: 17vw;
     height: 7vw;
+    @media screen and (max-width: 840px) {
+        width: 100%;
+        height: 35vw;
+        font-size: 5vw;
+  }
 `;
 
 const Button = styled.div`
@@ -179,6 +200,11 @@ const Button = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    @media screen and (max-width: 840px) {
+        width: 40vw;
+        height: 10vw;
+        font-size: 3vw;
+  }
 `;
 
 
