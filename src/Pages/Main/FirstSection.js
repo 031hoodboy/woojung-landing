@@ -60,8 +60,8 @@ const FirstSubTitle = styled(SubTitle)`
     color: #FFF041;
     margin-top: 35px;
     @media screen and (max-width: 760px) {
-        width: 60vw;
-        font-size: 12px;
+        width: 70vw;
+        font-size: 14px;
         line-height: 5vw;
   }
 `;
