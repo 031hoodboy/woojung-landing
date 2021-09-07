@@ -186,7 +186,9 @@ const BoardContent = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 74px;
+    width: 714px;
+    height: 38px;
+    font-size: 11px;
   }
 `;
 
@@ -235,6 +237,11 @@ const BoardHeader = styled.div`
     align-items: center;
     justify-content: space-between;
     color: #fff;
+    @media screen and (max-width: 780px) {
+        width: 714px;
+        height: 38px;
+        font-size: 11px;
+    }
 `;
 
 export const PageTitleWrpper = styled.div`
