@@ -179,7 +179,7 @@ const BoardContent = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    height: 74px;
+    height: 54px;
   }
 `;
 
@@ -196,10 +196,9 @@ const BordTitle = styled.div`
     padding: 0 50px;
     cursor: pointer;
     @media screen and (max-width: 780px) {
-        font-size: 12px;
-        padding: 0;
+        font-size: 14px;
+        padding: 0 10px;
         flex: 0;
-        margin-bottom: 10px;
         font-weight: 600;
   }
 `;
