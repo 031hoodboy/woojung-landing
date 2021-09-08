@@ -146,6 +146,7 @@ const EmailInput = styled(Input)`
 `;
 
 const Button = styled.input`
+    -webkit-appearance:none;
     margin: 0 auto;
     width: 90vw;
     height: 60px;
@@ -160,7 +161,6 @@ const Button = styled.input`
     border-radius: 5px;
     cursor: pointer;
     display: none;
-    -webkit-appearance:none;
     &:active {
     transform: scale(0.97);
     }
@@ -169,6 +169,11 @@ const Button = styled.input`
     css`
       display: flex;
     `}
+    @media screen and (max-width: 780px) {
+        font-size: 16px;
+        margin-top: 5vh;
+        height: 30px;
+  }
 `;
 
 const TermsWrapper = styled.div`
