@@ -160,6 +160,7 @@ const Button = styled.input`
     border-radius: 5px;
     cursor: pointer;
     display: none;
+    -webkit-appearance:none;
     &:active {
     transform: scale(0.97);
     }

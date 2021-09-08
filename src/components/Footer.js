@@ -40,7 +40,6 @@ const FooterBlock = styled.div`
     @media screen and (max-width: 840px) {
         padding: 0 5vw;
         margin: 0 auto;
-
   }
 `;
 
