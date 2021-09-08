@@ -31,7 +31,7 @@ const License = () => {
                         <NavBlock>소방시설안전관리/점검</NavBlock>
                     </Link>
                     <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock onClick={onToggle}>위험물 안전관리대행/설계/인허가<Arrow/></SelectNavBlock>
+                        <SelectNavBlock onClick={onToggle}>위험물 관리대행<Arrow/></SelectNavBlock>
                     </Link>
                     <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>소방 공사/위험물 공사</NavBlock>
@@ -44,7 +44,7 @@ const License = () => {
                             <MobileNavBlock onClick={onToggle}>소방시설안전관리/점검</MobileNavBlock>
                         </Link>
                         <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileSelectNavBlock>위험물 안전관리대행/설계/인허가</MobileSelectNavBlock>
+                            <MobileSelectNavBlock>위험물 관리대행</MobileSelectNavBlock>
                         </Link>
                         <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>소방 공사/위험물 공사</MobileNavBlock>
@@ -55,7 +55,7 @@ const License = () => {
                     </MobileNavBarWrapper>
                 </NavBarWrapper>
             <PageTitleWrpper>
-                <PageTitle>위험물 인허가/설계</PageTitle>
+                <PageTitle>위험물 관리대행</PageTitle>
             </PageTitleWrpper>
             <HelloWrapper>
                     <Profile/>

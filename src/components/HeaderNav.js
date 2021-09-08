@@ -33,7 +33,7 @@ export default withRouter(({location: {pathname}}) => (
                         <NavContent current={pathname === "/inspection"} >소방시설 안전관리/점검</NavContent>
                     </Link>
                     <Link to="/license" style={{textDecoration: 'none'}}>
-                        <NavContent current={pathname === "/license"}>위험물 안전관리대행/설계/인허가</NavContent>
+                        <NavContent current={pathname === "/license"}>위험물 관리대행</NavContent>
                     </Link>
                     <Link to="/corporation" style={{textDecoration: 'none'}}>
                         <NavContent current={pathname === "/corporation"}>소방/위험물 공사</NavContent>

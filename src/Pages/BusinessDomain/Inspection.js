@@ -29,7 +29,7 @@ const Inspection = () => {
                         <SelectNavBlock onClick={onToggle}>소방시설안전관리/점검<Arrow/></SelectNavBlock>
                     </Link>
                     <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock style={{width: "17vw", maxWidth: "255px"}}>위험물 안전관리대행/설계/인허가</NavBlock>
+                        <NavBlock style={{width: "17vw", maxWidth: "255px"}}>위험물 관리대행</NavBlock>
                     </Link>
                     <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>소방 공사/위험물 공사</NavBlock>
@@ -42,7 +42,7 @@ const Inspection = () => {
                             <MobileSelectNavBlock onClick={onToggle}>소방시설안전관리/점검<Arrow/></MobileSelectNavBlock>
                         </Link>
                         <Link to="/license" style={{textDecoration: 'none', color: "#000"}}>
-                            <MobileNavBlock>위험물 안전관리대행/설계/인허가</MobileNavBlock>
+                            <MobileNavBlock>위험물 관리대행</MobileNavBlock>
                         </Link>
                         <Link to="/corporation" style={{textDecoration: 'none', color: "#000"}}>
                             <MobileNavBlock>소방 공사/위험물 공사</MobileNavBlock>

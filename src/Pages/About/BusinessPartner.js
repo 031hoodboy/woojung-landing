@@ -89,7 +89,7 @@ const BusinessPartner = () => {
                         <Block3/>
                     </RemarkWrapper>
                     <RemarkWrapper>
-                        <Remark>소방시설관리업등록증</Remark>
+                        <Remark>위험물안전관리대행기관지정서</Remark>
                         <Block4/>
                     </RemarkWrapper>
                     <RemarkWrapper>
