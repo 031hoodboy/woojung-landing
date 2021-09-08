@@ -4,9 +4,11 @@ import Main from './Pages/Main/Main';
 import Greet from './Pages/About/Greet';
 import BusinessPartner from './Pages/About/BusinessPartner';
 import BusinessPerformance from './Pages/About/BusinessPerformance';
+import AddBusinessPerformance from './Pages/About/BusinessPerformance/AddBusinessPerformance';
+import UpdateBusinessPerformance from './Pages/About/BusinessPerformance/UpdateBusinessPerformance';
+import DelBusinessPerformance from './Pages/About/BusinessPerformance/DelBusinessPerformance';
 import SafetyManagement from './Pages/About/SafetyManagement';
 import HazardousdDsign from './Pages/About/HazardousdDsign';
-
 import Vision from './Pages/About/Vision';
 import WayToCome from './Pages/About/WayToCome';
 import SeonggeoFactory from './Pages/About/SeonggeoFactory';
@@ -36,6 +38,9 @@ const App = () => {
         <Route path="/" component={Main} exact />
         <Route path="/greet" component={Greet}  />
         <Route path="/business-performance" component={BusinessPerformance}  />
+        <Route path="/add-business-performance" component={AddBusinessPerformance}  />
+        <Route path="/update-business-performance" component={UpdateBusinessPerformance}  />
+        <Route path="/del-business-performance" component={DelBusinessPerformance}  />
         <Route path="/safety-management" component={SafetyManagement}  />
         <Route path="/hazardousd-dsign" component={HazardousdDsign}  />
         <Route path="/vision" component={Vision}  />
