@@ -85,10 +85,10 @@ class CustomerAdd extends React.Component {
                   <Label>아이디</Label>
                   <Input type="text" name="idx" value={this.state.idx} onChange={this.handleValueChange} />
                 </InputWrapper>
-                <Button type="submit" path={"?idx="+this.state.idx} onClick={Alert}>
-                    <a href={`https://sgtapi.co.kr/news/newsdelete.do?idx=`+this.state.idx} style={{textDecoration: "none",  color: "#fff"}}>                    
+                <Button type="submit" path={"?idx="+this.state.idx}>
+                    <A href={`https://sgtapi.co.kr/news/newsdelete.do?idx=`+this.state.idx} style={{textDecoration: "none",  color: "#fff"}}>                    
                         삭제하기
-                    </a>
+                    </A>
                 </Button>
               </form>
               </Blockwrapper>
@@ -98,6 +98,11 @@ class CustomerAdd extends React.Component {
     )
   }
 }
+
+const A = styled.a`
+  width: 100%;
+  height: 100%;
+`;
 
 const Blockwrapper = styled.div`
     display: flex;

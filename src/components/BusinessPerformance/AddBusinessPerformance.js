@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../../../components/Header';
-import Footer from '../../../components/Footer';
+import Header from '../Header';
+import Footer from '../Footer';
 import {Link} from 'react-router-dom';
 
-import {PageWrapper} from '../../../components/PageStyle';
-import BackgroundImg from '../../../assets/prbackground.png';
-import {PageTitleWrpper, PageTitle, NavBlock, SelectNavBlock, NavBarWrapper, MainImgTitle } from '../../../components/PageStyle';
+import {PageWrapper} from '../PageStyle';
+import BackgroundImg from '../../assets/prbackground.png';
+import {PageTitleWrpper, PageTitle, NavBarWrapper, SelectNavBlock, NavBlock, MainImgTitle } from '../PageStyle';
 import styled from '@emotion/styled';
 import { post } from 'axios';
 
@@ -14,9 +14,15 @@ class CustomerAdd extends React.Component {
   constructor(props) {
   super(props);
   this.state = {
-    idx: '',
+    main: null,
+    cate: '',
+    buyer: '',
+    cons_name: '',
+    fields: '',
+    regdate: ''
   }
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
+    this.handleFileChange = this.handleFileChange.bind(this)
     this.handleValueChange = this.handleValueChange.bind(this)
     this.addCustomer = this.addCustomer.bind(this)
   }
@@ -29,6 +35,12 @@ class CustomerAdd extends React.Component {
     })
   }
 
+  handleFileChange(e) {
+    this.setState({
+    main: e.target.files[0],
+    fileName: e.target.value
+    });
+  }
 
   handleValueChange(e) {
     let nextState = {};
@@ -38,25 +50,28 @@ class CustomerAdd extends React.Component {
 
   addCustomer(){
 
-    const url = 'https://www.wooapi.co.kr/business/businessdelete.do';
-    const formData = new FormData();
-  formData.append('idx', this.state.idx)
+  const url = 'https://www.wooapi.co.kr/business/businessinsert.do';
+  const formData = new FormData();
+  formData.append('main', this.state.main)
+  formData.append('cate', this.state.cate)
+  formData.append('buyer', this.state.buyer)
+  formData.append('cons_name', this.state.cons_name)
+  formData.append('fields', this.state.fields)
+  formData.append('regdate', this.state.regdate)
 
-
-  const news_list = {
+  const config = {
   headers: {
   'content-type': 'multipart/form-data'
-  }
-  }
-
-  return post(url, formData, news_list)
+    }
   }
 
+  return post(url, formData, config)
+  }
+  
   render() {
     const Alert = () => {
-        alert("페이지 이동 후 새로고침을 해주세요.");
-        console.log(this.state.idx)
-      }
+      alert("추가되었습니다.")
+    }
     return (
       <PageWrapper>
             <Header/>
@@ -64,32 +79,48 @@ class CustomerAdd extends React.Component {
               <MainImgTitle>
               사업실적 관리
               </MainImgTitle>
-            </MainImg>
+            </MainImg>                
             <NavBarWrapper>
                     <Link to="/add-business-performance" style={{textDecoration: 'none', color: "#000"}}>
-                        <NavBlock>사업실적 추가</NavBlock>
+                        <SelectNavBlock>사업실적 추가</SelectNavBlock>
                     </Link>
                     <Link to="/update-business-performance" style={{textDecoration: 'none', color: "#000"}}>
                         <NavBlock>사업실적 수정</NavBlock>
                     </Link>
                     <Link to="/del-business-performance" style={{textDecoration: 'none', color: "#000"}}>
-                        <SelectNavBlock>사업실적 삭제</SelectNavBlock>
+                        <NavBlock>사업실적 삭제</NavBlock>
                     </Link>
                 </NavBarWrapper>
             <PageTitleWrpper>
-                <PageTitle>사업실적 삭제</PageTitle>
+                <PageTitle>사업실적 추가</PageTitle>
             </PageTitleWrpper>
             <Blockwrapper>
-              <form onSubmit={this.handleFormSubmit}>
+              <form onSubmit={this.handleFormSubmit} encType="multipart/form-data" >
                 <InputWrapper>
-                  <Label>아이디</Label>
-                  <Input type="text" name="idx" value={this.state.idx} onChange={this.handleValueChange} />
+                  <Label>카테고리</Label>
+                  <Input type="text" name="cate" value={this.state.cate} onChange={this.handleValueChange} />
                 </InputWrapper>
-                <Button type="submit" path={"?idx="+this.state.idx} onClick={Alert}>
-                    <a href={`https://www.wooapi.co.kr/business/businessdelete.do?idx=`+this.state.idx} style={{textDecoration: "none",  color: "#fff"}}>                    
-                        삭제하기
-                    </a>
-                </Button>
+                <InputWrapper>
+                  <Label>발주처</Label>
+                  <Input type="text" name="buyer" value={this.state.buyer} onChange={this.handleValueChange} />
+                </InputWrapper>
+                <InputWrapper>
+                  <Label>공사명</Label>
+                  <Input type="text" name="cons_name" value={this.state.cons_name} onChange={this.handleValueChange} />
+                </InputWrapper>
+                <InputWrapper>
+                  <Label>분야</Label>
+                  <Input type="text" name="fields" value={this.state.fields} onChange={this.handleValueChange} />
+                </InputWrapper>
+                <InputWrapper>
+                  <Label>비고</Label>
+                  <Input type="text" name="regdate" value={this.state.regdate} onChange={this.handleValueChange} />
+                </InputWrapper>
+                <InputWrapper>
+                  <Label>이미지</Label>
+                  <Input type="file" name="main" file={this.state.main} value={this.state.fileName} onChange={this.handleFileChange} />
+                </InputWrapper>
+                <Button type="submit" onClick={Alert} >추가하기</Button>
               </form>
               </Blockwrapper>
             <Footer/>
@@ -189,11 +220,11 @@ const Button = styled.button`
     transform: scale(0.97);
     }
     @media screen and (max-width: 780px) {
-    padding: 5px 10px;
     width: 90%;
     height: 35px;
     font-size: 16px;
     }
 `;
+
 
 export default CustomerAdd;

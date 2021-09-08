@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../../../components/Header';
-import Footer from '../../../components/Footer';
+import Header from '../Header';
+import Footer from '../Footer';
 import {Link} from 'react-router-dom';
 
-import {PageWrapper} from '../../../components/PageStyle';
-import BackgroundImg from '../../../assets/prbackground.png';
-import {PageTitleWrpper, PageTitle, NavBarWrapper, SelectNavBlock, NavBlock, MainImgTitle } from '../../../components/PageStyle';
+import {PageWrapper} from '../PageStyle';
+import BackgroundImg from '../../assets/prbackground.png';
+import {PageTitleWrpper, PageTitle, NavBarWrapper, SelectNavBlock, NavBlock, MainImgTitle } from '../PageStyle';
 import styled from '@emotion/styled';
 import { post } from 'axios';
 
