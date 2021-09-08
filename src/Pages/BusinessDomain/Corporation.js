@@ -169,7 +169,7 @@ const SubTitle = styled.div`
 
 const Chart1 = styled.div`
     width: 1088px;
-    height: 872px;
+    height: 906px;
     background-image: url(${Chart1Img});
     background-size: cover;
     background-repeat: no-repeat;
@@ -179,13 +179,19 @@ const Chart1 = styled.div`
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
-
+    @media screen and (max-width: 840px) {
+        width: 544px;
+        height: 453px;
+  }
 `;
 
 const Chart2 = styled(Chart1)`
     background-image: url(${Chart2Img});
-    height: 773px;
+    height: 772px;
     margin-bottom: 20vh;
+    @media screen and (max-width: 840px) {
+        height: 386px;
+  }
 `;
 
 const ChartWrapper = styled.div`
