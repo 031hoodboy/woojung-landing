@@ -58,10 +58,6 @@ export default function Email() {
             <Textarea name="message" />
         </InputWrapper>
         <TermsWrapper>
-            <Label >
-                {/* <input type="checkbox" onClick={onToggleCheckBox} checked={CheckBoxopen}/>  */}
-                *약관에 동의합니다.
-            </Label>        
         </TermsWrapper>
         {CheckBoxopen?
                 <Button type="submit" value="보내기" open={CheckBoxopen} onClick={Alert}/>
