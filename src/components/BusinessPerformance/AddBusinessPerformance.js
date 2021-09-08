@@ -14,12 +14,11 @@ class CustomerAdd extends React.Component {
   constructor(props) {
   super(props);
   this.state = {
-    main: null,
     cate: '',
-    buyer: '',
+    regdate: '',
     cons_name: '',
     fields: '',
-    regdate: ''
+    buyer: ''
   }
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
     this.handleFileChange = this.handleFileChange.bind(this)
@@ -52,7 +51,6 @@ class CustomerAdd extends React.Component {
 
   const url = 'https://www.wooapi.co.kr/business/businessinsert.do';
   const formData = new FormData();
-  formData.append('main', this.state.main)
   formData.append('cate', this.state.cate)
   formData.append('buyer', this.state.buyer)
   formData.append('cons_name', this.state.cons_name)
@@ -116,16 +114,11 @@ class CustomerAdd extends React.Component {
                   <Label>비고</Label>
                   <Input type="text" name="regdate" value={this.state.regdate} onChange={this.handleValueChange} />
                 </InputWrapper>
-                <InputWrapper>
-                  <Label>이미지</Label>
-                  <Input type="file" name="main" file={this.state.main} value={this.state.fileName} onChange={this.handleFileChange} />
-                </InputWrapper>
                 <Button type="submit" onClick={Alert} >추가하기</Button>
               </form>
               </Blockwrapper>
             <Footer/>
         </PageWrapper>
-      
     )
   }
 }
