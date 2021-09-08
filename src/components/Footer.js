@@ -24,18 +24,22 @@ const FooterBcakgroundBlock = styled.div`
     background: #000;  
     display: flex;
     padding-bottom: 10px;
+    margin: 0 auto;
     @media screen and (max-width: 840px) {
         padding-bottom: 5vh;
+        margin: 0 auto;
   }
 `;
 
 const FooterBlock = styled.div`
-    padding: 0 20vw;
+
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin: 0 auto;
     @media screen and (max-width: 840px) {
         padding: 0 5vw;
+        margin: 0 auto;
 
   }
 `;
