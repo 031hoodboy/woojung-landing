@@ -115,7 +115,7 @@ class CustomerAdd extends React.Component {
                   <Label>비고</Label>
                   <Input type="text" name="regdate" value={this.state.regdate} onChange={this.handleValueChange} />
                 </InputWrapper>
-                <Button type="submit" onClick={Alert} >추가하기</Button>
+
               </form>
               </Blockwrapper>
             <Footer/>
@@ -123,6 +123,11 @@ class CustomerAdd extends React.Component {
     )
   }
 }
+
+const A = styled.a`
+  width: 100%;
+  height: 100%;
+`;
 
 const Blockwrapper = styled.div`
     display: flex;

@@ -3,15 +3,19 @@ import styled from '@emotion/styled';
 
 import BackgroundImg from '../../assets/mainbackgroundimg.png';
 import { Title, SubTitle } from '../../components/PageStyle';
+import BackgroundVideo from '../../assets/main.mp4'
 
 const FirstSection = () => {
     return (
         <>
         <Background>
-            <ContentWrapper>
+        <ContentWrapper>
                 <FirstTitle>신뢰를 바탕으로 <br/>고객님의 안전을 책임지겠습니다.</FirstTitle>
                 <FirstSubTitle>최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고있습니다.</FirstSubTitle>
             </ContentWrapper>
+            <video autoPlay loop controls={false} playsinline muted style={{width: '100%', height: '93vw', position: 'absolute',  filter: 'brightness(80%)'}}>
+                <source src={BackgroundVideo}/>
+            </video>
         </Background>
         </>
     );
@@ -39,6 +43,7 @@ const ContentWrapper = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
+    z-index: 3;
 `;
 
 
