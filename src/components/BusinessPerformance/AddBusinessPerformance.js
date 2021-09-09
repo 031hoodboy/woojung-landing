@@ -115,7 +115,15 @@ class CustomerAdd extends React.Component {
                   <Label>비고</Label>
                   <Input type="text" name="regdate" value={this.state.regdate} onChange={this.handleValueChange} />
                 </InputWrapper>
-
+                <Button type="submit">
+                    <A href={`https://www.wooapi.co.kr/business/businessinsert.do?cate=`+this.state.cate+
+                    `&buyer=`+this.state.buyer+
+                    `&cons_name=`+this.state.cons_name+
+                    `&fields=`+this.state.fields+
+                    `&regdate=`+this.state.regdate} style={{textDecoration: "none",  color: "#fff"}}>                    
+                    추가하기
+                    </A>
+                </Button>
               </form>
               </Blockwrapper>
             <Footer/>
