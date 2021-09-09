@@ -120,7 +120,16 @@ class CustomerAdd extends React.Component {
                   <Label>비고</Label>
                   <Input type="text" name="regdate" value={this.state.regdate} onChange={this.handleValueChange} />
                 </InputWrapper>
-                <Button type="submit" onClick={Alert} >추가하기</Button>
+                <Button type="submit">
+                    <A href={`https://www.wooapi.co.kr/business/businessupdate.do?idx=`+this.state.idx+
+                    `&cate=`+this.state.cate+
+                    `&buyer=`+this.state.buyer+
+                    `&cons_name=`+this.state.cons_name+
+                    `&fields=`+this.state.fields+
+                    `&regdate=`+this.state.regdate} style={{textDecoration: "none",  color: "#fff"}}>                    
+                    추가하기
+                    </A>
+                </Button>
               </form>
               </Blockwrapper>
             <Footer/>
@@ -129,6 +138,11 @@ class CustomerAdd extends React.Component {
     )
   }
 }
+
+const A = styled.a`
+  width: 100%;
+  height: 100%;
+`;
 
 const Blockwrapper = styled.div`
     display: flex;
