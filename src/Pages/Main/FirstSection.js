@@ -43,7 +43,7 @@ const ContentWrapper = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-    z-index: 3;
+    z-index: 1;
 `;
 
 
