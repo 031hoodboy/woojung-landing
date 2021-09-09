@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import {Link} from 'react-router-dom';
 import './Pagenation.css'
 import {PageWrapper} from '../../components/PageStyle';
-import BackgroundImg from '../../assets/prbackground.png';
+import BackgroundImg from '../../assets/aboutbackground.png';
 import { Title, MainImgTitle } from '../../components/PageStyle';
 import styled from '@emotion/styled';
 import axios from 'axios';

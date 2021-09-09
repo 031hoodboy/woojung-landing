@@ -55,7 +55,8 @@ class CustomerAdd extends React.Component {
   formData.append('buyer', this.state.buyer)
   formData.append('cons_name', this.state.cons_name)
   formData.append('fields', this.state.fields)
-  formData.append('regdate', this.state.regdate)
+  formData.append('regdate', this.state.regdate
+  )
 
   const config = {
   headers: {
