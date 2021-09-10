@@ -13,7 +13,7 @@ const FirstSection = () => {
                 <FirstTitle>신뢰를 바탕으로 <br/>고객님의 안전을 책임지겠습니다.</FirstTitle>
                 <FirstSubTitle>최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고있습니다.</FirstSubTitle>
             </ContentWrapper>
-            <video autoPlay loop controls={false} playsinline muted style={{width: '100%', height: '100%', position: 'absolute',  filter: 'brightness(80%)', objectFit: 'cover'}}>
+            <video autoPlay loop controls={false} playsinline muted style={{ height: '93vh', position: 'absolute',  filter: 'brightness(80%)'}}>
                 <source src={BackgroundVideo}/>
             </video>
         </Background>
@@ -32,9 +32,6 @@ const Background = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    @media screen and (max-width: 840px) {
-        height: 100%;
-  }
 `;
 
 const ContentWrapper = styled.div`
