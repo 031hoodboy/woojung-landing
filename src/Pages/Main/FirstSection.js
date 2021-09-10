@@ -13,18 +13,30 @@ const FirstSection = () => {
                 <FirstTitle>신뢰를 바탕으로 <br/>고객님의 안전을 책임지겠습니다.</FirstTitle>
                 <FirstSubTitle>최고 수준의 기술 인력으로 위험물 설계, 시공, 준공, 전반적인 종합컨설팅을 하고있습니다.</FirstSubTitle>
             </ContentWrapper>
-            <video autoPlay loop controls={false} playsinline muted style={{ height: '93vh', position: 'absolute',  filter: 'brightness(80%)'}}>
+            <Video autoPlay loop controls={false} playsinline muted >
                 <source src={BackgroundVideo}/>
-            </video>
+            </Video>
         </Background>
         </>
     );
 }
+
+const Video = styled.video`
+    height: 93vh;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    filter: brightness(80%);
+    @media screen and (max-width: 840px) {
+        overflow: hidden;
+        width: 100vw;
+    }
+`;
+
 const Background = styled.div`
     width: 100%;
     height: 93vh;
     background: #282D27;
-    background-image: url(${BackgroundImg});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
@@ -32,6 +44,9 @@ const Background = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    @media screen and (max-width: 840px) {
+        overflow: hidden;
+  }
 `;
 
 const ContentWrapper = styled.div`
