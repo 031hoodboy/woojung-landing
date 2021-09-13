@@ -30,13 +30,14 @@ const Video = styled.video`
     @media screen and (max-width: 840px) {
         overflow: hidden;
         width: 100vw;
+        display: none;
     }
 `;
 
 const Background = styled.div`
     width: 100%;
     height: 93vh;
-    background: #282D27;
+    background-image: url(${BackgroundImg});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
@@ -44,9 +45,7 @@ const Background = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    @media screen and (max-width: 840px) {
-        overflow: hidden;
-  }
+    background-position: 40% 40%; 
 `;
 
 const ContentWrapper = styled.div`
