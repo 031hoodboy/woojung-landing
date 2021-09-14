@@ -35,7 +35,7 @@ export default class News extends Component {
                 const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
                 const postData = slice.map(businesslist => 
                     <div>
-                        {businesslist.cate === '소방공사실' ?
+                        {businesslist.cate === '소방공사실적' ?
                             <BoardContent key={businesslist.idx}>
                                 <Buyer style={{border: 'none'}}>{businesslist.buyer}</Buyer>
                                 <ConsName>{businesslist.cons_name}</ConsName>
