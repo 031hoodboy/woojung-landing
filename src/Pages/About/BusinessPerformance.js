@@ -34,6 +34,7 @@ export default class News extends Component {
                 const data = res.data;
                 const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
                 const postData = slice.map(businesslist => 
+                    <>
                     <div>
                         {businesslist.cate === '소방공사실적' ?
                             <BoardContent key={businesslist.idx}>
@@ -46,10 +47,11 @@ export default class News extends Component {
                             null
                         }
                     </div>
+                    </>
                 )
 
                 this.setState({
-                    pageCount: Math.ceil(data.length / this.state.perPage),
+                    pageCount: Math.ceil((postData.length + 1) / this.state.perPage),
                    
                     postData
                 })
@@ -66,6 +68,7 @@ export default class News extends Component {
         });
 
     };
+
 
 
     componentDidMount() {
@@ -102,10 +105,10 @@ export default class News extends Component {
                     <ReactPaginate
                         previousLabel={"<"}
                         nextLabel={">"}
-                        breakLabel={"..."}
+                        breakLabel={""}
                         breakClassName={"break-me"}
                         pageCount={this.state.pageCount}
-                        marginPagesDisplayed={2}
+                        marginPagesDisplayed={0}
                         pageRangeDisplayed={4}
                         onPageChange={this.handlePageClick}
                         containerClassName={"pagination"}
@@ -160,6 +163,7 @@ const NewsCardWrapper = styled.div`
 
 const Paginate = styled.div`
     margin: 0vh auto 20vh auto;
+    cursor: pointer;
 `;
 
 const CardWrapper = styled.div`

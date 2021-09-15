@@ -48,7 +48,7 @@ export default class News extends Component {
                 )
 
                 this.setState({
-                    pageCount: Math.ceil(data.length / this.state.perPage),
+                    pageCount: Math.ceil((postData.length) / this.state.perPage),
                    
                     postData
                 })
