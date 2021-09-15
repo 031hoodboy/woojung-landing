@@ -110,6 +110,7 @@ const CardTitle = styled.div`
     font-size: 1.8vw;
     color: #fff;
     margin-bottom: 2.5vw;
+    font-weight: 600;
     @media screen and (max-width: 840px) {
         font-size: 8vw;
         margin-bottom: 8vw;
