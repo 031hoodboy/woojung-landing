@@ -28,8 +28,6 @@ const Video = styled.video`
     position: absolute;
     filter: brightness(80%);
     @media screen and (max-width: 840px) {
-        overflow: hidden;
-        width: 100vw;
         display: none;
     }
 `;
