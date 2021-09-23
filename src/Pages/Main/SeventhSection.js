@@ -31,7 +31,7 @@ const SeventhSection = () => {
 const Background = styled.div`
     width: 100vw;
     padding: 10vh 0;
-    background: #fbfbfb;
+    background: #fff;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
@@ -48,7 +48,7 @@ const Card1 = styled.div`
     min-height: 65px;
     margin: 0 1vw;
     background-image: url(${Card1Img});
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center; 
     display: flex;

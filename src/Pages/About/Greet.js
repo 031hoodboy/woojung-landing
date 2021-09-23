@@ -82,8 +82,8 @@ const Greet = () => {
                             <Date>2014. 04.<Space/><DateDescrip>우정에이치앤씨(주) 변경</DateDescrip></Date> 
                             <Date>2018. 11.<Space/><DateDescrip>제조업 등록 및 자본금 증자(3억 -{">"} 5억)</DateDescrip></Date>
                             <Date>2019. 05.<Space/><DateDescrip>친환경 자동차 사업부 설립(성거공장 구축 및 공장등록)</DateDescrip></Date>
-                            <Date>2019. 10.<Space/><DateDescrip>연구개발 전담부서 설립 및 인증</DateDescrip></Date>
                             <Date>2019. 07.<Space/><DateDescrip>HL그린파워 협력 업체 등록 및 부품 공금</DateDescrip></Date>
+                            <Date>2019. 10.<Space/><DateDescrip>연구개발 전담부서 설립 및 인증</DateDescrip></Date>
                             <Date>2021. 01.<Space/><DateDescrip>경영혁신형 중소기업 인증(Main Biz)</DateDescrip></Date>
                             <Date>2021. 02.<Space/><DateDescrip>압전고무소자 관련 특허 등록(기술이전 - 호서대학교)</DateDescrip></Date>
                             <Date>2021. 03.<Space/><DateDescrip>사업재편계획 승인 기업 인증(산업통상자원부)</DateDescrip></Date>

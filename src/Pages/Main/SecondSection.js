@@ -107,7 +107,7 @@ const CardWrapper =  styled.div`
 `;
 
 const CardTitle = styled.div`
-    font-size: 1.8vw;
+    font-size: 1.7vw;
     color: #fff;
     margin-bottom: 2.5vw;
     font-weight: 600;
